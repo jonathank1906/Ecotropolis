@@ -101,13 +101,14 @@ public class Game
                 // Play the challenges at the selected location
                 selectedLocation.PlayLocation(player);
 
+                // Remove the location from the list after completing its challenges
                 locations.RemoveAt(choice);
 
                 // After completing the location's challenges, return to the travel menu
                 Console.WriteLine("Press any key to return to the travel menu...");
                 Console.ReadKey();  // Wait for the player to press a key before returning to the menu
             }
-            else if (choice == 0)
+            else if (choice == -1)
             {
                 // Exit the game if the player chooses option 0
                 Console.WriteLine("Exiting the game...");
@@ -124,6 +125,7 @@ public class Game
     // Display the travel menu
     public void DisplayTravelMenu()
     {
+        Console.WriteLine("0. Exit Game");
         for (int i = 0; i < locations.Count; i++)
         {
             Console.WriteLine($"{i + 1}. {locations[i].Name}");
