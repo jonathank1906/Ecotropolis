@@ -18,6 +18,7 @@ public class Game
             CreateLosAngeles(),
             CreateTokyo(),
             CreateAmsterdam(),
+            CreateManilla(),
             // More locations...
         };
     }
@@ -157,7 +158,7 @@ public class Game
     {
         // Create a new Location for Los Angeles
         Location la = new Location("Los Angeles");
-
+        la.WelcomeMessage = "Welcome to Los Angeles, the City of Angels!";
         // Create Urban Challenges for Los Angeles
         UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in LA");
         airPollution.AddOption(new ChallengeOption("Implement new traffic laws", 10));  // Option 1
@@ -178,6 +179,7 @@ public class Game
     {
         // Create a new Location for Tokyo
         Location tokyo = new Location("Tokyo");
+   
 
         // Create Urban Challenges for Tokyo
         UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in Tokyo");
@@ -199,7 +201,7 @@ public class Game
     {
         // Create a new Location for Amsterdam
         Location amsterdam = new Location("Amsterdam");
-
+      
         // Create Urban Challenges for Amsterdam
         UrbanChallenge growth = new UrbanChallenge("Balancing Growth with Heritage");
         growth.AddOption(new ChallengeOption(@"Skyward Expansion.
@@ -218,16 +220,52 @@ public class Game
         floating neighbourhoods could help manage growth sustainably while adding a unique, attractive
         element to the cityscape.", 5));  // Option 3
 
-        UrbanChallenge homelessness = new UrbanChallenge("Innovative Housing Models");
-        homelessness.AddOption(new ChallengeOption("Create affordable housing", 2));  // Option 1
-        homelessness.AddOption(new ChallengeOption("Increase social programs", 4));   // Option 2
+        UrbanChallenge housing = new UrbanChallenge("Innovative Housing Models");
+        housing.AddOption(new ChallengeOption(@"Government Partnerships for Affordable Housing.
+        Amsterdam is exploring partnerships where developers receive government incentives to build
+        affordable housing. This would demand substantial funding but could attract new housing projects
+        quickly. Your city, with a growing population, might consider similar incentives to ensure housing
+        is available for all income levels.", 2));  // Option 1
+        housing.AddOption(new ChallengeOption(@"Co-living Spaces.
+        Amsterdam is testing co-living spaces that allow residents to share amenities and reduce costs. 
+        This model fosters a sense of community but may not appeal to all citizens. If it proves successful, 
+        your city could adapt this approach to strengthen community ties and offer affordable options in dense areas.", 4));   // Option 2
+        housing.AddOption(new ChallengeOption(@"Repurposing Vacant Commercial Spaces.
+        With the rise of remote work, many commercial spaces in Amsterdam are left vacant. The city could incentivize
+        the repurposing of office buildings and unused commercial spaces into affordable housing units. This adaptive
+        reuse would create housing quickly, and it could serve as a model for your city, especially if commercial
+        spaces become underutilized in the future.", 4));   // Option 2
 
         // Add the challenges to the Amsterdam location
         amsterdam.AddUrbanChallenge(growth);
-        amsterdam.AddUrbanChallenge(homelessness);
+        amsterdam.AddUrbanChallenge(housing);
 
         return amsterdam;  // Return the populated location
     }
+
+     private Location CreateManilla()
+    {
+        // Create a new Location for Manilla
+        Location manilla = new Location("Manilla");
+      
+
+        // Create Urban Challenges for Tokyo
+        UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in Manilla");
+        airPollution.AddOption(new ChallengeOption("Implement new traffic laws", 10));  // Option 1
+        airPollution.AddOption(new ChallengeOption("Reduce industrial emissions", 5));  // Option 2
+        
+        UrbanChallenge homelessness = new UrbanChallenge("Homelessness in Manilla");
+        homelessness.AddOption(new ChallengeOption("Create affordable housing", 15));  // Option 1
+        homelessness.AddOption(new ChallengeOption("Increase social programs", 10));   // Option 2
+
+        // Add the challenges to the Manilla location
+        manilla.AddUrbanChallenge(airPollution);
+        manilla.AddUrbanChallenge(homelessness);
+
+        return manilla;  // Return the populated location
+    }
+
+
     
 }
  

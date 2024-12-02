@@ -3,13 +3,11 @@ namespace Ecotropolis;
 public class Player
 {
     private List<Item> inventory;
-    private List<Location> visitedLocations;
     private int score;
 
     public Player()
     {
         inventory = new List<Item>();
-        visitedLocations = new List<Location>();
         score = 0;
     }
 

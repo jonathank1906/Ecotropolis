@@ -2,6 +2,7 @@ namespace Ecotropolis;
 public class Location
 {
     public string Name { get; private set; }
+    public string WelcomeMessage { get; set; }
     private List<UrbanChallenge> urbanChallenges;
 
     public Location(string name)
@@ -18,6 +19,7 @@ public class Location
     public void DisplayStartMessage()
     {
         Console.WriteLine($"You have arrived at {Name}.");
+        Console.WriteLine(WelcomeMessage);
     }
 
     public void PlayLocation(Player player)
