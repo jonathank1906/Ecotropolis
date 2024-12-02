@@ -19,6 +19,7 @@ public class Game
         locations = new List<Location>
         {
             CreateLosAngeles(),
+            CreateTokyo(),
             // More locations...
         };
     }
@@ -100,6 +101,8 @@ public class Game
                 // Play the challenges at the selected location
                 selectedLocation.PlayLocation(player);
 
+                locations.RemoveAt(choice);
+
                 // After completing the location's challenges, return to the travel menu
                 Console.WriteLine("Press any key to return to the travel menu...");
                 Console.ReadKey();  // Wait for the player to press a key before returning to the menu
@@ -155,6 +158,27 @@ public class Game
         la.AddUrbanChallenge(homelessness);
 
         return la;  // Return the populated location
+    }
+
+    private Location CreateTokyo()
+    {
+        // Create a new Location for Tokyo
+        Location tokyo = new Location("Tokyo");
+
+        // Create Urban Challenges for Tokyo
+        UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in Tokyo");
+        airPollution.AddOption(new ChallengeOption("Implement new traffic laws", 10));  // Option 1
+        airPollution.AddOption(new ChallengeOption("Reduce industrial emissions", 5));  // Option 2
+        
+        UrbanChallenge homelessness = new UrbanChallenge("Homelessness in Tokyo");
+        homelessness.AddOption(new ChallengeOption("Create affordable housing", 15));  // Option 1
+        homelessness.AddOption(new ChallengeOption("Increase social programs", 10));   // Option 2
+
+        // Add the challenges to the Tokyo location
+        tokyo.AddUrbanChallenge(airPollution);
+        tokyo.AddUrbanChallenge(homelessness);
+
+        return tokyo;  // Return the populated location
     }
     
 }
