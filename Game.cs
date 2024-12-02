@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace Ecotropolis;
 public class Game
 {
@@ -88,7 +85,8 @@ public class Game
 
             // Get the player's choice from the menu
             int choice = int.Parse(Console.ReadLine()) - 1;
-
+            Console.WriteLine(locations.Count);
+            Console.WriteLine(choice);
             // Check if the player's choice is a valid location number
             if (choice >= 0 && choice < locations.Count)
             {
@@ -114,6 +112,11 @@ public class Game
                 Console.WriteLine("Exiting the game...");
                 playing = false;  // Set the flag to false to break out of the game loop
             }
+            else if(choice == locations.Count)
+            {
+                // Display the help menu if the player chooses the help option
+                DisplayHelpMenu();
+            }
             else
             {
                 // Handle invalid input if the player enters a number outside of the valid range
@@ -130,6 +133,7 @@ public class Game
         {
             Console.WriteLine($"{i + 1}. {locations[i].Name}");
         }
+        Console.WriteLine($"{locations.Count + 1}. Help");
     }
 
 
@@ -137,9 +141,21 @@ public class Game
     public void Travel(Location location)
     {
         Console.WriteLine($"Traveling to {location.Name}...");
-        location.DisplayStartMessage();
-        location.PlayLocation(player);
+        location.DisplayStartMessage(); // Display "You have arrived at {Location Name}"
+        location.PlayLocation(player); // Play the challenges at the location
     }
+
+    public void DisplayHelpMenu()
+    {
+        Console.WriteLine("\nHelp - Game Instructions:");
+        Console.WriteLine("Welcome to Ecotropolis! Your task is to solve urban challenges across different cities.");
+        Console.WriteLine("- Each city has unique problems. Travel to them to begin solving challenges.");
+        Console.WriteLine("- After completing a challenge, you will receive a reward that impacts your city-building efforts.");
+        Console.WriteLine("- Make strategic decisions to balance progress and sustainability.");
+        Console.WriteLine("Press any key to return to the game...");
+        Console.ReadKey();
+    }
+
 
     private Location CreateLosAngeles()
     {
