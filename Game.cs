@@ -17,6 +17,7 @@ public class Game
         {
             CreateLosAngeles(),
             CreateTokyo(),
+            CreateAmsterdam(),
             // More locations...
         };
     }
@@ -85,10 +86,8 @@ public class Game
 
             // Get the player's choice from the menu
             int choice = int.Parse(Console.ReadLine()) - 1;
-            Console.WriteLine(locations.Count);
-            Console.WriteLine(choice);
-            // Check if the player's choice is a valid location number
-            if (choice >= 0 && choice < locations.Count)
+            
+            if (choice >= 0 && choice < locations.Count) // Check if the player's choice is a valid location number
             {
                 // Select the location based on the player's choice
                 Location selectedLocation = locations[choice];
@@ -106,20 +105,17 @@ public class Game
                 Console.WriteLine("Press any key to return to the travel menu...");
                 Console.ReadKey();  // Wait for the player to press a key before returning to the menu
             }
-            else if (choice == -1)
+            else if (choice == -1)  // Exit the game if the player chooses option 0
             {
-                // Exit the game if the player chooses option 0
                 Console.WriteLine("Exiting the game...");
                 playing = false;  // Set the flag to false to break out of the game loop
             }
-            else if(choice == locations.Count)
+            else if(choice == locations.Count) // Display the help menu if the player chooses the help option
             {
-                // Display the help menu if the player chooses the help option
                 DisplayHelpMenu();
             }
-            else
+            else // Handle invalid input if the player enters a number outside of the valid range
             {
-                // Handle invalid input if the player enters a number outside of the valid range
                 Console.WriteLine("Invalid choice. Please select a valid location.");
             }
         }
@@ -197,6 +193,40 @@ public class Game
         tokyo.AddUrbanChallenge(homelessness);
 
         return tokyo;  // Return the populated location
+    }
+
+      private Location CreateAmsterdam()
+    {
+        // Create a new Location for Amsterdam
+        Location amsterdam = new Location("Amsterdam");
+
+        // Create Urban Challenges for Amsterdam
+        UrbanChallenge growth = new UrbanChallenge("Balancing Growth with Heritage");
+        growth.AddOption(new ChallengeOption(@"Skyward Expansion.
+        Amsterdam is considering new high-rise, eco-friendly buildings to fit more homes into
+        limited space. This approach would allow more housing without sprawling outward, but it
+        risks changing Amsterdam's historic skyline. If successful, your city could adopt a
+        similar model, preserving space while maximizing housing options.", 3));  // Option 1
+        growth.AddOption(new ChallengeOption(@"Historical Revitalization.
+        Alternatively, Amsterdam could convert its old, vacant buildings into affordable apartments.
+        While this solution could fit Amsterdam's character, it may limit housing capacity. Your city
+        could use this approach to protect cultural areas while meeting housing demands.", 1));  // Option 2
+        growth.AddOption(new ChallengeOption(@"Floating Neighborhoods.
+        Amsterdam could create floating homes and neighbourhoods along its canals, a concept that
+        aligns with its strong maritime heritage. These eco-friendly, water-based residences could
+        expand housing without crowding the city center or altering the skyline. For your city, adopting
+        floating neighbourhoods could help manage growth sustainably while adding a unique, attractive
+        element to the cityscape.", 5));  // Option 3
+
+        UrbanChallenge homelessness = new UrbanChallenge("Innovative Housing Models");
+        homelessness.AddOption(new ChallengeOption("Create affordable housing", 2));  // Option 1
+        homelessness.AddOption(new ChallengeOption("Increase social programs", 4));   // Option 2
+
+        // Add the challenges to the Amsterdam location
+        amsterdam.AddUrbanChallenge(growth);
+        amsterdam.AddUrbanChallenge(homelessness);
+
+        return amsterdam;  // Return the populated location
     }
     
 }
