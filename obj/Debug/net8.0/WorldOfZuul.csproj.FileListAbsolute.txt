@@ -12,3 +12,4 @@ C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\refint\WorldOfZuul.dll
 C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.pdb
 C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.genruntimeconfig.cache
 C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\ref\WorldOfZuul.dll
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.sourcelink.json
