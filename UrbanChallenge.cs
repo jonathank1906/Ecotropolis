@@ -1,37 +1,53 @@
-namespace Ecotropolis;
-public class UrbanChallenge
+namespace Ecotropolis
 {
-    public string ChallengeDescription { get; private set; }
-    private List<ChallengeOption> options;
-
-    public UrbanChallenge(string description)
+    public class UrbanChallenge
     {
-        ChallengeDescription = description;
-        options = new List<ChallengeOption>();
-    }
+        public string ChallengeDescription { get; private set; }
+        private List<ChallengeOption> options;
 
-    public void Execute(Player player)
-    {
-        Console.WriteLine($"Challenge: {ChallengeDescription}");
-        for (int i = 0; i < options.Count; i++)
+        public UrbanChallenge(string description)
         {
-            Console.WriteLine($"{i + 1}. {options[i].Description}");
+            ChallengeDescription = description;
+            options = new List<ChallengeOption>();
         }
 
-        int choice = int.Parse(Console.ReadLine()) - 1;
+        public void Execute(Player player)
+        {
+            Console.WriteLine($"Challenge: {ChallengeDescription}");
+            
+            // Display available options
+            for (int i = 0; i < options.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {options[i].Description}");
+            }
 
-        if (choice >= 0 && choice < options.Count)
-        {
-            player.IncreaseScore(options[choice].ScoreImpact);
+            bool validChoice = false;
+            int choice = -1;
+
+            // Loop until the user selects a valid option
+            while (!validChoice)
+            {
+                Console.WriteLine("Please select an option (1 to {0}):", options.Count);
+
+                // Read input and check if it's a valid choice
+                string input = Console.ReadLine();
+                if (int.TryParse(input, out choice) && choice >= 1 && choice <= options.Count)
+                {
+                    validChoice = true;
+                    // Adjust choice for zero-indexed list
+                    choice--; 
+                    player.IncreaseScore(options[choice].ScoreImpact);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. Please try again.");
+                }
+            }
         }
-        else
+
+        public void AddOption(ChallengeOption option)
         {
-            Console.WriteLine("Invalid choice. No impact.");
+            options.Add(option);  // Add the option to the list
         }
-    }
-    public void AddOption(ChallengeOption option)
-    {
-        options.Add(option);  // Add the option to the list
     }
 }
-
