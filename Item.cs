@@ -1,23 +1,22 @@
 using System;
 
-namespace Ecotropolis
+namespace Ecotropolis;
+public class Item
 {
-    public class Item
+    public string Name { get; private set; }
+    public int Value { get; private set; }
+    public string ItemDetails { get; private set; }
+
+    public Item(string name, int value, string details)
     {
-        public string Name { get; private set; }
-        public int Value { get; private set; }
-        public string ItemDetails { get; private set; }
+        Name = name;
+        Value = value;
+        ItemDetails = details;
+    }
 
-        public Item(string name, int value, string details)
-        {
-            Name = name;
-            Value = value;
-            ItemDetails = details;
-        }
-
-        public void Use()
-        {
-            Console.WriteLine($"{Name} used. {ItemDetails}");
-        }
+    public void Use()
+    {
+        Console.WriteLine($"{Name} used. {ItemDetails}");
     }
 }
+
