@@ -75,11 +75,58 @@ namespace Ecotropolis
                           "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n" +
                           "In case you need any help, type \"Help\"" );
             
-            // Go to the travel menu
-            DisplayTravelMenu();
-            
-           
+            // Go to main game loop
+            GamePlay(); 
         }
+
+
+        public void GamePlay()
+        {
+            bool playing = true;  // Flag to control the game loop
+
+            // Main game loop that continues until the player chooses to exit
+            while (playing)
+            {
+                // Display the travel menu to the player
+                DisplayTravelMenu();
+
+                // Get the player's choice from the menu
+                int choice = 1;
+
+                // Check if the player's choice is a valid location number
+                if (choice >= 1 && choice <= locations.Count)
+                {
+                    // Select the location based on the player's choice
+                    Location selectedLocation = locations[choice - 1];
+
+                    // Display the start message for the selected location
+                    selectedLocation.DisplayStartMessage();
+
+                    // Play the challenges at the selected location
+                    selectedLocation.PlayLocation(player);
+
+                    // After completing the location's challenges, return to the travel menu
+                    Console.WriteLine("Press any key to return to the travel menu...");
+                    Console.ReadKey();  // Wait for the player to press a key before returning to the menu
+                }
+                else if (choice == 0)
+                {
+                    // Exit the game if the player chooses option 0
+                    Console.WriteLine("Exiting the game...");
+                    playing = false;  // Set the flag to false to break out of the game loop
+                }
+                else
+                {
+                    // Handle invalid input if the player enters a number outside of the valid range
+                    Console.WriteLine("Invalid choice. Please select a valid location.");
+                }
+            }
+        }
+
+
+
+
+
 
         // Display the travel menu
         public void DisplayTravelMenu()

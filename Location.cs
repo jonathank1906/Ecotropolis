@@ -29,6 +29,8 @@ namespace Ecotropolis
             {
                 challenge.Execute(player);
             }
+            // Challenges completed, go back to the travel menu
+            //TODO: delete a location after it was finished 
         }
     }
 }
