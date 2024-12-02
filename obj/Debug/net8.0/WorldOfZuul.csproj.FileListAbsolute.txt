@@ -1,0 +1,14 @@
+C:\Users\jonat\Desktop\WorldOfZuul\bin\Debug\net8.0\WorldOfZuul.exe
+C:\Users\jonat\Desktop\WorldOfZuul\bin\Debug\net8.0\WorldOfZuul.deps.json
+C:\Users\jonat\Desktop\WorldOfZuul\bin\Debug\net8.0\WorldOfZuul.runtimeconfig.json
+C:\Users\jonat\Desktop\WorldOfZuul\bin\Debug\net8.0\WorldOfZuul.dll
+C:\Users\jonat\Desktop\WorldOfZuul\bin\Debug\net8.0\WorldOfZuul.pdb
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.AssemblyInfoInputs.cache
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.AssemblyInfo.cs
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.csproj.CoreCompileInputs.cache
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.dll
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\refint\WorldOfZuul.dll
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.pdb
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\WorldOfZuul.genruntimeconfig.cache
+C:\Users\jonat\Desktop\WorldOfZuul\obj\Debug\net8.0\ref\WorldOfZuul.dll
