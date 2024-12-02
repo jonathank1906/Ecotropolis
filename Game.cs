@@ -19,12 +19,12 @@ namespace Ecotropolis
             player = new Player();
             locations = new List<Location>
             {
-                new Location("City Center"),
-                new Location("Suburban Area"),
-                new Location("Industrial Zone"),
-                new Location("Historic District"),
-                new Location("Coastal Area"),
-                new Location("Rural Village")
+                new Location("Los Angeles"),
+                new Location("Barcelona"),
+                new Location("Tokyo"),
+                new Location("Sao Paulo"),
+                new Location("Amsterdam"),
+                new Location("Manilla")
             };
         }
 
@@ -69,23 +69,21 @@ namespace Ecotropolis
                 
             Console.WriteLine("Please name your city and press enter:");
             Console.Write("> ");
-            string choice = Console.ReadLine();
 
-
-            if (choice == "1")
-            {
-                DisplayTravelMenu();
-            }
-            else
-            {
-                Console.WriteLine("Goodbye!");
-            }
+            string cityName = Console.ReadLine();
+            Console.WriteLine($"Welcome to {cityName} mr. newly elected mayor \n" +
+                          "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n" +
+                          "In case you need any help, type \"Help\"" );
+            
+            // Go to the travel menu
+            DisplayTravelMenu();
+            
+           
         }
 
         // Display the travel menu
         public void DisplayTravelMenu()
         {
-            Console.WriteLine("Select a location to travel to:");
             for (int i = 0; i < locations.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {locations[i].Name}");
