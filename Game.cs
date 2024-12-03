@@ -65,7 +65,7 @@ public class Game
         Console.WriteLine("Please name your city and press enter:");
         Console.Write("> ");
 
-        string cityName = Console.ReadLine();
+        string? cityName = Console.ReadLine();
         Console.WriteLine($"Welcome to {cityName} mr. newly elected mayor \n" +
                         "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n" +
                         "In case you need any help, type \"Help\"" );
@@ -85,40 +85,47 @@ public class Game
             // Display the travel menu to the player
             DisplayTravelMenu();
 
-            // Get the player's choice from the menu
-            int choice = int.Parse(Console.ReadLine()) - 1;
-            
-            if (choice >= 0 && choice < locations.Count) // Check if the player's choice is a valid location number
-            {
-                // Select the location based on the player's choice
-                Location selectedLocation = locations[choice];
+           // Get the player's choice from the menu
+           string? input = Console.ReadLine(); // Read the input
 
-                // Display the start message for the selected location
-                selectedLocation.DisplayStartMessage();
+           if (!string.IsNullOrEmpty(input)) // Ensure input is not null or empty
+           {
+               try
+               {
+                   int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
 
-                // Play the challenges at the selected location
-                selectedLocation.PlayLocation(player);
-
-                // Remove the location from the list after completing its challenges
-                locations.RemoveAt(choice);
-
-                // After completing the location's challenges, return to the travel menu
-                Console.WriteLine("Press any key to return to the travel menu...");
-                Console.ReadKey();  // Wait for the player to press a key before returning to the menu
-            }
-            else if (choice == -1)  // Exit the game if the player chooses option 0
-            {
-                Console.WriteLine("Exiting the game...");
-                playing = false;  // Set the flag to false to break out of the game loop
-            }
-            else if(choice == locations.Count) // Display the help menu if the player chooses the help option
-            {
-                DisplayHelpMenu();
-            }
-            else // Handle invalid input if the player enters a number outside of the valid range
-            {
-                Console.WriteLine("Invalid choice. Please select a valid location.");
-            }
+                   if (choice >= 0 && choice < locations.Count) // Valid location
+                   {
+                       Location selectedLocation = locations[choice];
+                       selectedLocation.DisplayStartMessage();
+                       selectedLocation.PlayLocation(player);
+                       locations.RemoveAt(choice);
+                       Console.WriteLine("Press any key to return to the travel menu...");
+                       Console.ReadKey();
+                   }
+                   else if (choice == -1) // Exit the game
+                   {
+                       Console.WriteLine("Exiting the game...");
+                       playing = false;
+                   }
+                   else if (choice == locations.Count) // Display help menu
+                   {
+                       DisplayHelpMenu();
+                   }
+                   else // Invalid choice
+                   {
+                       Console.WriteLine("Invalid choice. Please select a valid location.");
+                   }
+               }
+               catch (FormatException) // Handle invalid numeric input
+               {
+                   Console.WriteLine("Invalid input. Please enter a valid number.");
+               }
+           }
+           else // Null or empty input
+           {
+               Console.WriteLine("Input cannot be empty. Please enter a valid number.");
+           }
         }
     }
 
@@ -268,8 +275,3 @@ public class Game
 
     
 }
- 
-
-
-
-

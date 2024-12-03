@@ -30,7 +30,7 @@ namespace Ecotropolis
                 Console.WriteLine("Please select an option (1 to {0}):", options.Count);
 
                 // Read input and check if it's a valid choice
-                string input = Console.ReadLine();
+                string? input = Console.ReadLine();
                 if (int.TryParse(input, out choice) && choice >= 1 && choice <= options.Count)
                 {
                     validChoice = true;

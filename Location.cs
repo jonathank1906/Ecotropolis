@@ -8,6 +8,7 @@ public class Location
     public Location(string name)
     {
         Name = name;
+        WelcomeMessage = $"Welcome to {Name}.";
         urbanChallenges = new List<UrbanChallenge>();
     }
 
