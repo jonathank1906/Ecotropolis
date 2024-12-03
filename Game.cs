@@ -77,45 +77,51 @@ public class Game
         // Main game loop that continues until the player chooses to exit
         while (playing)
         {
+            if (locations.Count == 0)
+            {
+                Console.WriteLine("\nCongratulations! You have completed all the challenges in Ecotropolis.");
+                playing = false;
+                PawnShopSequence();
+            }
+
             // Display the travel menu to the player
             DisplayTravelMenu();
+            // Get the player's choice from the menu
+            string? input = Console.ReadLine(); // Read the input
 
-           // Get the player's choice from the menu
-           string? input = Console.ReadLine(); // Read the input
+            if (!string.IsNullOrEmpty(input)) // Ensure input is not null or empty
+            {
+                try
+                {
+                    int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
 
-           if (!string.IsNullOrEmpty(input)) // Ensure input is not null or empty
-           {
-               try
-               {
-                   int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
-
-                   if (choice >= 0 && choice < locations.Count) // Valid location
-                   {
-                       Location selectedLocation = locations[choice];
-                       selectedLocation.DisplayStartMessage();
-                       selectedLocation.PlayLocation(player);
-                       locations.RemoveAt(choice);
-                       Console.WriteLine("Press any key to return to the travel menu...");
-                       Console.ReadKey();
-                   }
-                   else if (choice == -1) // Exit the game
-                   {
-                       Console.WriteLine("Exiting the game...");
-                       playing = false;
-                   }
-                   else if (choice == locations.Count) // Display help menu
-                   {
-                       DisplayHelpMenu();
-                   }
-                   else // Invalid choice
-                   {
-                       Console.WriteLine("\nInvalid choice. Please select a valid location.");
-                   }
-               }
-               catch (FormatException) // Handle invalid numeric input
-               {
-                   Console.WriteLine("\nInvalid input. Please enter a valid number.");
-               }
+                    if (choice >= 0 && choice < locations.Count) // Valid location
+                    {
+                        Location selectedLocation = locations[choice];
+                        selectedLocation.DisplayStartMessage();
+                        selectedLocation.PlayLocation(player);
+                        locations.RemoveAt(choice);
+                        Console.WriteLine("Press any key to return to the travel menu...");
+                        Console.ReadKey();
+                    }
+                    else if (choice == -1) // Exit the game
+                    {
+                        Console.WriteLine("Exiting the game...");
+                        playing = false;
+                    }
+                    else if (choice == locations.Count) // Display help menu
+                    {
+                        DisplayHelpMenu();
+                    }
+                    else // Invalid choice
+                    {
+                        Console.WriteLine("\nInvalid choice. Please select a valid location.");
+                    }
+                }
+                catch (FormatException) // Handle invalid numeric input
+                {
+                    Console.WriteLine("\nInvalid input. Please enter a valid number.");
+                }
            }
            else // Null or empty input
            {
@@ -250,7 +256,6 @@ public class Game
         // Create a new Location for Manilla
         Location manilla = new Location("Manilla");
       
-
         // Create Urban Challenges for Tokyo
         UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in Manilla");
         airPollution.AddOption(new ChallengeOption("Implement new traffic laws", 10));  // Option 1
@@ -265,5 +270,45 @@ public class Game
         manilla.AddUrbanChallenge(homelessness);
 
         return manilla;  // Return the populated location
+    }
+
+    public void PawnShopSequence()
+    {
+        Console.WriteLine("Welcome to the Pawn Shop! Here you can sell your items.");
+        if (player.inventory.Count == 0)
+        {
+            Console.WriteLine("You have no items to sell.");
+        }
+        else
+        {
+            while (true)
+            {
+                Console.WriteLine("Your inventory:");
+                for (int i = 0; i < player.inventory.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {player.inventory[i].Name} (Value: {player.inventory[i].Value})");
+                }
+
+                Console.WriteLine("Enter the number of the item you want to sell, or type 'exit' to leave the Pawn Shop.");
+                string? input = Console.ReadLine();
+
+                if (input.ToLower() == "exit")
+                {
+                    break;
+                }
+
+                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= player.inventory.Count)
+                {
+                    Item itemToSell = player.inventory[choice - 1];
+                    player.SellItem(itemToSell);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid selection. Please try again.");
+                }
+            }
+        }
+
+        Console.WriteLine("Thank you for visiting the Pawn Shop. Your adventure ends here.");
     }
 }

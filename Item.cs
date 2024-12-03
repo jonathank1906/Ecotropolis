@@ -17,4 +17,3 @@ public class Item
         Console.WriteLine($"{Name} used. {ItemDetails}");
     }
 }
-

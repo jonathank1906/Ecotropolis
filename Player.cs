@@ -2,7 +2,7 @@ namespace Ecotropolis;
 
 public class Player
 {
-    private List<Item> inventory;
+    public List<Item> inventory;
     private int score;
 
     public Player()
@@ -36,4 +36,3 @@ public class Player
         }
     }
 }
-
