@@ -51,25 +51,20 @@ public class Game
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⠄⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
 
 
-            Console.WriteLine("Welcome to Ecotropolis – the city-building adventure where your decisions shape the future!\n\n" +
-                    "As a visionary leader, you'll travel to different cities, taking on roles like mayor, corporate CEO, or urban planner.\n" +
-                    "Each city faces unique environmental and urban challenges that only you can solve.\n" +
-                    "Complete quests to earn rewards that you can use to design and build your own perfect, sustainable city.\n" +
-                    "Can you balance progress with preservation and create a thriving, green metropolis?\n" +
-                    "The fate of Ecotropolis is in your hands!\n");
+        Console.WriteLine("Welcome to Ecotropolis – the city-building adventure where your decisions shape the future!\n\n" +
+        "As a visionary leader, you'll travel to different cities, taking on roles like mayor, corporate CEO, or urban planner.\n" +
+        "Each city faces unique environmental and urban challenges that only you can solve.\n" +
+        "Complete quests to earn rewards that you can use to design and build your own perfect, sustainable city.\n" +
+        "Can you balance progress with preservation and create a thriving, green metropolis?\n" +
+        "The fate of Ecotropolis is in your hands!\n");
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
-        
-        Console.WriteLine("\n----------\n");
-            
         Console.WriteLine("Please name your city and press enter:");
         Console.Write("> ");
 
         string? cityName = Console.ReadLine();
-        Console.WriteLine($"Welcome to {cityName} mr. newly elected mayor \n" +
-                        "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n" +
-                        "In case you need any help, type \"Help\"" );
-        
+        Console.WriteLine($"\nWelcome to {cityName} Mr. newly elected mayor. \n" +
+        "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n");
         // Go to main game loop
         GamePlay(); 
     }
@@ -114,12 +109,12 @@ public class Game
                    }
                    else // Invalid choice
                    {
-                       Console.WriteLine("Invalid choice. Please select a valid location.");
+                       Console.WriteLine("\nInvalid choice. Please select a valid location.");
                    }
                }
                catch (FormatException) // Handle invalid numeric input
                {
-                   Console.WriteLine("Invalid input. Please enter a valid number.");
+                   Console.WriteLine("\nInvalid input. Please enter a valid number.");
                }
            }
            else // Null or empty input
@@ -132,12 +127,12 @@ public class Game
     // Display the travel menu
     public void DisplayTravelMenu()
     {
-        Console.WriteLine("0. Exit Game");
-        for (int i = 0; i < locations.Count; i++)
+        Console.WriteLine("0. Exit Game"); // Exit the game
+        for (int i = 0; i < locations.Count; i++) // Display the available locations
         {
             Console.WriteLine($"{i + 1}. {locations[i].Name}");
         }
-        Console.WriteLine($"{locations.Count + 1}. Help");
+        Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
     }
 
 
@@ -204,7 +199,7 @@ public class Game
         return tokyo;  // Return the populated location
     }
 
-      private Location CreateAmsterdam()
+    private Location CreateAmsterdam()
     {
         // Create a new Location for Amsterdam
         Location amsterdam = new Location("Amsterdam");
@@ -250,7 +245,7 @@ public class Game
         return amsterdam;  // Return the populated location
     }
 
-     private Location CreateManilla()
+    private Location CreateManilla()
     {
         // Create a new Location for Manilla
         Location manilla = new Location("Manilla");
@@ -271,7 +266,4 @@ public class Game
 
         return manilla;  // Return the populated location
     }
-
-
-    
 }
