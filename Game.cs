@@ -20,7 +20,6 @@ public class Game
         GamePlay();
     }
 
-
     public void GamePlay()
     {
         while (true) 
