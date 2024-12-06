@@ -24,18 +24,16 @@ namespace Ecotropolis
             bool validChoice = false;
             int choice = -1;
 
-            // Loop until the user selects a valid option
-            while (!validChoice)
+            while (!validChoice) // Loop until the user selects a valid option
             {
                 Console.WriteLine("Please select an option (1 to {0}):", options.Count);
-
-                // Read input and check if it's a valid choice
+                Console.Write("> ");
+                
                 string? input = Console.ReadLine();
-                if (int.TryParse(input, out choice) && choice >= 1 && choice <= options.Count)
+                if (int.TryParse(input, out choice) && choice >= 1 && choice <= options.Count) // Read input and check if it's a valid choice
                 {
                     validChoice = true;
-                    // Adjust choice for zero-indexed list
-                    choice--; 
+                    choice--; // Adjust choice for zero-indexed list
                     player.IncreaseScore(options[choice].ScoreImpact);
                 }
                 else

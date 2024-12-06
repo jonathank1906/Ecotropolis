@@ -1,14 +1,9 @@
 namespace Ecotropolis;
+using static EcoTropolis.Messages;
 public class Game
 {
     private Player player;
     private List<Location> locations;
-
-    public static void Main(string[] args)
-    {
-        Game game = new Game();
-        game.DisplayStartMenu();
-    }
 
     public Game()
     {
@@ -58,36 +53,30 @@ public class Game
         "Can you balance progress with preservation and create a thriving, green metropolis?\n" +
         "The fate of Ecotropolis is in your hands!\n");
         Console.WriteLine("Press any key to continue...");
-        Console.ReadKey();
-        Console.WriteLine("Please name your city and press enter:");
+        Console.ReadKey(true);
+        Console.WriteLine("\nPlease name your city and press enter:");
         Console.Write("> ");
 
         string? cityName = Console.ReadLine();
         Console.WriteLine($"\nWelcome to {cityName} Mr. newly elected mayor. \n" +
         "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n");
-        // Go to main game loop
-        GamePlay(); 
+        
+        GamePlay(); // Go to main game loop
     }
 
 
     public void GamePlay()
     {
-        bool playing = true;  // Flag to control the game loop
-
-        // Main game loop that continues until the player chooses to exit
-        while (playing)
+        while (true) 
         {
             if (locations.Count == 0)
             {
-                Console.WriteLine("\nCongratulations! You have completed all the challenges in Ecotropolis.");
-                playing = false;
+                DisplayMessage("All Locations Visited");
                 PawnShopSequence();
+                break;
             }
-
-            // Display the travel menu to the player
-            DisplayTravelMenu();
-            // Get the player's choice from the menu
-            string? input = Console.ReadLine(); // Read the input
+            DisplayTravelMenu(); // Display the travel menu to the player
+            string? input = Console.ReadLine(); // Get the player's choice from the menu
 
             if (!string.IsNullOrEmpty(input)) // Ensure input is not null or empty
             {
@@ -102,16 +91,16 @@ public class Game
                         selectedLocation.PlayLocation(player);
                         locations.RemoveAt(choice);
                         Console.WriteLine("Press any key to return to the travel menu...");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                     }
                     else if (choice == -1) // Exit the game
                     {
-                        Console.WriteLine("Exiting the game...");
-                        playing = false;
+                        DisplayMessage("Exit Game");
+                        break;
                     }
                     else if (choice == locations.Count) // Display help menu
                     {
-                        DisplayHelpMenu();
+                        DisplayMessage("help");
                     }
                     else // Invalid choice
                     {
@@ -139,6 +128,7 @@ public class Game
             Console.WriteLine($"{i + 1}. {locations[i].Name}");
         }
         Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
+        Console.Write("> ");
     }
 
 
@@ -149,18 +139,6 @@ public class Game
         location.DisplayStartMessage(); // Display "You have arrived at {Location Name}"
         location.PlayLocation(player); // Play the challenges at the location
     }
-
-    public void DisplayHelpMenu()
-    {
-        Console.WriteLine("\nHelp - Game Instructions:");
-        Console.WriteLine("Welcome to Ecotropolis! Your task is to solve urban challenges across different cities.");
-        Console.WriteLine("- Each city has unique problems. Travel to them to begin solving challenges.");
-        Console.WriteLine("- After completing a challenge, you will receive a reward that impacts your city-building efforts.");
-        Console.WriteLine("- Make strategic decisions to balance progress and sustainability.");
-        Console.WriteLine("Press any key to return to the game...");
-        Console.ReadKey();
-    }
-
 
     private Location CreateLosAngeles()
     {
@@ -187,7 +165,6 @@ public class Game
     {
         // Create a new Location for Tokyo
         Location tokyo = new Location("Tokyo");
-   
 
         // Create Urban Challenges for Tokyo
         UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in Tokyo");
