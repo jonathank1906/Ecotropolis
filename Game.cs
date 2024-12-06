@@ -51,15 +51,15 @@ public class Game
                         DisplayMessage("help");
                     }
                     else { // Invalid choice
-                        Console.WriteLine("\nInvalid choice. Please select a valid location.");
+                        DisplayMessage("invalid location");
                     }
                 }
                 catch (FormatException) { // Handle invalid numeric input
-                    Console.WriteLine("\nInvalid input. Please enter a valid number.");
+                    DisplayMessage("invalid command");
                 }
            }
            else { // Null or empty input
-               Console.WriteLine("Input cannot be empty. Please enter a valid number.");
+               DisplayMessage("empty input");
            }
         }
     }
@@ -77,7 +77,7 @@ public class Game
 
     // Travel to a specific location
     public void Travel(Location location) {
-        Console.WriteLine($"Traveling to {location.Name}...");
+        Console.WriteLine($"Traveling to {location.Name}..."); // This is not being displayed for some reason................
         location.DisplayStartMessage(); // Display "You have arrived at {Location Name}"
         location.PlayLocation(player); // Play the challenges at the location
     }

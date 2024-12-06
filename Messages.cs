@@ -15,14 +15,17 @@ public static class Messages {
             case "start":
                 PrintStartMessage();
                 break;
-            case "invalid_command":
+            case "invalid command":
                 PrintInvalidCommandMessage();
                 break;
             case "world map":
                 PrintWorldMap();
                 break;
-            case "invalid_city_name":
-                PrintInvalidNameMessage();
+            case "invalid location":
+                PrintInvalidLocation();
+                break;
+            case "empty input":
+                PrintEmptyInput();
                 break;
             case "All Locations Visited":
                 PrintAllLocationsComplete();
@@ -111,11 +114,15 @@ public static class Messages {
     }
 
     private static void PrintInvalidCommandMessage() { // invalid command message
-        Console.WriteLine("Invalid command message, please try again");
+        Console.WriteLine("\nInvalid input. Please try again.");
     }
 
-    private static void PrintInvalidNameMessage() { // invalid city name message
-        Console.WriteLine("Invalid city name message - please implement!!!!!!!!!!!!!!!!");
+    private static void PrintInvalidLocation() { // invalid city name message
+        Console.WriteLine("\nInvalid choice. Please select a valid location.");
+    }
+
+    private static void PrintEmptyInput() { // invalid city name message
+        Console.WriteLine("\nInput cannot be empty. Please try again.");
     }
 
     private static void PrintMainCityDesc() { //main city message
