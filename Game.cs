@@ -6,12 +6,10 @@ public class Game
     private List<Location> locations;
     private PawnShop pawnShop;
 
-    public Game()
-    {
+    public Game() {
         player = new Player();
         pawnShop = new PawnShop(player);
-        locations = new List<Location>
-        {
+        locations = new List<Location> {
             CreateLosAngeles(),
             CreateTokyo(),
             CreateAmsterdam(),
@@ -22,12 +20,9 @@ public class Game
         GamePlay();
     }
 
-    public void GamePlay()
-    {
-        while (true) 
-        {
-            if (locations.Count == 0)
-            {
+    public void GamePlay() {
+        while (true) {
+            if (locations.Count == 0) { 
                 DisplayMessage("All Locations Visited");
                 pawnShop.Open();
                 break;
@@ -35,14 +30,11 @@ public class Game
             DisplayTravelMenu(); // Display the travel menu to the player
             string? input = Console.ReadLine(); // Get the player's choice from the menu
 
-            if (!string.IsNullOrEmpty(input)) // Ensure input is not null or empty
-            {
-                try
-                {
+            if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
+                try {
                     int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
 
-                    if (choice >= 0 && choice < locations.Count) // Valid location
-                    {
+                    if (choice >= 0 && choice < locations.Count) { // Valid location
                         Location selectedLocation = locations[choice];
                         selectedLocation.DisplayStartMessage();
                         selectedLocation.PlayLocation(player);
@@ -50,8 +42,7 @@ public class Game
                         Console.WriteLine("Press any key to return to the travel menu...");
                         Console.ReadKey(true);
                     }
-                    else if (choice == -1) // Exit the game
-                    {
+                    else if (choice == -1) { // Exit the game
                         DisplayMessage("Exit Game");
                         break;
                     }
@@ -59,29 +50,24 @@ public class Game
                     {
                         DisplayMessage("help");
                     }
-                    else // Invalid choice
-                    {
+                    else { // Invalid choice
                         Console.WriteLine("\nInvalid choice. Please select a valid location.");
                     }
                 }
-                catch (FormatException) // Handle invalid numeric input
-                {
+                catch (FormatException) { // Handle invalid numeric input
                     Console.WriteLine("\nInvalid input. Please enter a valid number.");
                 }
            }
-           else // Null or empty input
-           {
+           else { // Null or empty input
                Console.WriteLine("Input cannot be empty. Please enter a valid number.");
            }
         }
     }
 
     // Display the travel menu
-    public void DisplayTravelMenu()
-    {
+    public void DisplayTravelMenu() {
         Console.WriteLine("0. Exit Game"); // Exit the game
-        for (int i = 0; i < locations.Count; i++) // Display the available locations
-        {
+        for (int i = 0; i < locations.Count; i++) {// Display the available locations
             Console.WriteLine($"{i + 1}. {locations[i].Name}");
         }
         Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
@@ -90,15 +76,13 @@ public class Game
 
 
     // Travel to a specific location
-    public void Travel(Location location)
-    {
+    public void Travel(Location location) {
         Console.WriteLine($"Traveling to {location.Name}...");
         location.DisplayStartMessage(); // Display "You have arrived at {Location Name}"
         location.PlayLocation(player); // Play the challenges at the location
     }
 
-    private Location CreateLosAngeles()
-    {
+    private Location CreateLosAngeles() {
         Item goodItem = new Item("Golden Surfboard", 100, "A luxurious surfboard symbolizing LA's sunny beaches.");
         Item mediumItem = new Item("Silver Keychain", 50, "A sleek keychain featuring the LA skyline.");
         Item badItem = new Item("Bronze Badge", 20, "A small badge commemorating your visit to LA.");
@@ -124,8 +108,7 @@ public class Game
         return la;  // Return the populated location
     }
 
-    private Location CreateTokyo()
-    {
+    private Location CreateTokyo() {
         Item goodItem = new Item("Golden Fan", 100, "A traditional Japanese fan made with gold.");
         Item mediumItem = new Item("Silver Sushi Plate", 50, "A decorative sushi plate made of silver.");
         Item badItem = new Item("Bronze Origami Crane", 20, "A simple origami crane in bronze.");
@@ -151,8 +134,7 @@ public class Game
         return tokyo;  // Return the populated location
     }
 
-    private Location CreateAmsterdam()
-    {
+    private Location CreateAmsterdam() {
         Item goodItem = new Item("Golden Tulip", 100, "A rare tulip dipped in gold, symbolizing Amsterdam's heritage.");
         Item mediumItem = new Item("Silver Bicycle Bell", 50, "A decorative bell for bicycles, Amsterdam's favorite transport.");
         Item badItem = new Item("Bronze Windmill Replica", 20, "A small windmill replica made of bronze.");
@@ -204,8 +186,7 @@ public class Game
         return amsterdam;  // Return the populated location
     }
 
-    private Location CreateManilla()
-    {
+    private Location CreateManilla() {
         Item goodItem = new Item("Golden Jeepney", 100, "A golden miniature of Manila's iconic Jeepney.");
         Item mediumItem = new Item("Silver Coconut", 50, "A silver coconut symbolizing the Philippines' tropical beauty.");
         Item badItem = new Item("Bronze Sun Pin", 20, "A bronze pin representing the sun from the Philippine flag.");

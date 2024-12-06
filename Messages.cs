@@ -1,11 +1,8 @@
 namespace EcoTropolis;
 
-public static class Messages
-{
-    public static void DisplayMessage(string messageType, string? cityName = null)
-    {
-        switch (messageType)
-        {
+public static class Messages {
+    public static void DisplayMessage(string messageType, string? cityName = null) {
+        switch (messageType) {
             case "help":
                 PrintHelpMessageMain();
                 break;
@@ -54,8 +51,7 @@ public static class Messages
 
     
 
-    private static void PrintHelpMessageMain()
-    {
+    private static void PrintHelpMessageMain() {
         Console.WriteLine("\nHelp - Game Instructions:");
         Console.WriteLine("Welcome to Ecotropolis! Your task is to solve urban challenges across different cities.");
         Console.WriteLine("- Each city has unique problems. Travel to them to begin solving challenges.");
@@ -65,24 +61,20 @@ public static class Messages
         Console.ReadKey();
     }
 
-    public static void PrintHelpMessageTravel()
-    {
+    public static void PrintHelpMessageTravel() {
         Console.WriteLine("Travel menu help message - please implement!!!!!!!!!!!!!!!!");
     }
 
-    private static void PrintWelcomeMessage(string cityName)
-    {
+    private static void PrintWelcomeMessage(string? cityName) {
         Console.WriteLine($"\nWelcome to {cityName} Mr. newly elected mayor. \n" +
         "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n");
     }
 
-    private static void PrintTravelMessage() // travel message
-    {
+    private static void PrintTravelMessage() { // travel message
         Console.WriteLine("Travel message - please implement!!!!!!!!!!!!!!!!");
     }
 
-    private static void PrintStartMessage() // start message
-    {
+    private static void PrintStartMessage() { // start message
         Console.WriteLine("Welcome to Ecotropolis – the city-building adventure where your decisions shape the future!\n\n" +
         "As a visionary leader, you'll travel to different cities, taking on roles like mayor, corporate CEO, or urban planner.\n" +
         "Each city faces unique environmental and urban challenges that only you can solve.\n" +
@@ -91,8 +83,7 @@ public static class Messages
         "The fate of Ecotropolis is in your hands!\n");      
     }
 
-    private static void PrintWorldMap() // world map message
-    {
+    private static void PrintWorldMap() { // world map message
              Console.WriteLine(@"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⣄⣤⣦⣶⣶⣖⣲⣦⣶⣼⣶⣿⣿⣿⣦⡤⠄⠀⠀⠀⢀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣤⣿⣸⣷⣿⣿⣿⣿⠛⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⠀⠀⠀⠀⠀⠘⢻⠻⠅⠀⠀⠀⠀⠀⠀⣀⣠⡀⠀⠀⠀⣈⣉⣻⣆⣤⠀⠀⠀⠀⢀⣠⡀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -119,28 +110,23 @@ public static class Messages
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⠄⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
     }
 
-    private static void PrintInvalidCommandMessage() // invalid command message
-    {
+    private static void PrintInvalidCommandMessage() { // invalid command message
         Console.WriteLine("Invalid command message, please try again");
     }
 
-    private static void PrintInvalidNameMessage() // invalid city name message
-    {
+    private static void PrintInvalidNameMessage() { // invalid city name message
         Console.WriteLine("Invalid city name message - please implement!!!!!!!!!!!!!!!!");
     }
 
-    private static void PrintMainCityDesc() //main city message
-    {
+    private static void PrintMainCityDesc() { //main city message
         Console.WriteLine("Main City Message - please implement!!!!!!!!!!!!!!!!");
     }
 
-    private static void PrintAllLocationsComplete() //completed challenge message
-    {
+    private static void PrintAllLocationsComplete() { //completed challenge message
         Console.WriteLine("\nCongratulations! You have completed all the challenges in Ecotropolis.");
     }
 
-    public static void PrintEndMessage() //end of game message
-    {
+    public static void PrintEndMessage() { //end of game message
         Console.WriteLine("End of game Message - please implement!!!!!!!!!!!!!!!!");
     }
 }

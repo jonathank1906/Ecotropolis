@@ -5,8 +5,7 @@ public class Location
     public string WelcomeMessage { get; set; }
     private List<UrbanChallenge> urbanChallenges;
     private List<Item> rewardItems;
-    public Location(string name)
-    {
+    public Location(string name) {
         Name = name;
         WelcomeMessage = $"Welcome to {Name}."; // TODO move this.....................
         urbanChallenges = new List<UrbanChallenge>();
@@ -18,23 +17,16 @@ public class Location
         urbanChallenges.Add(challenge);  // Add the challenge to the list
     }
 
-    public void AddRewardItem(Item item)
-        {
-            if (item == null)
-            {
-                throw new ArgumentNullException(nameof(item), "Item cannot be null");
-            }
-            rewardItems.Add(item);
-        }
+    public void AddRewardItem(Item item) {
+        rewardItems.Add(item);
+    }
 
-    public void DisplayStartMessage()
-    {
+    public void DisplayStartMessage() { // TODO move this.....................
         Console.WriteLine($"You have arrived at {Name}.");
         Console.WriteLine(WelcomeMessage);
     }
 
-    public void PlayLocation(Player player)
-    {
+    public void PlayLocation(Player player) {
         foreach (var challenge in urbanChallenges)
         {
             challenge.Execute(player);
@@ -46,15 +38,9 @@ public class Location
         // Go back to travel menu
     }
 
-    public Item RewardItem(int totalScore)
-    {
-       if (rewardItems.Count == 0)
-            {
-                throw new InvalidOperationException("No reward items available");
-            }
-
-            if (totalScore >= 20) return rewardItems[0]; // Assuming the first item is the best
-            if (totalScore >= 10) return rewardItems.Count > 1 ? rewardItems[1] : rewardItems[0]; // Second best or fallback to first
-            return rewardItems.Count > 2 ? rewardItems[2] : rewardItems[0]; // Third best or fallback to first
+    public Item RewardItem(int totalScore) {
+        if (totalScore >= 20) return rewardItems[0]; // Assuming the first item is the best
+        if (totalScore >= 10) return rewardItems.Count > 1 ? rewardItems[1] : rewardItems[0]; // Second best or fallback to first
+        return rewardItems.Count > 2 ? rewardItems[2] : rewardItems[0]; // Third best or fallback to first
     }
 }

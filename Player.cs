@@ -5,14 +5,12 @@ public class Player
     public Inventory Inventory { get; set; }
     public int score {get; set;}
 
-    public Player()
-    {
+    public Player() {
         Inventory = new Inventory(this);
         score = 0;
     }
 
-    public void IncreaseScore(int points)
-    {
+    public void IncreaseScore(int points) {
         score += points;
         Console.WriteLine($"Score increased by {points}. Total score: {score}");
     }

@@ -5,8 +5,7 @@ public class Item
     public int Value { get; private set; }
     public string ItemDetails { get; private set; }
 
-    public Item(string name, int value, string details)
-    {
+    public Item(string name, int value, string details) {
         Name = name;
         Value = value;
         ItemDetails = details;

@@ -3,7 +3,7 @@ using static EcoTropolis.Messages;
 
 public class StartMenu
 {
-    public string CityName { get; private set; } = null;  
+    public string? CityName { get; private set; } = null;  
     
     public StartMenu() {
         DisplayMessage("world map");
