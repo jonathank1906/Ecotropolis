@@ -11,9 +11,4 @@ public class Item
         Value = value;
         ItemDetails = details;
     }
-
-    public void Use()
-    {
-        Console.WriteLine($"{Name} used. {ItemDetails}");
-    }
 }

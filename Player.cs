@@ -2,8 +2,8 @@ namespace Ecotropolis;
 
 public class Player
 {
-    public Inventory Inventory { get; private set; }
-    private int score;
+    public Inventory Inventory { get; set; }
+    public int score {get; set;}
 
     public Player()
     {
@@ -15,5 +15,9 @@ public class Player
     {
         score += points;
         Console.WriteLine($"Score increased by {points}. Total score: {score}");
+    }
+
+    public void ShowInventory() {
+        Inventory.Show(); 
     }
 }

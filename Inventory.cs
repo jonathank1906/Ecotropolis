@@ -15,6 +15,11 @@ public class Inventory
     public Item this[int index] => inventory[index];
     public void AddToInventory(Item item)
     {
+        
+        if (item == null)
+        {
+            throw new ArgumentNullException(nameof(item), "Item cannot be null");
+        }
         inventory.Add(item);
         Console.WriteLine($"{item.Name} added to inventory.");
     }
@@ -28,6 +33,12 @@ public class Inventory
         else
         {
             Console.WriteLine("Item not found in inventory.");
+        }
+    }
+
+    public void Show() {
+        foreach (var item in inventory) {
+            Console.WriteLine(item.Name + " " + item.Value);
         }
     }
 }

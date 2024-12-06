@@ -4,10 +4,12 @@ public class Game
 {
     private Player player;
     private List<Location> locations;
+    private PawnShop pawnShop;
 
     public Game()
     {
         player = new Player();
+        pawnShop = new PawnShop(player);
         locations = new List<Location>
         {
             CreateLosAngeles(),
@@ -27,7 +29,7 @@ public class Game
             if (locations.Count == 0)
             {
                 DisplayMessage("All Locations Visited");
-                //PawnShop
+                pawnShop.Open();
                 break;
             }
             DisplayTravelMenu(); // Display the travel menu to the player
@@ -97,8 +99,14 @@ public class Game
 
     private Location CreateLosAngeles()
     {
+        Item goodItem = new Item("Golden Surfboard", 100, "A luxurious surfboard symbolizing LA's sunny beaches.");
+        Item mediumItem = new Item("Silver Keychain", 50, "A sleek keychain featuring the LA skyline.");
+        Item badItem = new Item("Bronze Badge", 20, "A small badge commemorating your visit to LA.");
         // Create a new Location for Los Angeles
         Location la = new Location("Los Angeles");
+        la.AddRewardItem(goodItem);
+        la.AddRewardItem(mediumItem);
+        la.AddRewardItem(badItem);
         la.WelcomeMessage = "Welcome to Los Angeles, the City of Angels!";
         // Create Urban Challenges for Los Angeles
         UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in LA");
@@ -118,8 +126,14 @@ public class Game
 
     private Location CreateTokyo()
     {
+        Item goodItem = new Item("Golden Fan", 100, "A traditional Japanese fan made with gold.");
+        Item mediumItem = new Item("Silver Sushi Plate", 50, "A decorative sushi plate made of silver.");
+        Item badItem = new Item("Bronze Origami Crane", 20, "A simple origami crane in bronze.");
         // Create a new Location for Tokyo
         Location tokyo = new Location("Tokyo");
+        tokyo.AddRewardItem(goodItem);
+        tokyo.AddRewardItem(mediumItem);
+        tokyo.AddRewardItem(badItem);
 
         // Create Urban Challenges for Tokyo
         UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in Tokyo");
@@ -139,8 +153,15 @@ public class Game
 
     private Location CreateAmsterdam()
     {
+        Item goodItem = new Item("Golden Tulip", 100, "A rare tulip dipped in gold, symbolizing Amsterdam's heritage.");
+        Item mediumItem = new Item("Silver Bicycle Bell", 50, "A decorative bell for bicycles, Amsterdam's favorite transport.");
+        Item badItem = new Item("Bronze Windmill Replica", 20, "A small windmill replica made of bronze.");
         // Create a new Location for Amsterdam
         Location amsterdam = new Location("Amsterdam");
+
+        amsterdam.AddRewardItem(goodItem);
+        amsterdam.AddRewardItem(mediumItem);
+        amsterdam.AddRewardItem(badItem);
       
         // Create Urban Challenges for Amsterdam
         UrbanChallenge growth = new UrbanChallenge("Balancing Growth with Heritage");
@@ -185,8 +206,18 @@ public class Game
 
     private Location CreateManilla()
     {
+        Item goodItem = new Item("Golden Jeepney", 100, "A golden miniature of Manila's iconic Jeepney.");
+        Item mediumItem = new Item("Silver Coconut", 50, "A silver coconut symbolizing the Philippines' tropical beauty.");
+        Item badItem = new Item("Bronze Sun Pin", 20, "A bronze pin representing the sun from the Philippine flag.");
+
+
+        
         // Create a new Location for Manilla
         Location manilla = new Location("Manilla");
+
+        manilla.AddRewardItem(goodItem);
+        manilla.AddRewardItem(mediumItem);
+        manilla.AddRewardItem(badItem);
       
         // Create Urban Challenges for Tokyo
         UrbanChallenge airPollution = new UrbanChallenge("Air Pollution in Manilla");

@@ -20,10 +20,11 @@ public class PawnShop
             while (true)
             {
                 Console.WriteLine("Your inventory:");
-                for (int i = 0; i < player.Inventory.Count; i++)
-                {
-                    Console.WriteLine($"{i + 1}. {player.Inventory[i].Name} (Value: {player.Inventory[i].Value})");
-                }
+                // for (int i = 0; i < player.Inventory.Count; i++)
+                // {
+                //     Console.WriteLine($"{i + 1}. {player.Inventory[i].Name} (Value: {player.Inventory[i].Value})");
+                // }
+                player.ShowInventory();
 
                 Console.WriteLine("Enter the number of the item you want to sell, or type 'exit' to leave the Pawn Shop.");
                 string? input = Console.ReadLine();
