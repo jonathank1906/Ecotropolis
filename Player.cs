@@ -2,12 +2,12 @@ namespace Ecotropolis;
 
 public class Player
 {
-    public List<Item> inventory;
+    public Inventory Inventory { get; private set; }
     private int score;
 
     public Player()
     {
-        inventory = new List<Item>();
+        Inventory = new Inventory(this);
         score = 0;
     }
 
@@ -15,24 +15,5 @@ public class Player
     {
         score += points;
         Console.WriteLine($"Score increased by {points}. Total score: {score}");
-    }
-
-    public void AddToInventory(Item item)
-    {
-        inventory.Add(item);
-        Console.WriteLine($"{item.Name} added to inventory.");
-    }
-
-    public void SellItem(Item item)
-    {
-        if (inventory.Remove(item))
-        {
-            IncreaseScore(item.Value);
-            Console.WriteLine($"{item.Name} sold for {item.Value} points.");
-        }
-        else
-        {
-            Console.WriteLine("Item not found in inventory.");
-        }
     }
 }
