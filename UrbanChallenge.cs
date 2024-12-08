@@ -11,14 +11,12 @@ public class UrbanChallenge {
     }
 
     public void Execute(Player player) {
-        Console.WriteLine($"Challenge: {ChallengeDescription}");
-        // Display available options
-        for (int i = 0; i < options.Count; i++)
+        Console.WriteLine($"Challenge: {ChallengeDescription}"); // Display the challenge description
+        for (int i = 0; i < options.Count; i++) // Display available options
         {
             Console.WriteLine($"{i + 1}. {options[i].Description}");
         }
 
-        
         while (true) { // Loop until the user selects a valid option 
             Console.WriteLine("Please select an option (1 to {0}):", options.Count);
             Console.Write("> ");

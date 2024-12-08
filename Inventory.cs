@@ -2,10 +2,10 @@ namespace Ecotropolis;
 
 public class Inventory {
     private List<Item> inventory;
-    private Player player;
-    public Inventory(Player player) {
+   
+    public Inventory() {
         inventory = new List<Item>();
-        this.player = player;
+        
     }
     public int Count => inventory.Count;
     public Item this[int index] => inventory[index];
