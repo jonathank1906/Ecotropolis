@@ -35,7 +35,6 @@ public class UrbanChallenge {
                 }
                 catch (FormatException) { // Invalid input format
                     DisplayMessage("invalid command");
-                    continue;
                 }
             }  
             else { // Empty input

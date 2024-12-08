@@ -6,7 +6,7 @@ public class Player
     public int score {get; set;}
 
     public Player() {
-        Inventory = new Inventory();
+        Inventory = new Inventory(this);
         score = 0;
     }
 

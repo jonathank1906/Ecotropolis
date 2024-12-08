@@ -24,7 +24,6 @@ public class Game
         while (true) {
             if (locations.Count == 0) { 
                 DisplayMessage("All Locations Visited");
-                pawnShop.Open();
                 break;
             }
             DisplayTravelMenu(); // Display the travel menu to the player
@@ -60,6 +59,7 @@ public class Game
                DisplayMessage("empty input");
            }
         }
+        pawnShop.Open();
     }
 
     public void DisplayTravelMenu() {  // Display the travel menu
