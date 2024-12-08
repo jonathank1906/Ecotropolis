@@ -21,8 +21,8 @@ public static class Messages {
             case "world map":
                 PrintWorldMap();
                 break;
-            case "invalid location":
-                PrintInvalidLocation();
+            case "invalid option":
+                PrintInvalidOption();
                 break;
             case "empty input":
                 PrintEmptyInput();
@@ -117,8 +117,8 @@ public static class Messages {
         Console.WriteLine("\nInvalid input. Please try again.");
     }
 
-    private static void PrintInvalidLocation() { // invalid city name message
-        Console.WriteLine("\nInvalid choice. Please select a valid location.");
+    private static void PrintInvalidOption() { // invalid city name message
+        Console.WriteLine("\nInvalid choice. Please select a valid option.");
     }
 
     private static void PrintEmptyInput() { // invalid city name message

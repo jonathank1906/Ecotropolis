@@ -1,4 +1,5 @@
 namespace Ecotropolis;
+using static EcoTropolis.Messages;
 public class UrbanChallenge {
     public string ChallengeDescription { get; private set; }
     private List<ChallengeOption> options;
@@ -26,20 +27,22 @@ public class UrbanChallenge {
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
                     int choice = int.Parse(input) - 1; // Adjust choice for zero-indexed list
-
-                    if (choice >= 0 && choice < options.Count) {
+                    if (choice >= 0 && choice < options.Count) { // Check if choice is within valid range
                         player.IncreaseScore(options[choice].ScoreImpact);
                         break;
                     }
-                    else {
-                        Console.WriteLine("Invalid option number. Please try again.");
+                    else { // Invalid option number
+                        DisplayMessage("invalid option");
                     }
                 }
-                catch (FormatException) {
-                    Console.WriteLine("Invalid input. Please try again.");
+                catch (FormatException) { // Invalid input format
+                    DisplayMessage("invalid command");
                     continue;
                 }
-            }    
+            }  
+            else { // Empty input
+                DisplayMessage("empty input");
+            }  
         }
     }
 

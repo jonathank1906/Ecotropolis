@@ -33,7 +33,6 @@ public class Game
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
                     int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
-
                     if (choice >= 0 && choice < locations.Count) { // Valid location
                         Location selectedLocation = locations[choice];
                         selectedLocation.DisplayStartMessage();
@@ -50,7 +49,7 @@ public class Game
                         DisplayMessage("help");
                     }
                     else { // Invalid choice
-                        DisplayMessage("invalid location");
+                        DisplayMessage("invalid option");
                     }
                 }
                 catch (FormatException) { // Handle invalid numeric input
