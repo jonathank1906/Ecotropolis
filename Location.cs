@@ -39,8 +39,14 @@ public class Location
     }
 
     public Item RewardItem(int totalScore) {
-        if (totalScore >= 20) return rewardItems[0]; // Assuming the first item is the best
-        if (totalScore >= 10) return rewardItems.Count > 1 ? rewardItems[1] : rewardItems[0]; // Second best or fallback to first
-        return rewardItems.Count > 2 ? rewardItems[2] : rewardItems[0]; // Third best or fallback to first
+        if (totalScore >= 20) {
+            return rewardItems[0]; // Good item
+        }
+        else if (totalScore >= 10) {
+            return rewardItems[1]; // Medium item
+        }
+        else {
+            return rewardItems[2]; // Basic item
+        }
     }
 }

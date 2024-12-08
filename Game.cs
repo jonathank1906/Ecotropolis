@@ -37,7 +37,7 @@ public class Game
                     if (choice >= 0 && choice < locations.Count) { // Valid location
                         Location selectedLocation = locations[choice];
                         selectedLocation.DisplayStartMessage();
-                        selectedLocation.PlayLocation(player);
+                        selectedLocation.PlayLocation(player); // Play the challenges at the location
                         locations.RemoveAt(choice);
                         Console.WriteLine("Press any key to return to the travel menu...");
                         Console.ReadKey(true);
@@ -46,8 +46,7 @@ public class Game
                         DisplayMessage("Exit Game");
                         break;
                     }
-                    else if (choice == locations.Count) // Display help menu
-                    {
+                    else if (choice == locations.Count) { // Display help menu
                         DisplayMessage("help");
                     }
                     else { // Invalid choice
@@ -64,22 +63,13 @@ public class Game
         }
     }
 
-    // Display the travel menu
-    public void DisplayTravelMenu() {
+    public void DisplayTravelMenu() {  // Display the travel menu
         Console.WriteLine("0. Exit Game"); // Exit the game
-        for (int i = 0; i < locations.Count; i++) {// Display the available locations
+        for (int i = 0; i < locations.Count; i++) { // Display the available locations
             Console.WriteLine($"{i + 1}. {locations[i].Name}");
         }
         Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
         Console.Write("> ");
-    }
-
-
-    // Travel to a specific location
-    public void Travel(Location location) {
-        Console.WriteLine($"Traveling to {location.Name}..."); // This is not being displayed for some reason................
-        location.DisplayStartMessage(); // Display "You have arrived at {Location Name}"
-        location.PlayLocation(player); // Play the challenges at the location
     }
 
     private Location CreateLosAngeles() {
@@ -177,7 +167,7 @@ public class Game
         With the rise of remote work, many commercial spaces in Amsterdam are left vacant. The city could incentivize
         the repurposing of office buildings and unused commercial spaces into affordable housing units. This adaptive
         reuse would create housing quickly, and it could serve as a model for your city, especially if commercial
-        spaces become underutilized in the future.", 4));   // Option 2
+        spaces become underutilized in the future.", 4));   // Option 3
 
         // Add the challenges to the Amsterdam location
         amsterdam.AddUrbanChallenge(growth);
@@ -191,8 +181,6 @@ public class Game
         Item mediumItem = new Item("Silver Coconut", 50, "A silver coconut symbolizing the Philippines' tropical beauty.");
         Item badItem = new Item("Bronze Sun Pin", 20, "A bronze pin representing the sun from the Philippine flag.");
 
-
-        
         // Create a new Location for Manilla
         Location manilla = new Location("Manilla");
 

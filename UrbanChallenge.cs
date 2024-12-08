@@ -17,22 +17,29 @@ public class UrbanChallenge {
             Console.WriteLine($"{i + 1}. {options[i].Description}");
         }
 
-        bool validChoice = false;
-        int choice = -1;
-
-        while (!validChoice) { // Loop until the user selects a valid option 
+        
+        while (true) { // Loop until the user selects a valid option 
             Console.WriteLine("Please select an option (1 to {0}):", options.Count);
             Console.Write("> ");
-            
             string? input = Console.ReadLine();
-            if (int.TryParse(input, out choice) && choice >= 1 && choice <= options.Count) { // Read input and check if it's a valid choice
-                validChoice = true;
-                choice--; // Adjust choice for zero-indexed list
-                player.IncreaseScore(options[choice].ScoreImpact);
-            }
-            else {
-                Console.WriteLine("Invalid choice. Please try again.");
-            }
+
+            if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
+                try {
+                    int choice = int.Parse(input) - 1; // Adjust choice for zero-indexed list
+
+                    if (choice >= 0 && choice < options.Count) {
+                        player.IncreaseScore(options[choice].ScoreImpact);
+                        break;
+                    }
+                    else {
+                        Console.WriteLine("Invalid option number. Please try again.");
+                    }
+                }
+                catch (FormatException) {
+                    Console.WriteLine("Invalid input. Please try again.");
+                    continue;
+                }
+            }    
         }
     }
 
