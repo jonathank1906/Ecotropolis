@@ -19,11 +19,14 @@ public class Game
         StartMenu startMenu = new StartMenu();
         GamePlay();
     }
-
+   
+   
     public void GamePlay() {
+        bool enterPawnShopSequence = false;
         while (true) {
             if (locations.Count == 0) { 
                 DisplayMessage("All Locations Visited");
+                enterPawnShopSequence = true;
                 break;
             }
             DisplayTravelMenu(); // Display the travel menu to the player
@@ -59,7 +62,10 @@ public class Game
                DisplayMessage("empty input");
            }
         }
-        pawnShop.Open();
+        if (enterPawnShopSequence) {
+            pawnShop.Open();
+        }
+       
     }
 
     public void DisplayTravelMenu() {  // Display the travel menu

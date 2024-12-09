@@ -1,4 +1,5 @@
 namespace Ecotropolis;
+
 public class PawnShop
 {
     private Player player;
@@ -9,7 +10,8 @@ public class PawnShop
 
     public void Open() {
         Console.WriteLine("Welcome to the Pawn Shop! Here you can sell your items.");
-        if (player.Inventory.Count == 0) {
+        
+        if (player.Inventory.GetInventoryCount() == 0) {
             Console.WriteLine("You have no items to sell.");
         }
         else {
@@ -23,8 +25,8 @@ public class PawnShop
                 if (input?.ToLower() == "exit") {
                     break;
                 }
-                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= player.Inventory.Count) {
-                    Item itemToSell = player.Inventory[choice - 1];
+                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= player.Inventory.GetInventoryCount()) {
+                    Item itemToSell = player.Inventory.GetItemAtIndex(choice - 1);
                     player.Inventory.SellItem(itemToSell);
                 }
                 else {

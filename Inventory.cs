@@ -1,12 +1,25 @@
 namespace Ecotropolis;
+
 public class Inventory {
     private List<Item> inventory;
    
-    public Inventory(Player player) {
-        inventory = new List<Item>();
+    public Inventory() {
+        inventory = new();
     }
-    public int Count => inventory.Count;
-    public Item this[int index] => inventory[index];
+
+    // Method to get the count of items
+    public int GetInventoryCount() {
+        return inventory.Count;
+    }
+
+    // Method to get an item at a specific index
+    public Item GetItemAtIndex(int index) {
+        if (index >= 0 && index < inventory.Count) {
+            return inventory[index];  // Return the item if the index is valid
+        }
+        return null;  // Return null if the index is invalid
+    }
+
     public void AddToInventory(Item item) {
         inventory.Add(item);
         Console.WriteLine($"{item.Name} added to inventory.");
@@ -19,6 +32,7 @@ public class Inventory {
         else {
             Console.WriteLine("Item not found in inventory.");
         }
+        Console.WriteLine($"{GetInventoryCount()} items remaining.");
     }
 
     public void Show() {
