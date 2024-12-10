@@ -1,5 +1,9 @@
+using System.Threading.Channels;
+
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
+using System.Text.Json;
+
 public class Game
 {
     private Player player;
@@ -13,7 +17,7 @@ public class Game
             CreateLosAngeles(),
             CreateTokyo(),
             CreateAmsterdam(),
-            CreateManilla(),
+            LocationLoader.LoadLocationFromJson("C:\\Users\\valko\\Documents\\UNI_Laptop\\01_Semester\\RefactoredEcotropolis\\jsons\\Manila.json")
             // More locations...
         };
         StartMenu startMenu = new StartMenu();
@@ -207,5 +211,15 @@ public class Game
         manilla.AddUrbanChallenge(homelessness);
 
         return manilla;  // Return the populated location
+    }
+
+    private Location createManila(string filePath) {
+        return LoadLocationFromJson(filePath); 
+    }
+    
+    public static Location LoadLocationFromJson(string filePath) {
+        string json = File.ReadAllText(filePath);
+        Console.WriteLine(json);
+        return JsonSerializer.Deserialize<Location>(json);
     }
 }

@@ -1,32 +1,43 @@
+using System.Text.Json.Serialization;
+
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
 public class UrbanChallenge {
-    public string ChallengeDescription { get; private set; }
-    private List<ChallengeOption> options;
+    public string Name { get; private set; }
 
-    public UrbanChallenge(string description)
+    [JsonPropertyName("options")]
+    public List<ChallengeOption> Options { get; private set; }
+
+    public UrbanChallenge(string name)
     {
-        ChallengeDescription = description;
-        options = new List<ChallengeOption>();
+        Name = name;
+        Options = new List<ChallengeOption>();
+    }
+
+    [JsonConstructor]
+    public UrbanChallenge(string name, List<ChallengeOption> options)
+    {
+        Name = name;
+        Options = options;
     }
 
     public void Execute(Player player) {
-        Console.WriteLine($"Challenge: {ChallengeDescription}"); // Display the challenge description
-        for (int i = 0; i < options.Count; i++) // Display available options
+        Console.WriteLine($"Challenge: {Name}"); // Display the challenge description
+        for (int i = 0; i < Options.Count; i++) // Display available options
         {
-            Console.WriteLine($"{i + 1}. {options[i].Description}");
+            Console.WriteLine($"{i + 1}. {Options[i].Description}");
         }
 
         while (true) { // Loop until the user selects a valid option 
-            Console.WriteLine("Please select an option (1 to {0}):", options.Count);
+            Console.WriteLine("Please select an option (1 to {0}):", Options.Count);
             Console.Write("> ");
             string? input = Console.ReadLine();
 
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
                     int choice = int.Parse(input) - 1; // Adjust choice for zero-indexed list
-                    if (choice >= 0 && choice < options.Count) { // Check if choice is within valid range
-                        player.IncreaseScore(options[choice].ScoreImpact);
+                    if (choice >= 0 && choice < Options.Count) { // Check if choice is within valid range
+                        player.IncreaseScore(Options[choice].ScoreImpact);
                         break;
                     }
                     else { // Invalid option number
@@ -44,6 +55,6 @@ public class UrbanChallenge {
     }
 
     public void AddOption(ChallengeOption option) {
-        options.Add(option);  // Add the option to the list
+        Options.Add(option);  // Add the option to the list
     }
 }

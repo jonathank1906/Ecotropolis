@@ -1,0 +1,70 @@
+﻿{
+  "name": "Manila",
+  "rewardItems": [
+    { 
+      "name": "Golden Jeepney", 
+      "value": 100,
+      "description": "A golden miniature of Manila's iconic Jeepney."
+    },
+    { 
+      "name": "Silver Coconut", 
+      "value": 50, 
+      "description": "A silver coconut symbolizing the Philippines' tropical beauty."
+    }, 
+    { 
+        "name": "Bronze Sun Pin", 
+        "value": 20, 
+        "description": "A bronze pin representing the sun from the Philippine flag."
+    }],
+  "urbanChallenges": [
+    {
+      "name": "Air Pollution in Manilla",
+      "options": [
+        { 
+          "description": "Implement new traffic laws", 
+          "scoreImpact": 10
+        },
+        { 
+          "description": "Reduce industrial emissions", 
+          "scoreImpact": 5
+        }]
+    },
+    {
+      "name": "Waste Management in Manilla",
+      "options": [
+        { 
+          "description": "Implement a recycling program", 
+          "scoreImpact": 10
+        },
+        { 
+          "description": "Build more landfills", 
+          "scoreImpact": 5
+        }]
+    },
+    {
+      "name": "Water Pollution in Manilla",
+      "options": [
+        { 
+          "description": "Implement a water treatment program", 
+          "scoreImpact": 10
+        },
+        { 
+          "description": "Reduce industrial waste", 
+          "scoreImpact": 5
+        }]
+    },
+    {
+      "name": "Homelessness in Manilla",
+      "options": [
+        { 
+          "description": "Create affordable housing", 
+          "scoreImpact": 15
+        },
+        { 
+          "description": "Increase social programs", 
+          "scoreImpact": 10
+        }
+      ]
+    }
+  ]
+}
