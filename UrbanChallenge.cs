@@ -27,6 +27,9 @@ public class UrbanChallenge {
                     int choice = int.Parse(input) - 1; // Adjust choice for zero-indexed list
                     if (choice >= 0 && choice < options.Count) { // Check if choice is within valid range
                         player.IncreaseScore(options[choice].ScoreImpact);
+                        if (options[choice].ScoreImpact > 10) {
+                            player.AddToken();
+                        }
                         break;
                     }
                     else { // Invalid option number

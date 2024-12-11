@@ -33,6 +33,9 @@ public static class Messages {
             case "Exit Game":
                 Console.WriteLine("\nExiting the game...");
                 break;
+            case "pawn shop":
+                DisplayPawnShopItems();
+                break;
             case "game_end":
                 PrintEndMessage();
                 break;
@@ -134,6 +137,13 @@ public static class Messages {
     }
 
     public static void PrintEndMessage() { //end of game message
-        Console.WriteLine("End of game Message - please implement!!!!!!!!!!!!!!!!");
+        Console.WriteLine("\nYou have reached the end of the game. Your own city is now yours. Here are some stats on your performance:");
+    }
+
+    public static void DisplayPawnShopItems() {
+        Console.WriteLine(@" 
+       Welcome to the Pawnshop!
+--------------------------------------
+        ");
     }
 }

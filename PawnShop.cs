@@ -1,38 +1,66 @@
 namespace Ecotropolis;
-
+using static EcoTropolis.Messages;
 public class PawnShop
 {
     private Player player;
 
+    private List<Item> uniqueItems;
     public PawnShop(Player player) {
         this.player = player;
+        uniqueItems = new List<Item>
+        {
+            new Item("Golden Compass", 2, "sd"),
+            new Item("Emerald Amulet", 3, "ds"),
+            new Item("Crystal Globe", 4, "ds")
+        };
     }
 
     public void Open() {
-        Console.WriteLine("Welcome to the Pawn Shop! Here you can sell your items.");
-        
-        if (player.Inventory.GetInventoryCount() == 0) {
-            Console.WriteLine("You have no items to sell.");
+        DisplayMessage("pawn shop"); // this is the heading only
+        while (true) {
+            Console.WriteLine("Available unique items:");
+            for (int i = 0; i < uniqueItems.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {uniqueItems[i].Name} (Cost: {uniqueItems[i].Value} tokens)");
+            }
+            Console.WriteLine("Tokens: " + player.Tokens);
+            
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("0. Exit the shop\n1. Buy an item\n2. View inventory"); 
+            Console.Write("> ");
+            string? input1 = Console.ReadLine();
+            switch (input1)
+            {
+                case "0":
+                    return;
+                case "1":
+                    Console.WriteLine("Which item would you like to buy?");
+                    string? input = Console.ReadLine();
+                    if (int.TryParse(input, out int choice) && choice >= 1 && choice <= uniqueItems.Count) {
+                        Console.WriteLine($"You selected {uniqueItems[choice - 1].Name}.");
+                        Item selectedItem = uniqueItems[choice - 1];
+                        BuyItem(selectedItem);
+                    }
+                    break;
+                case "2":
+                    Console.WriteLine("Your inventory:");
+                    player.ShowInventory();
+                    continue;
+                default:
+                    Console.WriteLine("Invalid selection. Please try again.");
+                    break;
+            }
+        }
+    }
+
+    public void BuyItem(Item item) {
+        if (player.Tokens >= item.Value) {
+            player.Tokens -= item.Value;
+            player.Inventory.AddToInventory(item);
+            uniqueItems.Remove(item);
         }
         else {
-            while (true) {
-                Console.WriteLine("Your inventory:");
-                player.ShowInventory();
-
-                Console.WriteLine("Enter the number of the item you want to sell, or type 'exit' to leave the Pawn Shop.");
-                string? input = Console.ReadLine();
-
-                if (input?.ToLower() == "exit") {
-                    break;
-                }
-                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= player.Inventory.GetInventoryCount()) {
-                    Item itemToSell = player.Inventory.GetItemAtIndex(choice - 1);
-                    player.Inventory.SellItem(itemToSell);
-                }
-                else {
-                    Console.WriteLine("Invalid selection. Please try again.");
-                }
-            }
+            Console.WriteLine("You don't have enough tokens to buy this item.");
         }
     }
 }

@@ -32,9 +32,10 @@ public class Location
             challenge.Execute(player);
         }
         // Challenges completed, reward the player with an item
-        Item reward = RewardItem(player.score);
+        Item reward = RewardItem(player.Score);
         player.Inventory.AddToInventory(reward);
         Console.WriteLine($"You earned: {reward.Name}!");
+        player.Score = 0; // Reset the score
         // Go back to travel menu
     }
 

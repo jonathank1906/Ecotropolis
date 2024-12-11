@@ -65,7 +65,7 @@ public class Game
         if (enterPawnShopSequence) {
             pawnShop.Open();
         }
-       
+        EndGame();
     }
 
     public void DisplayTravelMenu() {  // Display the travel menu
@@ -75,6 +75,13 @@ public class Game
         }
         Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
         Console.Write("> ");
+    }
+
+    public void EndGame() {
+        DisplayMessage("game_end");
+        Console.WriteLine($"You have completed your journey with a sustainability score of {player.SustainabilityScore}!");
+        //EvaluatePerformance();
+        Console.WriteLine("Thank you for playing Ecotropolis!");
     }
 
     private Location CreateLosAngeles() {
