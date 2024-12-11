@@ -79,9 +79,28 @@ public class Game
 
     public void EndGame() {
         DisplayMessage("game_end");
-        Console.WriteLine($"You have completed your journey with a sustainability score of {player.SustainabilityScore}!");
-        //EvaluatePerformance();
+        EvaluatePerformance();
         Console.WriteLine("Thank you for playing Ecotropolis!");
+    }
+    public void EvaluatePerformance()
+    {
+        Console.WriteLine($@"You have completed your journey with a sustainability score of... 
++------------------+
+      {player.SustainabilityScore}/1000     
++------------------+");
+        if (player.SustainabilityScore >= 200)
+        {
+            Console.WriteLine("Congratulations! You have achieved a high sustainability score.");
+        }
+        else if (player.SustainabilityScore >= 100)
+        {
+            Console.WriteLine("You have achieved a moderate sustainability score.");
+        }
+        else
+        {
+            Console.WriteLine("Your sustainability score is low. Consider playing again and revist the locations to improve it.");
+        }
+        // Your items will be used to build a sustainable city of your own.
     }
 
     private Location CreateLosAngeles() {
