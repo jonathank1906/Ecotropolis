@@ -1,24 +1,44 @@
+using System.Text.Json.Serialization;
+
 namespace Ecotropolis;
 public class Location
 {
-    public string Name { get; private set; }
-    public string WelcomeMessage { get; set; }
-    private List<UrbanChallenge> urbanChallenges;
-    private List<Item> rewardItems;
+    public required string Name { get; init; }
+    public required string WelcomeMessage { get; init; }
+    [JsonPropertyName("urbanChallenges")]
+    public required List<UrbanChallenge> UrbanChallenges { get; init; }
+
+    [JsonPropertyName("rewardItems")]
+    public required List<Item> RewardItems { get; init; }
+
+    
+    //Default deserialization constructor
+    public Location() { }
+    
+    [JsonConstructor]
+    public Location(string name, List<Item> rewardItems, List<UrbanChallenge> urbanChallenges)
+    {
+        Name = name;
+        RewardItems = rewardItems;
+        UrbanChallenges = urbanChallenges;
+        WelcomeMessage = $"Welcome to {Name}.";
+    }
+    
+
     public Location(string name) {
         Name = name;
         WelcomeMessage = $"Welcome to {Name}."; // TODO move this.....................
-        urbanChallenges = new List<UrbanChallenge>();
-        rewardItems = new List<Item>();
+        UrbanChallenges = new List<UrbanChallenge>();
+        RewardItems = new List<Item>();
     }
 
     public void AddUrbanChallenge(UrbanChallenge challenge)
     {  
-        urbanChallenges.Add(challenge);  // Add the challenge to the list
+        UrbanChallenges.Add(challenge);  // Add the challenge to the list
     }
 
     public void AddRewardItem(Item item) {
-        rewardItems.Add(item);
+        RewardItems.Add(item);
     }
 
     public void DisplayStartMessage() { // TODO move this.....................
@@ -27,7 +47,7 @@ public class Location
     }
 
     public void PlayLocation(Player player) {
-        foreach (var challenge in urbanChallenges)
+        foreach (var challenge in UrbanChallenges)
         {
             challenge.Execute(player);
         }
@@ -35,19 +55,18 @@ public class Location
         Item reward = RewardItem(player.Score);
         player.Inventory.AddToInventory(reward);
         Console.WriteLine($"You earned: {reward.Name}!");
-        player.Score = 0; // Reset the score
         // Go back to travel menu
     }
 
     public Item RewardItem(int totalScore) {
         if (totalScore >= 20) {
-            return rewardItems[0]; // Good item
+            return RewardItems[0]; // Good item
         }
         else if (totalScore >= 10) {
-            return rewardItems[1]; // Medium item
+            return RewardItems[1]; // Medium item
         }
         else {
-            return rewardItems[2]; // Basic item
+            return RewardItems[2]; // Basic item
         }
     }
 }

@@ -1,0 +1,108 @@
+{
+  "name": "Amsterdam",
+  "WelcomeMessage": "Welcome to Amsterdam! Start your urban challenge.",
+  "rewardItems": [
+    {
+      "name": "Golden Windmill Replica",
+      "value": 100,
+      "description": "A small windmill replica made of gold, symbolizing Amsterdam's heritage."
+    },
+    {
+      "name": "Silver Bicycle Bell",
+      "value": 50,
+      "description": "A decorative bell for bicycles, Amsterdam's favorite transport."
+    },
+    {
+      "name": "Bronze Tulip",
+      "value": 20,
+      "description": "A rare tulip dipped in bronze."
+    }
+  ],
+  "urbanChallenges": [
+    {
+      "name": "Balancing Growth with Heritage",
+      "options": [
+        {
+          "description": "Skyward Expansion. Amsterdam is considering new high-rise, eco-friendly buildings to fit more homes into limited space. This approach would allow more housing without sprawling outward, but it risks changing Amsterdam's historic skyline.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Historical Revitalization. Convert old, vacant buildings into affordable apartments. While this solution fits Amsterdam's character, it may limit housing capacity.",
+          "scoreImpact": 1
+        },
+        {
+          "description": "Floating neighbourhoods. Create floating homes and neighbourhoods along canals, aligning with Amsterdam's maritime heritage and expanding housing sustainably.",
+          "scoreImpact": 5
+        }
+      ]
+    },
+    {
+      "name": "Innovative Housing Models",
+      "options": [
+        {
+          "description": "Government Partnerships for Affordable Housing. Incentivize developers to build affordable housing, attracting projects quickly.",
+          "scoreImpact": 5
+        },
+        {
+          "description": "Co-living Spaces. Test co-living spaces with shared amenities to reduce costs and foster community.",
+          "scoreImpact": 1
+        },
+        {
+          "description": "Repurposing Vacant Commercial Spaces. Convert office buildings and unused spaces into housing, adapting to remote work trends.",
+          "scoreImpact": 3
+        }
+      ]
+    },
+    {
+      "name": "Safety Disparities",
+      "options": [
+        {
+          "description": "Increased Police Presence. Deploy more law enforcement officers in high-crime areas, though this may lead to over-policing and distrust.",
+          "scoreImpact": 1
+        },
+        {
+          "description": "Community Safety Initiatives. Support neighborhood watch programs and community-led safety projects.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Holistic Urban Safety Program. Combine housing, education, employment, and social services to improve safety sustainably.",
+          "scoreImpact": 5
+        }
+      ]
+    },
+    {
+      "name": "Social Inequalities in Housing Access",
+      "options": [
+        {
+          "description": "Prioritize Market-Rate Housing Development. Increase supply but risk excluding low-income groups.",
+          "scoreImpact": 1
+        },
+        {
+          "description": "Mixed-Income Urban Developments. Promote inclusive planning with mixed-income housing, rent controls, and subsidies.",
+          "scoreImpact": 5
+        },
+        {
+          "description": "Expand Social Housing Stock. Increase social housing units but ensure integration with other housing types.",
+          "scoreImpact": 3
+        }
+      ]
+    },
+    {
+      "name": "Inequitable Access to Public Green Spaces",
+      "options": [
+        {
+          "description": "Focus on Large Central Parks. Enhance existing parks, attracting visitors but neglecting underserved areas.",
+          "scoreImpact": 1
+        },
+        {
+          "description": "Develop Small Green Areas Locally. Add small green spaces in underserved neighborhoods for immediate benefits.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Comprehensive Urban Greening Plan. Integrate equitable green spaces citywide, including parks, rooftop gardens, and green infrastructure.",
+          "scoreImpact": 5
+        }
+      ]
+    }
+  ]
+}
