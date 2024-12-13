@@ -3,28 +3,18 @@ using System.Text.Json.Serialization;
 namespace Ecotropolis;
 public class Location
 {
-    public required string Name { get; init; }
-    public required string WelcomeMessage { get; init; }
+    public string Name { get; set; }
+    public string WelcomeMessage { get; set; }
     [JsonPropertyName("urbanChallenges")]
-    public required List<UrbanChallenge> UrbanChallenges { get; init; }
+    public List<UrbanChallenge> UrbanChallenges { get; set; }
 
     [JsonPropertyName("rewardItems")]
-    public required List<Item> RewardItems { get; init; }
+    public List<Item> RewardItems { get; set; }
 
     
     //Default deserialization constructor
     public Location() { }
-    
     [JsonConstructor]
-    public Location(string name, List<Item> rewardItems, List<UrbanChallenge> urbanChallenges)
-    {
-        Name = name;
-        RewardItems = rewardItems;
-        UrbanChallenges = urbanChallenges;
-        WelcomeMessage = $"Welcome to {Name}.";
-    }
-    
-
     public Location(string name) {
         Name = name;
         WelcomeMessage = $"Welcome to {Name}."; // TODO move this.....................

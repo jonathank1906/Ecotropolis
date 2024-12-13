@@ -1,7 +1,7 @@
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
 using System.Text.Json;
-using System.Threading.Channels;
+
 
 public class Game
 {
@@ -11,23 +11,12 @@ public class Game
 
     public Game() 
     {
-        Console.WriteLine("Game constructor started.");
-
         player = new Player();
         pawnShop = new PawnShop(player);
 
-        // Check if the path to the JSON is correct and if it's being invoked.
-        Console.WriteLine("Attempting to load locations from folder...");
-
         // Correct the assignment to the class-level 'locations' field
         locations = LocationLoader.LoadLocationsFromFolder("jsons");
-
-        foreach (var location in locations)
-        {
-            Console.WriteLine($"Loaded location: {location.Name}"); // Assuming `Name` is a property in `Location`
-        }
-
-        // Start game
+     
         StartMenu startMenu = new StartMenu();
         GamePlay();
     }
