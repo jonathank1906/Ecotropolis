@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WorldOfZuul
-build_property.ProjectDir = c:\Users\jonat\Desktop\WorldOfZuul\
+build_property.ProjectDir = /Users/niclasliedke/Desktop/Projects/CSharp/RefactoredEcotropolis/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
