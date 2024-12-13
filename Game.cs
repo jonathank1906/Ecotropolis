@@ -1,21 +1,32 @@
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
+using System.Text.Json;
+
 public class Game
 {
     private Player player;
     private List<Location> locations;
     private PawnShop pawnShop;
 
-    public Game() {
+    public Game() 
+    {
+        Console.WriteLine("Game constructor started.");
+
         player = new Player();
         pawnShop = new PawnShop(player);
-        locations = new List<Location> {
-            CreateLosAngeles(),
-            CreateTokyo(),
-            CreateAmsterdam(),
-            CreateManilla(),
-            // More locations...
-        };
+
+        // Check if the path to the JSON is correct and if it's being invoked.
+        Console.WriteLine("Attempting to load locations from folder...");
+
+        // Correct the assignment to the class-level 'locations' field
+        locations = LocationLoader.LoadLocationsFromFolder("jsons");
+
+        foreach (var location in locations)
+        {
+            Console.WriteLine($"Loaded location: {location.Name}"); // Assuming `Name` is a property in `Location`
+        }
+
+        // Start game
         StartMenu startMenu = new StartMenu();
         GamePlay();
     }
@@ -233,5 +244,53 @@ public class Game
         manilla.AddUrbanChallenge(homelessness);
 
         return manilla;  // Return the populated location
+    }
+
+    public static class LocationLoader
+    {
+        public static List<Location> LoadLocationsFromFolder(string folderPath)
+        {
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+
+            var locations = new List<Location>();
+
+            try
+            {
+                // Get all JSON files in the folder
+                string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
+
+                foreach (string filePath in jsonFiles)
+                {
+                    string json = File.ReadAllText(filePath);
+                    Console.WriteLine($"Reading file: {filePath}");
+                    
+                    Location? location = JsonSerializer.Deserialize<Location>(json, options);
+
+                    if (location != null)
+                    {
+                        locations.Add(location);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Warning: Failed to deserialize {filePath}. Skipping.");
+                    }
+                }
+
+                Console.WriteLine($"Successfully loaded {locations.Count} location(s).");
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine($"Error: Folder not found - {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+            }
+
+            return locations;
+        }
     }
 }
