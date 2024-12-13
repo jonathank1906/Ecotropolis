@@ -157,7 +157,7 @@ public class Game
         Alternatively, Amsterdam could convert its old, vacant buildings into affordable apartments.
         While this solution could fit Amsterdam's character, it may limit housing capacity. Your city
         could use this approach to protect cultural areas while meeting housing demands.", 1));  // Option 2
-        growth.AddOption(new ChallengeOption(@"Floating Neighborhoods.
+        growth.AddOption(new ChallengeOption(@"Floating neighbourhoods.
         Amsterdam could create floating homes and neighbourhoods along its canals, a concept that
         aligns with its strong maritime heritage. These eco-friendly, water-based residences could
         expand housing without crowding the city center or altering the skyline. For your city, adopting
@@ -188,8 +188,8 @@ public class Game
         ", 3));   // Option 3
 
 
-        UrbanChallenge safety = new UrbanChallenge(@"Safety Disparities
-        Safety disparities are a pressing concern in Amsterdam, with certain neighborhoods experiencing higher levels 
+        UrbanChallenge safety = new UrbanChallenge(@"Safety Disparities:
+        Safety disparities are a pressing concern in Amsterdam, with certain neighbourhoods experiencing higher levels 
         of crime, fewer resources for community safety, and reduced perceptions of security compared to others. These 
         inequalities often align with socioeconomic factors, where marginalized communities face greater vulnerabilities. 
         This not only affects residents' quality of life but also undermines SDG 11's aim for inclusive, safe, and 
@@ -205,12 +205,12 @@ public class Game
         the broader structural causes of insecurity.", 3)); //Option 2
         safety.AddOption(new ChallengeOption(@"Holistic Urban Safety Program.
         Implement a comprehensive urban safety strategy combining affordable housing, quality education, employment opportunities, 
-        and targeted social services in vulnerable neighborhoods. Engaging residents and local organizations ensures solutions are
+        and targeted social services in vulnerable neighbourhoods. Engaging residents and local organizations ensures solutions are
         culturally relevant and sustainable.
         ", 5)); // Option 3
 
 
-        UrbanChallenge housingaccess = new UrbanChallenge(@"Social Inequalities in Housing Access.
+        UrbanChallenge housingaccess = new UrbanChallenge(@"Social Inequalities in Housing Access:
         In Amsterdam, marginalized groups such as low-income families, immigrants, and students face systemic barriers to securing
         adequate housing. These challenges arise from the city's high housing costs, competition for limited space, and insufficient
         social housing availability. As a result, some communities are forced into substandard housing or face displacement.
@@ -225,26 +225,26 @@ public class Game
         and subsidies for vulnerable groups. ", 5)); //Option 2
         housingaccess.AddOption(new ChallengeOption(@"Expand Social Housing Stock.
         Increasing the number of social housing units can provide relief for low-income families. However, this solution is limited by funding
-        constraints and risks creating segregated neighborhoods if not properly integrated with other housing types.
+        constraints and risks creating segregated neighbourhoods if not properly integrated with other housing types.
         ", 3)); // Option 3
 
 
-        UrbanChallenge greenspaces = new UrbanChallenge(@"Inequitable Access to Public Green Spaces.
-        While Amsterdam is known for its green spaces, access to these areas is unevenly distributed across neighborhoods. Communities in
+        UrbanChallenge greenspaces = new UrbanChallenge(@"Inequitable Access to Public Green Spaces:
+        While Amsterdam is known for its green spaces, access to these areas is unevenly distributed across neighbourhoods. Communities in
         lower-income or densely populated areas often have fewer parks and recreational spaces, limiting opportunities for exercise, mental
         health benefits, and community interaction. This imbalance reinforces social inequality and reduces overall urban resilience, which
         is a critical focus of SDG 11.
         "); // Option 1
         greenspaces.AddOption(new ChallengeOption(@"Focus on Large Central Parks.
         Focus resources on enhancing and enlarging existing major parks, like Vondelpark or Westerpark, to attract more visitors and boost 
-        tourism. While this approach highlights well-known landmarks, it fails to address green space disparities in underserved neighborhoods 
+        tourism. While this approach highlights well-known landmarks, it fails to address green space disparities in underserved neighbourhoods 
         and may inadvertently worsen inequality.", 1)); // Option 2
         greenspaces.AddOption(new ChallengeOption(@"Develop Small Green Areas Locally.
-        Add small, localized green areas in neighborhoods lacking parks and community gardens, this 
+        Add small, localized green areas in neighbourhoods lacking parks and community gardens, this 
         could provide immediate benefits and be an affordable option, making it pretty atractive to adress the problem in very few time", 3));
-        greenspaces.AddOption(new ChallengeOption(@"Comprehensive Urban Greening Plan
+        greenspaces.AddOption(new ChallengeOption(@"Comprehensive Urban Greening Plan.
         Adopt a strategic urban greening initiative that integrates equitable access to green spaces citywide. This would include creating new 
-        parks in neighborhoods in demand of parks embedding green infrastructure into urban developments, and incentivizing rooftop gardens and 
+        parks in neighbourhoods in demand of parks embedding green infrastructure into urban developments, and incentivizing rooftop gardens and 
         green facades.
         ", 5)); // Option 3
 
