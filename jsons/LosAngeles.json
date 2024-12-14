@@ -1,25 +1,25 @@
 {
     "name": "LA",
-    "WelcomeMessage": "Welcome to Manila! Start your urban challenge.",
+    "WelcomeMessage": "Welcome to Los Angeles! Start your urban challenges.",
     "rewardItems": [
       { 
-        "name": "Golden Jeepney", 
+        "name": "Golden Surfboard", 
         "value": 100,
-        "description": "A golden miniature of Manila's iconic Jeepney."
+        "description": "A luxurious surfboard symbolizing LA's sunny beaches."
       },
       { 
-        "name": "Silver Coconut", 
+        "name": "Silver Keychain", 
         "value": 50, 
-        "description": "A silver coconut symbolizing the Philippines' tropical beauty."
+        "description": "A sleek keychain featuring the LA skyline."
       }, 
       { 
-          "name": "Bronze Sun Pin", 
+          "name": "Bronze Badge", 
           "value": 20, 
-          "description": "A bronze pin representing the sun from the Philippine flag."
+          "description": "A small badge commemorating your visit to LA."
       }],
     "urbanChallenges": [
       {
-        "name": "Air Pollution in Manilla",
+        "name": "Air Pollution",
         "options": [
           { 
             "description": "Implement new traffic laws", 

@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using EcoTropolis;
 
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
@@ -22,10 +23,11 @@ public class UrbanChallenge {
     }
 
     public void Execute(Player player) {
-        Console.WriteLine($"Challenge: {Name}"); // Display the challenge description
+        Console.WriteLine($"\nChallenge: {Name}"); // Display the challenge description
         for (int i = 0; i < Options.Count; i++) // Display available options
         {
-            Console.WriteLine($"{i + 1}. {Options[i].Description}");
+           
+            Console.WriteLine(WordWrap($"{i + 1}. {Options[i].Description}",60,"   "));
         }
 
         while (true) { // Loop until the user selects a valid option 

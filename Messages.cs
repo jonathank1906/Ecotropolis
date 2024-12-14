@@ -146,4 +146,43 @@ public static class Messages {
 --------------------------------------
         ");
     }
+
+    public static string WordWrap(string text, int lineWidth, string indent)
+    {
+        string[] words = text.Split(' ');
+        string result = "";
+        string currentLine = "";
+        bool firstLine = true;
+
+        foreach (var word in words)
+        {
+            if ((currentLine + word).Length > lineWidth)
+            {
+                // Add the current line to the result, applying indentation for subsequent lines
+                if (firstLine)
+                {
+                    result += currentLine.TrimEnd() + Environment.NewLine;
+                    firstLine = false;
+                }
+                else
+                {
+                    result += indent + currentLine.TrimEnd() + Environment.NewLine;
+                }
+                currentLine = "";
+            }
+            currentLine += word + " ";
+        }
+
+        // Add any remaining text, with indentation if it's not the first line
+        if (!firstLine)
+        {
+            result += indent + currentLine.TrimEnd();
+        }
+        else
+        {
+            result += currentLine.TrimEnd();
+        }
+
+        return result;
+    }
 }
