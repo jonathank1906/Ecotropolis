@@ -148,10 +148,10 @@ public class Game
 
     private Location CreateTokyo()
     {
-        // Define reward items
-        Item goodItem = new Item("Golden Fan", 100, "A traditional Japanese fan made with gold.");
-        Item mediumItem = new Item("Silver Sushi Plate", 50, "A decorative sushi plate made of silver.");
-        Item badItem = new Item("Bronze Origami Crane", 20, "A simple origami crane in bronze.");
+        // Define reward items - See PawnShop class for Diamond item (Diamond-Edged Katana).
+        Item goodItem = new Item("Golden Ōgi", 100, "A stunning golden fan, that represents balance, refinement, and near perfection. A treaasure of those that have achieved greatness, but strive for more.");
+        Item mediumItem = new Item("Silver Torii Gate", 50, "A Torii gate symbolizes progress and milestones. Let it guide you further beyond!.");
+        Item badItem = new Item("Bronze Daruma Doll", 20, "A traditional spiritual talisman, that symbolizes perseverence - 'Fall seven times, rise up eight.''.");
 
         // Create the Tokyo location
         Location tokyo = new Location("Tokyo");
@@ -161,42 +161,109 @@ public class Game
 
         // Define challenges
         // Challenge 1: Earthquake-Resistant Buildings
-        UrbanChallenge earthquakeSafety = new UrbanChallenge("Earthquake-Resistant Buildings");
+        UrbanChallenge earthquakeSafety = new UrbanChallenge(@"
+        
+        'Earthquake-Resistant Buildings.'
+        
+        Tokyo is located in one of the most earthquake-prone regions on the planet.
+
+        It is vital to have Earthquake-resilient buildings that protect the lives of the Japanese people,
+        and the properties themselves. However, this is a costly affair that also requires strict codes.
+
+        How will you fare in face of this challenge?:
+        
+        ");
+
         earthquakeSafety.AddOption(new ChallengeOption("Strengthen building codes to ensure all new constructions are earthquake-resistant.", 10));
         earthquakeSafety.AddOption(new ChallengeOption("Provide financial incentives to retrofit older buildings for earthquake resistance.", 6));
         earthquakeSafety.AddOption(new ChallengeOption("Focus only on emergency shelters while ignoring long-term building safety.", -5));
         tokyo.AddUrbanChallenge(earthquakeSafety);
 
         // Challenge 2: Flood Risk Reduction
-        UrbanChallenge floodPrevention = new UrbanChallenge("Flood Risk Reduction");
-        floodPrevention.AddOption(new ChallengeOption("Build large-scale underground floodwater storage and advanced drainage systems.", 10));
+        UrbanChallenge floodPrevention = new UrbanChallenge(@"
+        
+        'Flood Risk Reduction.'
+        
+        Tokyo experiences frequent flooding, especially during typhoon seasons and during heavy rainfall. 
+        To manage flood risk, a balance between large-scale infrastructure and nature-based solutions, is required. 
+
+        What strategy will you implement to ensure the city remains dry and protected?:
+
+        ");
+
         floodPrevention.AddOption(new ChallengeOption("Install permeable pavements and rain gardens in urban areas.", 5));
         floodPrevention.AddOption(new ChallengeOption("Increase reliance on sandbags and temporary barriers.", -5));
+        floodPrevention.AddOption(new ChallengeOption("Build large-scale underground floodwater storage and advanced drainage systems.", 10));
         tokyo.AddUrbanChallenge(floodPrevention);
 
         // Challenge 3: Typhoon Early Warning Systems
-        UrbanChallenge typhoonWarnings = new UrbanChallenge("Typhoon Early Warning Systems");
+        UrbanChallenge typhoonWarnings = new UrbanChallenge(@"
+        
+        'Typhoon Early Warning Systems.'
+        
+        Typhoons pose a significant risk to Tokyo's populace, with high winds and heavy rains, causing damage and disruption. 
+        Early warning systems can save lives, by ensuring people have time to prepare and evacuate. 
+
+        How will you improve Tokyo's preparedness for the next big storm?
+        
+        ");
+        
+        typhoonWarnings.AddOption(new ChallengeOption("Rely on outdated meteorological systems for warnings.", -5));
         typhoonWarnings.AddOption(new ChallengeOption("Develop AI-based forecasting systems and public evacuation apps.", 10));
         typhoonWarnings.AddOption(new ChallengeOption("Expand community awareness programs for typhoon preparedness.", 6));
-        typhoonWarnings.AddOption(new ChallengeOption("Rely on outdated meteorological systems for warnings.", -5));
         tokyo.AddUrbanChallenge(typhoonWarnings);
 
         // Challenge 4: Urban Greening (Heat Mitigation)
-        UrbanChallenge urbanGreening = new UrbanChallenge("Urban Greening");
+        UrbanChallenge urbanGreening = new UrbanChallenge(@"
+        
+        'Urban Greening.'
+        
+        Rising urban temperatures in Tokyo, are worsened by the lack of greenery and dense concrete structures. 
+        Green roofs, urban trees, and parks can help reduce heat and improve the air quality.
+
+        How will you cool down the city while enhancing its livability?
+        
+        
+        ");
+
         urbanGreening.AddOption(new ChallengeOption("Mandate green roofs and walls for all new developments.", 10));
-        urbanGreening.AddOption(new ChallengeOption("Plant urban trees and increase public green spaces.", 6));
         urbanGreening.AddOption(new ChallengeOption("Install artificial shade structures instead of vegetation.", -5));
+        urbanGreening.AddOption(new ChallengeOption("Plant urban trees and increase public green spaces.", 6));
         tokyo.AddUrbanChallenge(urbanGreening);
 
         // Challenge 5: Cool Pavements (Heat Mitigation)
-        UrbanChallenge coolPavements = new UrbanChallenge("Cool Pavements");
+        UrbanChallenge coolPavements = new UrbanChallenge(@"
+        
+        'Cool Pavements.'
+        
+        Traditional asphalt pavements absorb and retain heat, making Tokyo's streets unbearably hot during summer. 
+        Cool pavements, like reflective surfaces or water-retaining materials, can help reduce ground-level temperatures.
+
+        What steps will you take to make Tokyo's streets cooler?:
+        
+        ");
+        
+        coolPavements.AddOption(new ChallengeOption("Focus on public relations campaigns without addressing root causes.", -5));
         coolPavements.AddOption(new ChallengeOption("Replace all high-traffic roads with reflective or water-retaining pavements.", 10));
         coolPavements.AddOption(new ChallengeOption("Gradually install cool pavements in selected districts.", 4));
-        coolPavements.AddOption(new ChallengeOption("Focus on public relations campaigns without addressing root causes.", -5));
         tokyo.AddUrbanChallenge(coolPavements);
 
-        // Set the welcome message for Tokyo
-        tokyo.WelcomeMessage = "Welcome to Tokyo, a bustling metropolis blending tradition and innovation!";
+        // Set the welcome message for Tokyo - Using @ for Verbatim string literal, which is easier to format.
+        tokyo.WelcomeMessage = @"
+        
+        -Yōkoso Tokyo e! - Welcome to Tokyo! The heart of Japan, where tradition and innovation collide!
+
+        Tokyo provides everything between serene temples and towering skyscrapers, a global icon of progress!
+        Beneath the vibrant facade however, lie challenges that test even the most progressed and advanced cities.
+        
+        To set the scene, Tokyo faces two distinct issues that threaten it's future sustainability: Growing impacts of natural disasters,
+        and ever rising urban heat levels.
+        
+        To get to the bottom of this, you will have to navigate the different solutions presented to you,
+        to make sure Tokyo can perservere as the strong spirited metropolis that it is!
+        
+        
+        ";
 
         return tokyo; // Return the populated location
     }
