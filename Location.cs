@@ -4,6 +4,7 @@ namespace Ecotropolis;
 public class Location
 {
     public string Name { get; set; }
+    [JsonPropertyName("WelcomeMessage")]
     public string WelcomeMessage { get; set; }
     [JsonPropertyName("urbanChallenges")]
     public List<UrbanChallenge> UrbanChallenges { get; set; }
@@ -22,11 +23,8 @@ public class Location
         RewardItems = new List<Item>();
     }
 
-    public void DisplayStartMessage() { 
-        Console.WriteLine(WelcomeMessage);
-    }
-
     public void PlayLocation(Player player) {
+        Console.WriteLine(WelcomeMessage);
         foreach (var challenge in UrbanChallenges)
         {
             challenge.Execute(player);

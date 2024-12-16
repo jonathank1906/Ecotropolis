@@ -2,21 +2,21 @@
     "name": "Barcelona",
     "WelcomeMessage": "The next location your supervisor assigns is Barcelona, known for its vibrant culture, modernist architecture, and Mediterranean beaches. As you arrive, the city's beauty is undeniable, but you quickly notice the local population grappling with a severe housing crisis. Tourists occupy a large portion of available rentals, prices are skyrocketing due to speculative investors, and the current laws struggle to protect affordable housing for residents. You are part of a pilot urban management project made up of experts from all over the world and your role is to analyze the proposals and participate in the meetings.",
     "rewardItems": [
-      {
-        "name": "Catalan Flag",
-        "value": 100,
-        "description": "This flag represents Barcelona’s success in housing protection. In your city, the Catalan Flag enables a ‘Residential Protection Zone,’ where rent controls, vacancy taxes, and anti-speculation measures protect locals from rapid price hikes and maintain housing accessibility."
-      },
-      {
-        "name": "Mediterranean Tile Art",
-        "value": 50,
-        "description": "This unique tile art symbolizes Barcelona's partial success in balancing housing needs. In your city, it boosts community cohesion, reducing speculative pressure in key areas and promoting local ownership through incentives for residents."
-      },
-      {
-        "name": "La Rambla Souvenir",
-        "value": 20,
-        "description": "This souvenir reminds your city of Barcelona’s struggles with tourism-driven housing demand. In your city, it sparks awareness campaigns, prompting residents to advocate for stronger housing protections, though the immediate impact on affordability is limited."
-      }
+    {
+      "name": "Catalan Flag",
+      "value": 100,
+      "description": "This flag represents Barcelona’s success in housing protection. In your city, the Catalan Flag enables a ‘Residential Protection Zone,’ where rent controls, vacancy taxes, and anti-speculation measures protect locals from rapid price hikes and maintain housing accessibility."
+    },
+    {
+      "name": "Mediterranean Tile Art",
+      "value": 50,
+      "description": "This unique tile art symbolizes Barcelona's partial success in balancing housing needs. In your city, it boosts community cohesion, reducing speculative pressure in key areas and promoting local ownership through incentives for residents."
+    },
+    {
+      "name": "La Rambla Souvenir",
+      "value": 20,
+      "description": "This souvenir reminds your city of Barcelona’s struggles with tourism-driven housing demand. In your city, it sparks awareness campaigns, prompting residents to advocate for stronger housing protections, though the immediate impact on affordability is limited."
+    }
     ],
     "urbanChallenges": [
       {

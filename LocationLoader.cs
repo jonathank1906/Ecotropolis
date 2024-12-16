@@ -16,16 +16,12 @@ public static class LocationLoader
 
         try
         {
-            // Get all JSON files in the folder
-            string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
+            string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");  // Get all JSON files in the folder
 
             foreach (string filePath in jsonFiles)
             {
                 string json = File.ReadAllText(filePath);
-                Console.WriteLine($"Reading file: {filePath}");
-                
                 Location? location = JsonSerializer.Deserialize<Location>(json, options);
-
                 if (location != null)
                 {
                     locations.Add(location);
@@ -35,8 +31,6 @@ public static class LocationLoader
                     Console.WriteLine($"Warning: Failed to deserialize {filePath}. Skipping.");
                 }
             }
-
-            Console.WriteLine($"Successfully loaded {locations.Count} location(s).");
         }
         catch (DirectoryNotFoundException ex)
         {
@@ -46,8 +40,6 @@ public static class LocationLoader
         {
             Console.WriteLine($"Unexpected error: {ex.Message}");
         }
-
         return locations;
     }
-    
 }

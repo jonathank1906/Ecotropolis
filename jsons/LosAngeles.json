@@ -1,6 +1,6 @@
 {
-    "name": "LA",
-    "WelcomeMessage": "Welcome to Los Angeles! Start your urban challenges.",
+    "name": "Los Angeles",
+    "WelcomeMessage": "Los Angeles is a city like no other—a global hub of entertainment, innovation, and cultural diversity. From the star-studded streets of Hollywood to the vibrant neighborhoods shaped by countless communities, this city captures the imagination of millions.\n\nYet, behind the sunlit skyline lies a metropolis facing significant challenges. L.A. grapples with the demands of rapid urban growth, a fragile water supply, and the urgent need for greener, more sustainable living.\n\nYour journey begins here, in a city that dreams big but requires bold solutions to secure its future. Will you rise to the occasion, balancing innovation with responsibility, and ensure Los Angeles remains a city where dreams thrive for generations to come?",
     "rewardItems": [
       { 
         "name": "Golden Surfboard", 
@@ -86,24 +86,6 @@
         },
         {
           "description": "Do nothing about housing prices",
-          "scoreImpact": 0
-        }
-      ]
-    },
-    {
-      "name": "Disaster Resilience",
-      "description": "Los Angeles faces risks from earthquakes, flooding, and wildfires.",
-      "options": [
-        {
-          "description": "Invest in earthquake-resistant infrastructure",
-          "scoreImpact": 90
-        },
-        {
-          "description": "Improve early warning systems for natural disasters",
-          "scoreImpact": 70
-        },
-        {
-          "description": "Rely on existing infrastructure and emergency plans",
           "scoreImpact": 0
         }
       ]

@@ -45,7 +45,7 @@ public static class Messages {
 
     private static void PrintHelpMessageMain() {
         Console.WriteLine("\nHelp - Game Instructions:");
-        Console.WriteLine("Welcome to Ecotropolis! Your task is to solve urban challenges across different cities.");
+        Console.WriteLine("Your task is to solve urban challenges across different cities.");
         Console.WriteLine("- Each city has unique problems. Travel to them to begin solving challenges.");
         Console.WriteLine("- After completing a challenge, you will receive a reward that impacts your city-building efforts.");
         Console.WriteLine("- Make strategic decisions to balance progress and sustainability.");
