@@ -17,55 +17,114 @@
           "value": 20, 
           "description": "A small badge commemorating your visit to LA."
       }],
-    "urbanChallenges": [
-      {
-        "name": "Air Pollution",
-        "options": [
-          { 
-            "description": "Implement new traffic laws", 
-            "scoreImpact": 10
-          },
-          { 
-            "description": "Reduce industrial emissions", 
-            "scoreImpact": 5
-          }]
-      },
-      {
-        "name": "Waste Management in Manilla",
-        "options": [
-          { 
-            "description": "Implement a recycling program", 
-            "scoreImpact": 10
-          },
-          { 
-            "description": "Build more landfills", 
-            "scoreImpact": 5
-          }]
-      },
-      {
-        "name": "Water Pollution in Manilla",
-        "options": [
-          { 
-            "description": "Implement a water treatment program", 
-            "scoreImpact": 10
-          },
-          { 
-            "description": "Reduce industrial waste", 
-            "scoreImpact": 5
-          }]
-      },
-      {
-        "name": "Homelessness in Manilla",
-        "options": [
-          { 
-            "description": "Create affordable housing", 
-            "scoreImpact": 15
-          },
-          { 
-            "description": "Increase social programs", 
-            "scoreImpact": 10
-          }
-        ]
-      }
-    ]
-  }
+"urbanChallenges": [
+    {
+      "name": "Air Pollution",
+      "description": "High levels of PM2.5 and ozone are impacting air quality and public health.",
+      "options": [
+        {
+          "description": "Implement stricter emissions standards for vehicles",
+          "scoreImpact": 50
+        },
+        {
+          "description": "Encourage the use of public transportation and carpooling",
+          "scoreImpact": 40
+        },
+        {
+          "description": "No changes to current regulations",
+          "scoreImpact": 0
+        }
+      ]
+    },
+    {
+      "name": "Urban Planning",
+      "description": "Residential areas are located too close to major pollution sources like highways and factories.",
+      "options": [
+        {
+          "description": "Relocate residential zones farther from highways",
+          "scoreImpact": 60
+        },
+        {
+          "description": "Create buffer zones with green spaces",
+          "scoreImpact": 50
+        },
+        {
+          "description": "Allow current zoning practices to continue",
+          "scoreImpact": 0
+        }
+      ]
+    },
+    {
+      "name": "Traffic Congestion and Transportation",
+      "description": "Severe traffic congestion leads to wasted time and increased emissions.",
+      "options": [
+        {
+          "description": "Expand public transportation infrastructure",
+          "scoreImpact": 70
+        },
+        {
+          "description": "Implement congestion pricing in high-traffic areas",
+          "scoreImpact": 50
+        },
+        {
+          "description": "Encourage the use of personal vehicles",
+          "scoreImpact": 0
+        }
+      ]
+    },
+    {
+      "name": "Housing Affordability and Homelessness",
+      "description": "Rising housing costs have led to a growing homelessness crisis.",
+      "options": [
+        {
+          "description": "Increase funding for affordable housing projects",
+          "scoreImpact": 80
+        },
+        {
+          "description": "Provide incentives to developers for affordable housing",
+          "scoreImpact": 60
+        },
+        {
+          "description": "Do nothing about housing prices",
+          "scoreImpact": 0
+        }
+      ]
+    },
+    {
+      "name": "Disaster Resilience",
+      "description": "Los Angeles faces risks from earthquakes, flooding, and wildfires.",
+      "options": [
+        {
+          "description": "Invest in earthquake-resistant infrastructure",
+          "scoreImpact": 90
+        },
+        {
+          "description": "Improve early warning systems for natural disasters",
+          "scoreImpact": 70
+        },
+        {
+          "description": "Rely on existing infrastructure and emergency plans",
+          "scoreImpact": 0
+        }
+      ]
+    },
+    {
+      "name": "Waste Management",
+      "description": "High levels of waste generation and low recycling rates are causing environmental issues.",
+      "options": [
+        {
+          "description": "Expand recycling programs and public awareness campaigns",
+          "scoreImpact": 60
+        },
+        {
+          "description": "Encourage composting and reduce single-use plastics",
+          "scoreImpact": 50
+        },
+        {
+          "description": "Continue with current waste management practices",
+          "scoreImpact": 0
+        }
+      ]
+    }
+  ]
+}

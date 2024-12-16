@@ -6,11 +6,11 @@ public static class Messages {
             case "help":
                 PrintHelpMessageMain();
                 break;
-            case "help_travel": 
-                PrintHelpMessageTravel();
-                break;
             case "welcome":
                 PrintWelcomeMessage(cityName);
+                break;
+            case "welcome to city":
+                PrintCityWelcome(cityName);
                 break;
             case "start":
                 PrintStartMessage();
@@ -42,20 +42,6 @@ public static class Messages {
         }
     }
 
-    // public static void DisplayDescription(string roomName)
-    // {
-    //     switch (roomName)
-    //     {
-    //         case "main_city":
-    //             PrintMainCityDesc();
-    //             break;
-    //         case "travel_menu":
-    //             PrintTravelMessage();
-    //             break;
-    //     }
-    // }
-
-    
 
     private static void PrintHelpMessageMain() {
         Console.WriteLine("\nHelp - Game Instructions:");
@@ -67,17 +53,13 @@ public static class Messages {
         Console.ReadKey();
     }
 
-    public static void PrintHelpMessageTravel() {
-        Console.WriteLine("Travel menu help message - please implement!!!!!!!!!!!!!!!!");
-    }
-
     private static void PrintWelcomeMessage(string? cityName) {
         Console.WriteLine($"\nWelcome to {cityName} Mr. newly elected mayor. \n" +
         "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n");
     }
 
-    private static void PrintTravelMessage() { // travel message
-        Console.WriteLine("Travel message - please implement!!!!!!!!!!!!!!!!");
+    private static void PrintCityWelcome(string? cityName) {
+        Console.WriteLine($"You have arrived in {cityName}.");
     }
 
     private static void PrintStartMessage() { // start message

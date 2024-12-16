@@ -26,7 +26,6 @@ public class UrbanChallenge {
         Console.WriteLine($"\nChallenge: {Name}"); // Display the challenge description
         for (int i = 0; i < Options.Count; i++) // Display available options
         {
-           
             Console.WriteLine(WordWrap($"{i + 1}. {Options[i].Description}",60,"   "));
         }
 

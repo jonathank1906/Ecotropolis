@@ -25,18 +25,6 @@ public class Inventory {
         Console.WriteLine($"{item.Name} added to inventory.");
     }
 
-
-    // Add the new item in the inventory
-    // public void TradeItem(Item item) {
-    //     if (inventory.Remove(item)) {
-    //         Console.WriteLine($"{item.Name} sold for {item.Value} points.");
-    //     }
-    //     else {
-    //         Console.WriteLine("Item not found in inventory.");
-    //     }
-    //     Console.WriteLine($"{GetInventoryCount()} items remaining.");
-    // }
-
     public void Show() {
         int i = 1;
         foreach (var item in inventory) {

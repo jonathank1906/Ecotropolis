@@ -2,7 +2,6 @@ namespace Ecotropolis;
 using static EcoTropolis.Messages;
 using System.Text.Json;
 
-
 public class Game
 {
     private Player player;
@@ -38,15 +37,15 @@ public class Game
                     int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
                     if (choice >= 0 && choice < locations.Count) { // Valid location
                         Location selectedLocation = locations[choice];
-                        selectedLocation.DisplayStartMessage();
+                        DisplayMessage("welcome to city", selectedLocation.Name);
                         selectedLocation.PlayLocation(player); // Play the challenges at the location
                         locations.RemoveAt(choice);
-                        Console.WriteLine("Press any key to return to the travel menu...");
+                        Console.WriteLine("\nPress any key to return to the travel menu...");
                         Console.ReadKey(true);
                     }
                     else if (choice == -1) { // Exit the game
                         DisplayMessage("Exit Game");
-                        break;
+                        return;
                     }
                     else if (choice == locations.Count) { // Display help menu
                         DisplayMessage("help");
@@ -102,54 +101,5 @@ public class Game
             Console.WriteLine("Your sustainability score is low. Consider playing again and revist the locations to improve it.");
         }
         // Your items will be used to build a sustainable city of your own.
-    }
-
-
-    public static class LocationLoader
-    {
-        public static List<Location> LoadLocationsFromFolder(string folderPath)
-        {
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-
-            var locations = new List<Location>();
-
-            try
-            {
-                // Get all JSON files in the folder
-                string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
-
-                foreach (string filePath in jsonFiles)
-                {
-                    string json = File.ReadAllText(filePath);
-                    Console.WriteLine($"Reading file: {filePath}");
-                    
-                    Location? location = JsonSerializer.Deserialize<Location>(json, options);
-
-                    if (location != null)
-                    {
-                        locations.Add(location);
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Warning: Failed to deserialize {filePath}. Skipping.");
-                    }
-                }
-
-                Console.WriteLine($"Successfully loaded {locations.Count} location(s).");
-            }
-            catch (DirectoryNotFoundException ex)
-            {
-                Console.WriteLine($"Error: Folder not found - {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Unexpected error: {ex.Message}");
-            }
-
-            return locations;
-        }
     }
 }

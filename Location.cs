@@ -17,22 +17,12 @@ public class Location
     [JsonConstructor]
     public Location(string name) {
         Name = name;
-        WelcomeMessage = $"Welcome to {Name}."; // TODO move this.....................
+        WelcomeMessage = $"Welcome to {Name}."; 
         UrbanChallenges = new List<UrbanChallenge>();
         RewardItems = new List<Item>();
     }
 
-    public void AddUrbanChallenge(UrbanChallenge challenge)
-    {  
-        UrbanChallenges.Add(challenge);  // Add the challenge to the list
-    }
-
-    public void AddRewardItem(Item item) {
-        RewardItems.Add(item);
-    }
-
-    public void DisplayStartMessage() { // TODO move this.....................
-        Console.WriteLine($"You have arrived at {Name}.");
+    public void DisplayStartMessage() { 
         Console.WriteLine(WelcomeMessage);
     }
 
@@ -43,8 +33,8 @@ public class Location
         }
         // Challenges completed, reward the player with an item
         Item reward = RewardItem(player.Score);
+        Console.WriteLine($"\nYou earned: {reward.Name}!");
         player.Inventory.AddToInventory(reward);
-        Console.WriteLine($"You earned: {reward.Name}!");
         // Go back to travel menu
     }
 
