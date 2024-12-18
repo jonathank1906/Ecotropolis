@@ -9,12 +9,6 @@ public class UrbanChallenge {
     [JsonPropertyName("options")]
     public List<ChallengeOption> Options { get; private set; }
 
-    public UrbanChallenge(string name)
-    {
-        Name = name;
-        Options = new List<ChallengeOption>();
-    }
-
     [JsonConstructor]
     public UrbanChallenge(string name, List<ChallengeOption> options)
     {
@@ -53,9 +47,5 @@ public class UrbanChallenge {
                 DisplayMessage("empty input");
             }  
         }
-    }
-
-    public void AddOption(ChallengeOption option) {
-        Options.Add(option);  // Add the option to the list
     }
 }

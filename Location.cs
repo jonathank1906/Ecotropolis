@@ -12,9 +12,6 @@ public class Location
     [JsonPropertyName("rewardItems")]
     public List<Item> RewardItems { get; set; }
 
-    
-    //Default deserialization constructor
-    public Location() { }
     [JsonConstructor]
     public Location(string name) {
         Name = name;
@@ -22,7 +19,6 @@ public class Location
         UrbanChallenges = new List<UrbanChallenge>();
         RewardItems = new List<Item>();
     }
-
     public void PlayLocation(Player player) {
         Console.WriteLine(WelcomeMessage);
         foreach (var challenge in UrbanChallenges)
@@ -35,7 +31,6 @@ public class Location
         player.Inventory.AddToInventory(reward);
         // Go back to travel menu
     }
-
     public Item RewardItem(int totalScore) {
         if (totalScore >= 20) {
             return RewardItems[0]; // Good item

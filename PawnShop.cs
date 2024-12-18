@@ -1,9 +1,9 @@
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
+
 public class PawnShop
 {
     private Player player;
-
     private List<Item> uniqueItems;
     public PawnShop(Player player) {
         this.player = player;
@@ -14,7 +14,6 @@ public class PawnShop
             new Item("Crystal Globe", 4, "ds")
         };
     }
-
     public void Open() {
         DisplayMessage("pawn shop"); // this is the heading only
         while (true) {
@@ -23,13 +22,11 @@ public class PawnShop
             {
                 Console.WriteLine($"{i + 1}. {uniqueItems[i].Name} (Cost: {uniqueItems[i].Value} tokens)");
             }
-            Console.WriteLine("Tokens: " + player.Tokens);
-            
+            Console.WriteLine($"You have {player.Tokens} tokens.");
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("0. Exit the shop\n1. Buy an item\n2. View inventory"); 
             Console.Write("> ");
-            string? input1 = Console.ReadLine();
-            switch (input1)
+            switch (Console.ReadLine())
             {
                 case "0":
                     return;
@@ -44,7 +41,7 @@ public class PawnShop
                     break;
                 case "2":
                     Console.WriteLine("Your inventory:");
-                    player.ShowInventory();
+                    player.Inventory.Show();
                     continue;
                 default:
                     Console.WriteLine("Invalid selection. Please try again.");
@@ -52,7 +49,6 @@ public class PawnShop
             }
         }
     }
-
     public void BuyItem(Item item) {
         if (player.Tokens >= item.Value) {
             player.Tokens -= item.Value;

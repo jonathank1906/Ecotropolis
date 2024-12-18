@@ -164,7 +164,6 @@ public static class Messages {
         {
             result += currentLine.TrimEnd();
         }
-
         return result;
     }
 }

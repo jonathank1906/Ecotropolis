@@ -74,11 +74,6 @@ public class Game
 
     public void EndGame() {
         DisplayMessage("game_end");
-        EvaluatePerformance();
-        Console.WriteLine("Thank you for playing Ecotropolis!");
-    }
-    public void EvaluatePerformance()
-    {
         Console.WriteLine($@"You have completed your journey with a sustainability score of... 
 +------------------+
       {player.SustainabilityScore}/1000     
@@ -96,5 +91,6 @@ public class Game
             Console.WriteLine("Your sustainability score is low. Consider playing again and revist the locations to improve it.");
         }
         // Your items will be used to build a sustainable city of your own.
-    }
+        Console.WriteLine("Thank you for playing Ecotropolis!");
+    }   
 }
