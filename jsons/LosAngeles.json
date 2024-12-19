@@ -19,7 +19,6 @@
       }],
 "urbanChallenges": [
     {
-      "name": "Air Pollution",
       "description": "High levels of PM2.5 and ozone are impacting air quality and public health.",
       "options": [
         {

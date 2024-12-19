@@ -21,6 +21,7 @@
   "urbanChallenges": [
     {
       "name": "Balancing Growth with Heritage",
+      "description": "Amsterdam is a city of rich history and culture, but faces challenges in balancing growth with heritage preservation. How will you navigate this delicate balance?",
       "options": [
         {
           "description": "Skyward Expansion. Amsterdam is considering new high-rise, eco-friendly buildings to fit more homes into limited space. This approach would allow more housing without sprawling outward, but it risks changing Amsterdam's historic skyline.",
@@ -38,6 +39,7 @@
     },
     {
       "name": "Innovative Housing Models",
+      "description": "Amsterdam faces a housing crisis with rising prices and limited availability. How will you address this challenge?",
       "options": [
         {
           "description": "Government Partnerships for Affordable Housing. Incentivize developers to build affordable housing, attracting projects quickly.",
@@ -55,6 +57,7 @@
     },
     {
       "name": "Safety Disparities",
+      "description": "Amsterdam experiences safety disparities across neighborhoods, affecting residents' quality of life. How will you address this issue?",
       "options": [
         {
           "description": "Increased Police Presence. Deploy more law enforcement officers in high-crime areas, though this may lead to over-policing and distrust.",
@@ -72,6 +75,7 @@
     },
     {
       "name": "Social Inequalities in Housing Access",
+      "description": "Amsterdam faces social inequalities in housing access, with certain groups facing discrimination and exclusion. How will you promote fair housing opportunities?",
       "options": [
         {
           "description": "Prioritize Market-Rate Housing Development. Increase supply but risk excluding low-income groups.",
@@ -89,6 +93,7 @@
     },
     {
       "name": "Inequitable Access to Public Green Spaces",
+      "description": "Amsterdam's public green spaces are not equally distributed, with some areas lacking access to parks and recreational areas. How will you address this disparity?",
       "options": [
         {
           "description": "Focus on Large Central Parks. Enhance existing parks, attracting visitors but neglecting underserved areas.",

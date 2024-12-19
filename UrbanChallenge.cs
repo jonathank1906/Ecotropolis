@@ -4,30 +4,29 @@ using EcoTropolis;
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
 public class UrbanChallenge {
-    public string Name { get; private set; }
+     [JsonPropertyName("description")]
+    public string Description { get; private set; }
 
     [JsonPropertyName("options")]
     public List<ChallengeOption> Options { get; private set; }
 
     [JsonConstructor]
-    public UrbanChallenge(string name, List<ChallengeOption> options)
+    public UrbanChallenge(string description, List<ChallengeOption> options)
     {
-        Name = name;
+        Description = description;
         Options = options;
     }
 
     public void Execute(Player player) {
-        Console.WriteLine($"\nChallenge: {Name}"); // Display the challenge description
+        Console.WriteLine($"\nChallenge: {Description}"); // Display the challenge description
         for (int i = 0; i < Options.Count; i++) // Display available options
         {
             Console.WriteLine(WordWrap($"{i + 1}. {Options[i].Description}",60,"   "));
         }
-
         while (true) { // Loop until the user selects a valid option 
             Console.WriteLine("Please select an option (1 to {0}):", Options.Count);
             Console.Write("> ");
             string? input = Console.ReadLine();
-
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
                     int choice = int.Parse(input) - 1; // Adjust choice for zero-indexed list

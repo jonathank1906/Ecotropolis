@@ -20,6 +20,7 @@
     "urbanChallenges": [
       {
         "name": "Air Pollution in Manilla",
+        "description": "Manila suffers from severe air pollution, with high levels of smog and particulate matter. How will you address this issue?",
         "options": [
           { 
             "description": "Implement new traffic laws", 
@@ -32,6 +33,7 @@
       },
       {
         "name": "Waste Management in Manilla",
+        "description": "Manila faces significant challenges in waste management, with overflowing landfills and limited recycling programs. How will you address this issue?",
         "options": [
           { 
             "description": "Implement a recycling program", 
@@ -44,6 +46,7 @@
       },
       {
         "name": "Water Pollution in Manilla",
+        "description": "Manila's water sources are heavily polluted, affecting public health and the environment. How will you address this issue?",
         "options": [
           { 
             "description": "Implement a water treatment program", 
@@ -56,6 +59,7 @@
       },
       {
         "name": "Homelessness in Manilla",
+        "description": "Manila faces a growing homelessness crisis, with many people living on the streets. How will you address this issue?",
         "options": [
           { 
             "description": "Create affordable housing", 

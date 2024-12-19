@@ -60,7 +60,7 @@ public class Game
         if (enterPawnShopSequence) {
             pawnShop.Open();
         }
-        EndGame();
+        GameEnd();
     }
 
     public void DisplayTravelMenu() {  // Display the travel menu
@@ -72,7 +72,7 @@ public class Game
         Console.Write("> ");
     }
 
-    public void EndGame() {
+    public void GameEnd() {
         DisplayMessage("game_end");
         Console.WriteLine($@"You have completed your journey with a sustainability score of... 
 +------------------+

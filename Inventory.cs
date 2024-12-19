@@ -8,6 +8,7 @@ public class Inventory {
     public void AddToInventory(Item item) {
         inventory.Add(item);
         Console.WriteLine($"{item.Name} added to inventory.");
+        Console.WriteLine(item.Description);
     }
     public void Show() { 
         int i = 1;

@@ -6,9 +6,6 @@ public static class Messages {
             case "help":
                 PrintHelpMessageMain();
                 break;
-            case "welcome":
-                PrintWelcomeMessage(cityName);
-                break;
             case "welcome to city":
                 PrintCityWelcome(cityName);
                 break;
@@ -42,7 +39,6 @@ public static class Messages {
         }
     }
 
-
     private static void PrintHelpMessageMain() {
         Console.WriteLine("\nHelp - Game Instructions:");
         Console.WriteLine("Your task is to solve urban challenges across different cities.");
@@ -62,7 +58,7 @@ public static class Messages {
         Console.WriteLine($"You have arrived in {cityName}.");
     }
 
-    private static void PrintStartMessage() { // start message
+    private static void PrintStartMessage() { 
         Console.WriteLine("Welcome to Ecotropolis – the city-building adventure where your decisions shape the future!\n\n" +
         "As a visionary leader, you'll travel to different cities, taking on roles like mayor, corporate CEO, or urban planner.\n" +
         "Each city faces unique environmental and urban challenges that only you can solve.\n" +
@@ -71,7 +67,7 @@ public static class Messages {
         "The fate of Ecotropolis is in your hands!\n");      
     }
 
-    private static void PrintWorldMap() { // world map message
+    private static void PrintWorldMap() { 
              Console.WriteLine(@"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⣄⣤⣦⣶⣶⣖⣲⣦⣶⣼⣶⣿⣿⣿⣦⡤⠄⠀⠀⠀⢀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣤⣿⣸⣷⣿⣿⣿⣿⠛⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⠀⠀⠀⠀⠀⠘⢻⠻⠅⠀⠀⠀⠀⠀⠀⣀⣠⡀⠀⠀⠀⣈⣉⣻⣆⣤⠀⠀⠀⠀⢀⣠⡀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

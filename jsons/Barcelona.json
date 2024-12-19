@@ -21,6 +21,7 @@
     "urbanChallenges": [
       {
         "name": "Tourism-Driven Rent Inflation",
+        "description": "Barcelona's housing market faces significant challenges due to tourism-driven rent inflation. Short-term rentals occupy a large portion of available housing, driving up prices and displacing residents. How will you address this issue?",
         "options": [
           {
             "description": "Limited Tourist Zones: By designating certain areas for tourists and limiting short-term rentals to these zones, Barcelona might balance tourism revenue with housing needs. It could create more affordable areas for residents.",
@@ -34,6 +35,7 @@
       },
       {
         "name": "Housing Speculation",
+        "description": "Barcelona's housing market is heavily influenced by speculative investors, driving up prices and reducing housing affordability for residents. How will you address this issue?",
         "options": [
           {
             "description": "Incentives for Local Ownership: Offering incentives for locals to purchase homes could reduce speculative purchases by foreign investors. This approach may not drastically alter market prices but would empower residents to remain in their neighborhoods.",
@@ -51,6 +53,7 @@
       },
       {
         "name": "Housing Legislation",
+        "description": "Barcelona's current housing laws struggle to protect residents from rent increases and displacement. How will you address this issue?",
         "options": [
           {
             "description": "Property Tax Exemptions for Low-Income Residents: Reducing property taxes for low-income households would provide financial relief but may not prevent landlords from increasing rents.",
@@ -68,6 +71,7 @@
       },
       {
         "name": "Converting Underutilized Properties",
+        "description": "Barcelona has underutilized properties that could be repurposed to increase housing availability. How will you address this issue?",
         "options": [
           {
             "description": "Temporary Housing Programs: Creating temporary housing in underutilized properties for vulnerable populations would provide short-term relief but might not increase permanent housing availability.",
@@ -85,6 +89,7 @@
       },
       {
         "name": "Expanding Cooperative Housing Models",
+        "description": "Barcelona could benefit from expanding cooperative housing models to increase affordable housing options. How will you address this issue?",
         "options": [
           {
             "description": "Public-Private Partnerships for Affordable Housing: Collaborating with private developers to build affordable housing units with government subsidies might address immediate housing needs.",

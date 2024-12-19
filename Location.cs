@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 namespace Ecotropolis;
 public class Location
 {
+    [JsonPropertyName("name")]
     public string Name { get; set; }
     [JsonPropertyName("WelcomeMessage")]
     public string WelcomeMessage { get; set; }
@@ -13,9 +14,9 @@ public class Location
     public List<Item> RewardItems { get; set; }
 
     [JsonConstructor]
-    public Location(string name) {
-        Name = name;
-        WelcomeMessage = $"Welcome to {Name}."; 
+    public Location() {
+        Name = string.Empty;
+        WelcomeMessage = string.Empty; 
         UrbanChallenges = new List<UrbanChallenge>();
         RewardItems = new List<Item>();
     }
