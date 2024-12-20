@@ -3,17 +3,15 @@ namespace Ecotropolis;
 public class Player
 {
     public Inventory Inventory { get; set; }
-    public int Score { get; set; }
     public int SustainabilityScore { get; set; }
     public int Tokens { get; set; }
     public Player() {
         Inventory = new Inventory();  
-        Score = 0;
         Tokens = 0;
+        SustainabilityScore = 0;
     }
     public void IncreaseScore(int amount) {
-        Score += amount;
-        SustainabilityScore += Score;
+        SustainabilityScore += amount;
     }
     public void AddToken()
     {

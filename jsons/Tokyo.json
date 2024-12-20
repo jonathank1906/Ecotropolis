@@ -5,17 +5,20 @@
     {
         "name": "Golden Ōgi",
         "value": 100,
-        "description": "A stunning golden fan, that represents balance, refinement, and near perfection. A treasure of those that have achieved greatness, but strive for more."
+        "description": "A stunning golden fan, that represents balance, refinement, and near perfection. A treasure of those that have achieved greatness, but strive for more.",
+        "endgamefeedback": "You have successfully navigated the urban challenges of Tokyo, demonstrating your commitment to sustainability and innovation. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Tokyo urban challenge!"
     },
     {
         "name": "Silver Torii Gate",
         "value": 50,
-        "description": "A Torii gate symbolizes progress and milestones. Let it guide you further beyond!"
+        "description": "A Torii gate symbolizes progress and milestones. Let it guide you further beyond!",
+        "endgamefeedback": "You have made significant progress in addressing the urban challenges of Tokyo, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Tokyo urban challenge!"
     },
     {
         "name": "Bronze Daruma Doll",
         "value": 20,
-        "description": "A traditional spiritual talisman, that symbolizes perseverance - 'Fall seven times, rise up eight.'"
+        "description": "A traditional spiritual talisman, that symbolizes perseverance - 'Fall seven times, rise up eight.'",
+        "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Tokyo, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Tokyo urban challenge!"
     }
     ],
     "urbanChallenges": [

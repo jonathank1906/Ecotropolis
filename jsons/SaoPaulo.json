@@ -5,17 +5,20 @@
       { 
         "name": "Golden Surfboard", 
         "value": 100,
-        "description": "A luxurious surfboard symbolizing LA's sunny beaches."
+        "description": "A luxurious surfboard symbolizing LA's sunny beaches.",
+        "endgamefeedback": "You have successfully navigated the urban challenges of Los Angeles, demonstrating your commitment to sustainability and innovation. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Los Angeles urban challenge!"
       },
       { 
         "name": "Silver Keychain", 
         "value": 50, 
-        "description": "A sleek keychain featuring the LA skyline."
+        "description": "A sleek keychain featuring the LA skyline.",
+        "endgamefeedback": "You have made significant progress in addressing the urban challenges of Los Angeles, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Los Angeles urban challenge!"
       }, 
       { 
           "name": "Bronze Badge", 
           "value": 20, 
-          "description": "A small badge commemorating your visit to LA."
+          "description": "A small badge commemorating your visit to LA.",
+          "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Los Angeles, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Los Angeles urban challenge!"
       }],
 "urbanChallenges": [
     {

@@ -1,7 +1,7 @@
 namespace Ecotropolis;
 
 public class Inventory {
-    private List<Item> inventory;
+    public List<Item> inventory;
     public Inventory() {
         inventory = new();
     }
@@ -15,6 +15,13 @@ public class Inventory {
         foreach (var item in inventory) {
             Console.WriteLine(i + ". " + item.Name + " " + item.Value);
             i++;
+        }
+    }
+    public void ShowEndGameFeedback() {
+        foreach (var item in inventory) {
+            Console.WriteLine($"\nItem: {item.Name}");
+            Console.WriteLine($"Description: {item.Description}");
+            Console.WriteLine($"Feedback: {item.EndGameFeedback}");
         }
     }
 }

@@ -15,7 +15,6 @@ public class Game
         StartMenu startMenu = new StartMenu();
         GamePlay();
     }
-   
     public void GamePlay() {
         bool enterPawnShopSequence = false;
         while (true) {
@@ -32,7 +31,6 @@ public class Game
                     int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
                     if (choice >= 0 && choice < locations.Count) { // Valid location
                         Location selectedLocation = locations[choice];
-                        //DisplayMessage("welcome to city", selectedLocation.Name);
                         selectedLocation.PlayLocation(player); // Play the challenges at the location
                         locations.RemoveAt(choice);
                         Console.WriteLine("\nPress any key to return to the travel menu...");
@@ -62,7 +60,6 @@ public class Game
         }
         GameEnd();
     }
-
     public void DisplayTravelMenu() {  // Display the travel menu
         Console.WriteLine("0. Exit Game"); // Exit the game
         for (int i = 0; i < locations.Count; i++) { // Display the available locations
@@ -71,12 +68,11 @@ public class Game
         Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
         Console.Write("> ");
     }
-
     public void GameEnd() {
         DisplayMessage("game_end");
         Console.WriteLine($@"You have completed your journey with a sustainability score of... 
 +------------------+
-      {player.SustainabilityScore}/1000     
+      {player.SustainabilityScore}/100     
 +------------------+");
         if (player.SustainabilityScore >= 200)
         {
@@ -91,6 +87,7 @@ public class Game
             Console.WriteLine("Your sustainability score is low. Consider playing again and revist the locations to improve it.");
         }
         // Your items will be used to build a sustainable city of your own.
+        player.Inventory.ShowEndGameFeedback();
         Console.WriteLine("Thank you for playing Ecotropolis!");
     }   
 }

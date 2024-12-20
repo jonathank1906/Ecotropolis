@@ -1,13 +1,10 @@
 namespace EcoTropolis;
 
 public static class Messages {
-    public static void DisplayMessage(string messageType, string? cityName = null) {
+    public static void DisplayMessage(string messageType) {
         switch (messageType) {
             case "help":
                 PrintHelpMessageMain();
-                break;
-            case "welcome to city":
-                PrintCityWelcome(cityName);
                 break;
             case "start":
                 PrintStartMessage();
@@ -47,15 +44,6 @@ public static class Messages {
         Console.WriteLine("- Make strategic decisions to balance progress and sustainability.");
         Console.WriteLine("Press any key to return to the game...");
         Console.ReadKey();
-    }
-
-    private static void PrintWelcomeMessage(string? cityName) {
-        Console.WriteLine($"\nWelcome to {cityName} Mr. newly elected mayor. \n" +
-        "Thanks to our new programme called EcoTropolis you can help our city by helping others ;)\n");
-    }
-
-    private static void PrintCityWelcome(string? cityName) {
-        Console.WriteLine($"You have arrived in {cityName}.");
     }
 
     private static void PrintStartMessage() { 
@@ -106,10 +94,6 @@ public static class Messages {
         Console.WriteLine("\nInput cannot be empty. Please try again.");
     }
 
-    private static void PrintMainCityDesc() { //main city message
-        Console.WriteLine("Main City Message - please implement!!!!!!!!!!!!!!!!");
-    }
-
     private static void PrintAllLocationsComplete() { //completed challenge message
         Console.WriteLine("\nCongratulations! You have completed all the challenges in Ecotropolis.");
     }
@@ -123,6 +107,7 @@ public static class Messages {
        Welcome to the Pawnshop!
 --------------------------------------
         ");
+        Console.WriteLine("Here are the unique items available for purchase using tokens:");
     }
 
     public static string WordWrap(string text, int lineWidth, string indent)

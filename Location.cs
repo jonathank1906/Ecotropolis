@@ -1,6 +1,5 @@
-using System.Text.Json.Serialization;
-
 namespace Ecotropolis;
+using System.Text.Json.Serialization;
 public class Location
 {
     [JsonPropertyName("name")]
@@ -27,7 +26,7 @@ public class Location
             challenge.Execute(player);
         }
         // Challenges completed, reward the player with an item
-        Item reward = RewardItem(player.Score);
+        Item reward = RewardItem(player.SustainabilityScore);
         Console.WriteLine($"\nYou earned: {reward.Name}!");
         player.Inventory.AddToInventory(reward);
         // Go back to travel menu

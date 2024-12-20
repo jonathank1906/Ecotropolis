@@ -5,17 +5,20 @@
     {
       "name": "Catalan Flag",
       "value": 100,
-      "description": "This flag represents Barcelona’s success in housing protection. In your city, the Catalan Flag enables a ‘Residential Protection Zone,’ where rent controls, vacancy taxes, and anti-speculation measures protect locals from rapid price hikes and maintain housing accessibility."
+      "description": "This flag represents Barcelona’s success in housing protection. In your city, the Catalan Flag enables a ‘Residential Protection Zone,’ where rent controls, vacancy taxes, and anti-speculation measures protect locals from rapid price hikes and maintain housing accessibility.",
+      "endgamefeedback": "You have successfully navigated the urban challenges of Barcelona, demonstrating your commitment to housing justice and community well-being. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Barcelona urban challenge!"
     },
     {
       "name": "Mediterranean Tile Art",
       "value": 50,
-      "description": "This unique tile art symbolizes Barcelona's partial success in balancing housing needs. In your city, it boosts community cohesion, reducing speculative pressure in key areas and promoting local ownership through incentives for residents."
+      "description": "This unique tile art symbolizes Barcelona's partial success in balancing housing needs. In your city, it boosts community cohesion, reducing speculative pressure in key areas and promoting local ownership through incentives for residents.",
+      "endgamefeedback": "You have made significant progress in addressing the urban challenges of Barcelona, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Barcelona urban challenge!"
     },
     {
       "name": "La Rambla Souvenir",
       "value": 20,
-      "description": "This souvenir reminds your city of Barcelona’s struggles with tourism-driven housing demand. In your city, it sparks awareness campaigns, prompting residents to advocate for stronger housing protections, though the immediate impact on affordability is limited."
+      "description": "This souvenir reminds your city of Barcelona’s struggles with tourism-driven housing demand. In your city, it sparks awareness campaigns, prompting residents to advocate for stronger housing protections, though the immediate impact on affordability is limited.",
+      "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Barcelona, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Barcelona urban challenge!"
     }
     ],
     "urbanChallenges": [
