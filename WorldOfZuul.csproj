@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <Target Name="CopyJsonFiles" AfterTargets="Build">
+    <Copy SourceFiles="@(JsonFiles)" DestinationFolder="$(ProjectDir)bin\Debug\net8.0\jsons" />
+  </Target>
+  <ItemGroup>
+    <JsonFiles Include="$(ProjectDir)jsons\**\*" />
+  </ItemGroup>
+
 </Project>

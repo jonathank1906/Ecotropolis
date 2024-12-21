@@ -1,0 +1,78 @@
+{
+    "name": "Manila",
+    "WelcomeMessage": "Welcome to Manila! Start your urban challenge.",
+    "rewardItems": [
+      { 
+        "name": "Golden Jeepney", 
+        "value": 100,
+        "description": "A golden miniature of Manila's iconic Jeepney.",
+        "endgamefeedback": "You have successfully navigated the urban challenges of Manila, demonstrating your commitment to sustainability and innovation. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Manila urban challenge!"
+      },
+      { 
+        "name": "Silver Coconut", 
+        "value": 50, 
+        "description": "A silver coconut symbolizing the Philippines' tropical beauty.",
+        "endgamefeedback": "You have made significant progress in addressing the urban challenges of Manila, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Manila urban challenge!"
+      }, 
+      { 
+          "name": "Bronze Sun Pin", 
+          "value": 20, 
+          "description": "A bronze pin representing the sun from the Philippine flag.",
+          "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Manila, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Manila urban challenge!"
+      }],
+    "urbanChallenges": [
+      {
+        "name": "Air Pollution in Manilla",
+        "description": "Manila suffers from severe air pollution, with high levels of smog and particulate matter. How will you address this issue?",
+        "options": [
+          { 
+            "description": "Implement new traffic laws", 
+            "scoreImpact": 10
+          },
+          { 
+            "description": "Reduce industrial emissions", 
+            "scoreImpact": 5
+          }]
+      },
+      {
+        "name": "Waste Management in Manilla",
+        "description": "Manila faces significant challenges in waste management, with overflowing landfills and limited recycling programs. How will you address this issue?",
+        "options": [
+          { 
+            "description": "Implement a recycling program", 
+            "scoreImpact": 10
+          },
+          { 
+            "description": "Build more landfills", 
+            "scoreImpact": 5
+          }]
+      },
+      {
+        "name": "Water Pollution in Manilla",
+        "description": "Manila's water sources are heavily polluted, affecting public health and the environment. How will you address this issue?",
+        "options": [
+          { 
+            "description": "Implement a water treatment program", 
+            "scoreImpact": 10
+          },
+          { 
+            "description": "Reduce industrial waste", 
+            "scoreImpact": 5
+          }]
+      },
+      {
+        "name": "Homelessness in Manilla",
+        "description": "Manila faces a growing homelessness crisis, with many people living on the streets. How will you address this issue?",
+        "options": [
+          { 
+            "description": "Create affordable housing", 
+            "scoreImpact": 15
+          },
+          { 
+            "description": "Increase social programs", 
+            "scoreImpact": 10
+          }
+        ]
+      }
+    ]
+  }
