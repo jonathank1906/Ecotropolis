@@ -2,70 +2,123 @@
     "name": "Manila",
     "WelcomeMessage": "Welcome to Manila! Start your urban challenge.",
     "rewardItems": [
-      { 
-        "name": "Golden Jeepney", 
-        "value": 100,
-        "description": "A golden miniature of Manila's iconic Jeepney."
+      {
+      "name": "Pearl of the Orient Trophy",
+      "value": 100,
+      "description": "A dazzling pearl trophy symbolizing Manila's resilience and beauty."
       },
-      { 
-        "name": "Silver Coconut", 
-        "value": 50, 
-        "description": "A silver coconut symbolizing the Philippines' tropical beauty."
-      }, 
-      { 
-          "name": "Bronze Sun Pin", 
-          "value": 20, 
-          "description": "A bronze pin representing the sun from the Philippine flag."
+      {
+        "name": "Bamboo Weaving Basket",
+        "value": 50,
+        "description": "A handcrafted basket made from sustainable bamboo, reflecting Filipino craftsmanship."
+      },
+      {
+        "name": "Counterfeit Burial Jar",
+        "value": 20,
+        "description": "The guy that gave you this definitely scammed you. But at least it looks cool. Could have tried harder though."
       }],
-    "urbanChallenges": [
-      {
-        "name": "Air Pollution in Manilla",
-        "options": [
-          { 
-            "description": "Implement new traffic laws", 
-            "scoreImpact": 10
-          },
-          { 
-            "description": "Reduce industrial emissions", 
-            "scoreImpact": 5
-          }]
-      },
-      {
-        "name": "Waste Management in Manilla",
-        "options": [
-          { 
-            "description": "Implement a recycling program", 
-            "scoreImpact": 10
-          },
-          { 
-            "description": "Build more landfills", 
-            "scoreImpact": 5
-          }]
-      },
-      {
-        "name": "Water Pollution in Manilla",
-        "options": [
-          { 
-            "description": "Implement a water treatment program", 
-            "scoreImpact": 10
-          },
-          { 
-            "description": "Reduce industrial waste", 
-            "scoreImpact": 5
-          }]
-      },
-      {
-        "name": "Homelessness in Manilla",
-        "options": [
-          { 
-            "description": "Create affordable housing", 
-            "scoreImpact": 15
-          },
-          { 
-            "description": "Increase social programs", 
-            "scoreImpact": 10
-          }
-        ]
-      }
-    ]
-  }
+
+  "urbanChallenges": [
+    {
+      "name": "Flooding and Climate Resilience \n\n Manila is prone to severe flooding due to typhoons, heavy rains, and inadequate drainage. Coastal areas face rising sea levels, while urbanization has reduced natural water-absorbing areas like forests and wetlands.",
+      "options": [
+        {
+          "description": "Build Extensive Flood Control Systems. Invest in large-scale floodways, pumping stations, and dikes. These solutions are effective but require high upfront costs and time to complete.",
+          "scoreImpact": 5
+        },
+        {          "description": "Promote Community-Led Solutions. Empower local communities with flood preparedness kits and training programs. While cost-effective, this addresses only immediate concerns and relies heavily on community participation.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Adopt Nature-Based Solutions. Restore mangroves, plant urban forests, and construct green spaces to mitigate flooding naturally while improving air quality and biodiversity.",
+          "scoreImpact": 5
+        }
+      ]
+    },
+    {
+      "name": "Urban Housing Crisis \n\nInformal settlements dominate Manila, housing millions of low-income families in unsafe and overcrowded conditions. The growing population outpaces available land and housing, leading to social inequality.",
+      "options": [
+        {
+          "description": "Vertical Affordable Housing Projects. Build high-rise, affordable housing developments to maximize limited land. This reduces urban sprawl but requires strong regulation to avoid displacement.",
+          "scoreImpact": 5
+        },
+        {
+          "description": "Integrate Informal  Settlements. Upgrade slums with better housing, water, and sanitation, while preserving the community’s structure. It is socially inclusive but may have scalability challenges.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Mixed-Income Residential Zones. Create zones combining low-, middle-, and high-income housing to ensure inclusivity and equitable access to services.",
+          "scoreImpact": 5
+        }
+      ]
+    },
+    {
+      "name": "Disaster Preparedness and Response \n\nAs part of the Pacific Ring of Fire, Manila faces frequent earthquakes, typhoons, and volcanic threats. Infrastructure and communities need better disaster preparedness to minimize losses.",
+      "options": [
+        {
+          "description": "Early Warning Systems and Evacuation Plans. Install high-tech monitoring systems and establish clear evacuation protocols. This reduces risks during disasters but relies heavily on long-term maintenance and compliance.",
+          "scoreImpact": 5
+        },
+        {
+          "description": "Community-Based Disaster Readiness Programs. Train local communities in disaster risk reduction and first aid. This fosters resilience but may lack the scale needed for larger disasters.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Reinforce Critical Infrastructure. Retrofit bridges, hospitals, and schools to withstand earthquakes, floods, and typhoons. Effective but costly.",
+          "scoreImpact": 5
+        }
+      ]
+    },
+    {
+      "name": "Access to Green and Safe Public Spaces \n\nMany parts of Manila lack public parks and recreational areas, particularly in densely populated and low-income neighborhoods, worsening health and social inequality.",
+      "options": [
+        {
+          "description": "Redevelop Rizal Park and Major Green Spaces. Enhance iconic parks to attract tourism and provide recreation, though this approach may leave underserved areas untouched.",
+          "scoreImpact": 1
+        },
+        {
+          "description": "Create Pocket Parks in Urban Poor Areas. Develop small, accessible parks in densely populated, underserved neighborhoods. Immediate but limited in scale.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Citywide Green Infrastructure Network. Establish an interconnected system of parks, rooftop gardens, vertical greenery, and urban forests, improving access for all citizens.",
+          "scoreImpact": 5
+        }
+      ]
+    },
+    {
+      "name": "Water and Sanitation Challenges \n\nManila suffers from polluted waterways, inadequate sewerage systems, and water scarcity. Informal settlers and low-income communities are disproportionately affected.",
+      "options": [
+        {
+          "description": "Expand Sewerage and Wastewater Treatment Plants. Address water pollution and improve sanitation, but requires significant funding and time.",
+          "scoreImpact": 5
+        },
+        {
+          "description": "Found a private company specializing in water treatment and distribution, so you can sell the clean water for a profit. This way, you can ensure that the citizens get clean water, as well as ensure that your pockets are full of money.",
+          "scoreImpact": 1
+        },
+        {
+          "description": "Rainwater Harvesting and Reuse Programs. Promote systems to collect and reuse rainwater in urban and rural areas, reducing demand on water supply systems.",
+          "scoreImpact": 5
+        }
+      ]
+    },
+    {
+      "name": "Waste Management and Pollution \n\nWith millions of residents, Manila produces massive amounts of waste. Inefficient collection and reliance on landfills lead to pollution and health hazards, especially in coastal areas.",
+      "options": [
+        {
+          "description": "Implement Waste-to-Energy Plants. Reduce landfill waste and generate power, but may face opposition due to environmental concerns.",
+          "scoreImpact": 5
+        },
+        {
+          "description": "Expand Barangay-Level Recycling Programs. Promote local recycling programs that create jobs and reduce waste. Scalable but requires strong community participation.",
+          "scoreImpact": 3
+        },
+        {
+          "description": "Ban Single-Use Plastics. Enforce strict bans on single-use plastics across the city, reducing pollution but requiring significant public education efforts.",
+          "scoreImpact": 3
+        }
+      ]
+    }
+  ]
+}
