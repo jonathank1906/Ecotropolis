@@ -109,9 +109,9 @@ public static class Messager
         Console.Write("> ");
     }
 
-    public static void PrintMessage() {
+    // public static void PrintMessage() {
         
-    }
+    // }
 
     public static string WordWrap(string text, int lineWidth, string indent)
     {
@@ -150,6 +150,4 @@ public static class Messager
         }
         return result;
     }
-
-
 }

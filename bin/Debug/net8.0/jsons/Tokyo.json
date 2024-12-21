@@ -1,0 +1,117 @@
+{
+    "name": "Tokyo",
+    "WelcomeMessage": "- Yōkoso Tokyo e! - Welcome to Tokyo! The heart of Japan, where tradition and innovation collide!\n\nTokyo provides everything between serene temples and towering skyscrapers, a global icon of progress!\nBeneath the vibrant facade however, lie challenges that test even the most progressed and advanced cities.\n\nTo set the scene, Tokyo faces two distinct issues that threaten its future sustainability: Growing impacts of natural disasters,\nand ever rising urban heat levels.\n\nTo get to the bottom of this, you will have to navigate the different solutions presented to you,\nto make sure Tokyo can persevere as the strong-spirited metropolis that it is!",
+    "rewardItems": [
+    {
+        "name": "Golden Ōgi",
+        "value": 100,
+        "description": "A stunning golden fan, that represents balance, refinement, and near perfection. A treasure of those that have achieved greatness, but strive for more.",
+        "endgamefeedback": "You have successfully navigated the urban challenges of Tokyo, demonstrating your commitment to sustainability and innovation. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Tokyo urban challenge!"
+    },
+    {
+        "name": "Silver Torii Gate",
+        "value": 50,
+        "description": "A Torii gate symbolizes progress and milestones. Let it guide you further beyond!",
+        "endgamefeedback": "You have made significant progress in addressing the urban challenges of Tokyo, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Tokyo urban challenge!"
+    },
+    {
+        "name": "Bronze Daruma Doll",
+        "value": 20,
+        "description": "A traditional spiritual talisman, that symbolizes perseverance - 'Fall seven times, rise up eight.'",
+        "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Tokyo, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Tokyo urban challenge!"
+    }
+    ],
+    "urbanChallenges": [
+    {
+        "name": "Earthquake-Resistant Buildings",
+        "description": "Tokyo is located in one of the most earthquake-prone regions on the planet.\n\nIt is vital to have earthquake-resilient buildings that protect the lives of the Japanese people, and the properties themselves. However, this is a costly affair that also requires strict codes.\n\nHow will you fare in face of this challenge?",
+        "options": [
+        {
+            "description": "Strengthen building codes to ensure all new constructions are earthquake-resistant.",
+            "scoreImpact": 10
+        },
+        {
+            "description": "Provide financial incentives to retrofit older buildings for earthquake resistance.",
+            "scoreImpact": 6
+        },
+        {
+            "description": "Focus only on emergency shelters while ignoring long-term building safety.",
+            "scoreImpact": -5
+        }
+        ]
+    },
+    {
+        "name": "Flood Risk Reduction",
+        "description": "Tokyo experiences frequent flooding, especially during typhoon seasons and during heavy rainfall.\nTo manage flood risk, a balance between large-scale infrastructure and nature-based solutions is required.\n\nWhat strategy will you implement to ensure the city remains dry and protected?",
+        "options": [
+        {
+            "description": "Install permeable pavements and rain gardens in urban areas.",
+            "scoreImpact": 5
+        },
+        {
+            "description": "Increase reliance on sandbags and temporary barriers.",
+            "scoreImpact": -5
+        },
+        {
+            "description": "Build large-scale underground floodwater storage and advanced drainage systems.",
+            "scoreImpact": 10
+        }
+        ]
+    },
+    {
+        "name": "Typhoon Early Warning Systems",
+        "description": "Typhoons pose a significant risk to Tokyo's populace, with high winds and heavy rains, causing damage and disruption.\nEarly warning systems can save lives, by ensuring people have time to prepare and evacuate.\n\nHow will you improve Tokyo's preparedness for the next big storm?",
+        "options": [
+        {
+            "description": "Rely on outdated meteorological systems for warnings.",
+            "scoreImpact": -5
+        },
+        {
+            "description": "Develop AI-based forecasting systems and public evacuation apps.",
+            "scoreImpact": 10
+        },
+        {
+            "description": "Expand community awareness programs for typhoon preparedness.",
+            "scoreImpact": 6
+        }
+        ]
+    },
+    {
+        "name": "Urban Greening (Heat Mitigation)",
+        "description": "Rising urban temperatures in Tokyo are worsened by the lack of greenery and dense concrete structures.\nGreen roofs, urban trees, and parks can help reduce heat and improve the air quality.\n\nHow will you cool down the city while enhancing its livability?",
+        "options": [
+        {
+            "description": "Mandate green roofs and walls for all new developments.",
+            "scoreImpact": 10
+        },
+        {
+            "description": "Install artificial shade structures instead of vegetation.",
+            "scoreImpact": -5
+        },
+        {
+            "description": "Plant urban trees and increase public green spaces.",
+            "scoreImpact": 6
+        }
+        ]
+    },
+    {
+        "name": "Cool Pavements (Heat Mitigation)",
+        "description": "Traditional asphalt pavements absorb and retain heat, making Tokyo's streets unbearably hot during summer.\nCool pavements, like reflective surfaces or water-retaining materials, can help reduce ground-level temperatures.\n\nWhat steps will you take to make Tokyo's streets cooler?",
+        "options": [
+        {
+            "description": "Focus on public relations campaigns without addressing root causes.",
+            "scoreImpact": -5
+        },
+        {
+            "description": "Replace all high-traffic roads with reflective or water-retaining pavements.",
+            "scoreImpact": 10
+        },
+        {
+            "description": "Gradually install cool pavements in selected districts.",
+            "scoreImpact": 4
+        }
+        ]
+    }
+    ]
+}
+  
