@@ -1,0 +1,112 @@
+{
+    "name": "Barcelona",
+    "WelcomeMessage": "The next location your supervisor assigns is Barcelona, known for its vibrant culture, modernist architecture, and Mediterranean beaches. As you arrive, the city's beauty is undeniable, but you quickly notice the local population grappling with a severe housing crisis. Tourists occupy a large portion of available rentals, prices are skyrocketing due to speculative investors, and the current laws struggle to protect affordable housing for residents. You are part of a pilot urban management project made up of experts from all over the world and your role is to analyze the proposals and participate in the meetings.",
+    "rewardItems": [
+    {
+      "name": "Catalan Flag",
+      "value": 100,
+      "description": "This flag represents Barcelona’s success in housing protection. In your city, the Catalan Flag enables a ‘Residential Protection Zone,’ where rent controls, vacancy taxes, and anti-speculation measures protect locals from rapid price hikes and maintain housing accessibility.",
+      "endgamefeedback": "You have successfully navigated the urban challenges of Barcelona, demonstrating your commitment to housing justice and community well-being. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Barcelona urban challenge!"
+    },
+    {
+      "name": "Mediterranean Tile Art",
+      "value": 50,
+      "description": "This unique tile art symbolizes Barcelona's partial success in balancing housing needs. In your city, it boosts community cohesion, reducing speculative pressure in key areas and promoting local ownership through incentives for residents.",
+      "endgamefeedback": "You have made significant progress in addressing the urban challenges of Barcelona, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Barcelona urban challenge!"
+    },
+    {
+      "name": "La Rambla Souvenir",
+      "value": 20,
+      "description": "This souvenir reminds your city of Barcelona’s struggles with tourism-driven housing demand. In your city, it sparks awareness campaigns, prompting residents to advocate for stronger housing protections, though the immediate impact on affordability is limited.",
+      "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Barcelona, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Barcelona urban challenge!"
+    }
+    ],
+    "urbanChallenges": [
+      {
+        "name": "Tourism-Driven Rent Inflation",
+        "description": "Barcelona's housing market faces significant challenges due to tourism-driven rent inflation. Short-term rentals occupy a large portion of available housing, driving up prices and displacing residents. How will you address this issue?",
+        "options": [
+          {
+            "description": "Limited Tourist Zones: By designating certain areas for tourists and limiting short-term rentals to these zones, Barcelona might balance tourism revenue with housing needs. It could create more affordable areas for residents.",
+            "scoreImpact": 5
+          },
+          {
+            "description": "Strict Short-Term Rental Regulations: Barcelona could impose stricter regulations on short-term rentals to curb their impact on housing availability and rent prices to prioritize long-term housing for residents.",
+            "scoreImpact": 10
+          }
+        ]
+      },
+      {
+        "name": "Housing Speculation",
+        "description": "Barcelona's housing market is heavily influenced by speculative investors, driving up prices and reducing housing affordability for residents. How will you address this issue?",
+        "options": [
+          {
+            "description": "Incentives for Local Ownership: Offering incentives for locals to purchase homes could reduce speculative purchases by foreign investors. This approach may not drastically alter market prices but would empower residents to remain in their neighborhoods.",
+            "scoreImpact": 5
+          },
+          {
+            "description": "Community Land Trusts: Establishing a trust to purchase properties and offer them at affordable rates could stabilize housing for some residents, but high initial costs and limited scale might limit its impact. In your city, this strategy could preserve housing for low-income residents.",
+            "scoreImpact": 2
+          },
+          {
+            "description": "Taxing Vacant Properties: Barcelona could implement a vacancy tax on empty homes, encouraging landlords to rent out vacant properties. This would increase housing stock and deter speculative investors. A similar policy back home could reduce artificial scarcity, making housing more accessible.",
+            "scoreImpact": 10
+          }
+        ]
+      },
+      {
+        "name": "Housing Legislation",
+        "description": "Barcelona's current housing laws struggle to protect residents from rent increases and displacement. How will you address this issue?",
+        "options": [
+          {
+            "description": "Property Tax Exemptions for Low-Income Residents: Reducing property taxes for low-income households would provide financial relief but may not prevent landlords from increasing rents.",
+            "scoreImpact": 2
+          },
+          {
+            "description": "Affordable Housing Quotas for New Developments: Mandating a percentage of affordable units in new housing developments would create more accessible homes.",
+            "scoreImpact": 5
+          },
+          {
+            "description": "Rent Control Measures: By expanding rent control laws, Barcelona could set limits on annual rent increases, protecting tenants from sharp price hikes. If your city adopted similar policies, they could provide stability to renters facing rapid price changes.",
+            "scoreImpact": 10
+          }
+        ]
+      },
+      {
+        "name": "Converting Underutilized Properties",
+        "description": "Barcelona has underutilized properties that could be repurposed to increase housing availability. How will you address this issue?",
+        "options": [
+          {
+            "description": "Temporary Housing Programs: Creating temporary housing in underutilized properties for vulnerable populations would provide short-term relief but might not increase permanent housing availability.",
+            "scoreImpact": 2
+          },
+          {
+            "description": "Adaptive Reuse of Vacant Buildings: Barcelona could repurpose vacant office spaces, factories, or public buildings into affordable housing. This approach would increase housing availability without requiring new construction.",
+            "scoreImpact": 10
+          },
+          {
+            "description": "Subsidies for Renovating Empty Homes: Providing subsidies to renovate and rent vacant homes would encourage property owners to bring unused units back into the housing market. Locally, this could unlock new housing opportunities but might need ongoing investment.",
+            "scoreImpact": 5
+          }
+        ]
+      },
+      {
+        "name": "Expanding Cooperative Housing Models",
+        "description": "Barcelona could benefit from expanding cooperative housing models to increase affordable housing options. How will you address this issue?",
+        "options": [
+          {
+            "description": "Public-Private Partnerships for Affordable Housing: Collaborating with private developers to build affordable housing units with government subsidies might address immediate housing needs.",
+            "scoreImpact": 5
+          },
+          {
+            "description": "Support for Housing Cooperatives: Barcelona could incentivize the development of housing cooperatives, where residents collectively own and manage their buildings. This model reduces reliance on private landlords and speculative markets.",
+            "scoreImpact": 10
+          },
+          {
+            "description": "Shared-Equity Homeownership: Introducing shared-equity schemes, where buyers co-own homes with a public or nonprofit entity, could lower purchase costs but limit ownership rights.",
+            "scoreImpact": 2
+          }
+        ]
+      }
+    ]
+  }
