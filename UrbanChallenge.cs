@@ -15,43 +15,37 @@ public class UrbanChallenge {
         Options = options;
     }
 
-    public void Execute(Player player) {
-        Console.WriteLine($"\nChallenge: {Description}"); // Display the challenge description
-        // Shuffle the options list randomly
-        var random = new Random();
-        var shuffledOptions = Options.OrderBy(x => random.Next()).ToList();
-
-        // Display the shuffled options
-        for (int i = 0; i < shuffledOptions.Count; i++) {
-            Console.WriteLine(WordWrap($"{i + 1}. {shuffledOptions[i].Description}", 60, "   "));
+        public void Execute(Player player) {  
+        Console.WriteLine("Challenge:");
+        Console.WriteLine(WordWrap($"{Description}", 100, "")); // Display the challenge description
+        for (int i = 0; i < Options.Count; i++) // Display the option descriptions
+        {
+           
+            Console.WriteLine(WordWrap($"{i + 1}. {Options[i].Description}",60,"   "));
         }
+
         while (true) { // Loop until the user selects a valid option 
-            Console.WriteLine("Please select an option (1 to {0}):", shuffledOptions.Count);
+            Console.WriteLine("Please select an option (1 to {0}):", Options.Count);
             Console.Write("> ");
             string? input = Console.ReadLine();
-            if (!string.IsNullOrEmpty(input)) 
-            { 
-                try 
-                {
+
+            if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
+                try {
                     int choice = int.Parse(input) - 1; // Adjust choice for zero-indexed list
-                    if (choice >= 0 && choice < shuffledOptions.Count) 
-                    { 
-                        player.IncreaseScore(shuffledOptions[choice].ScoreImpact); 
-                        if (shuffledOptions[choice].ScoreImpact > 10) {
-                            player.AddToken();
-                        }
-                        break; 
+                    if (choice >= 0 && choice < Options.Count) { // Check if choice is within valid range
+                        player.IncreaseScore(Options[choice].ScoreImpact);
+                        break;
                     }
-                    else { 
-                        PrintMessage("invalid_option"); 
+                    else { // Invalid option number
+                        PrintMessage("invalid option");
                     }
-                } 
-                catch (FormatException) { 
-                    PrintMessage("invalid_command"); 
+                }
+                catch (FormatException) { // Invalid input format
+                    PrintMessage("invalid command");
                 }
             }  
-            else { 
-                PrintMessage("empty_input"); 
+            else { // Empty input
+                PrintMessage("empty input");
             }  
         }
     }

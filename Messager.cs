@@ -41,12 +41,11 @@ public static class Messager
         
         key = "travel_menu";
         message = """
-                  Travel Menu:
+                  ---- Travel Menu ----
+                  Explore vibrant cities across the globe, each with unique challenges to tackle.
+                  Solve urban issues, earn rewards, and shape the future of Ecotropolis!
                   Select a location to visit:
-                  TODO: WE NEED TO MAKE SOME SORT OF A DESCRIPTION HERE!!!!  
-                  
-                  Available locations:
-                  """; //TODO: Travel menu description
+                  """;
         AddMessage(key, message);
         
         key = "invalid_option";
@@ -62,7 +61,7 @@ public static class Messager
         AddMessage(key, message);
         
         key = "all_locations_visited";
-        message = "nCongratulations! You have completed all the challenges in Ecotropolis.";
+        message = "Congratulations! You have completed all the challenges in Ecotropolis.";
         AddMessage(key, message);
         
         key = "pawn_shop";
@@ -87,7 +86,6 @@ public static class Messager
     
     public static void PrintMessage(string key, string? variable = null) {
         Messages.TryGetValue(key, out string? message);
-        
         if (string.IsNullOrEmpty(message)) {
             Console.WriteLine("Message not found.");
         }

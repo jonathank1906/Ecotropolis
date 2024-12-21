@@ -62,7 +62,6 @@ public class Game
     }
     public void DisplayTravelMenu() { // Display the travel menu
         string variable = "0. Exit Game\n";
-
         for (int i = 0; i < locations.Count; i++) { // Display the available locations
             variable += $"{i + 1}. {locations[i].Name}\n";
         }
@@ -75,11 +74,11 @@ public class Game
 +------------------+
       {player.SustainabilityScore}/100     
 +------------------+");
-        if (player.SustainabilityScore >= 200)
+        if (player.SustainabilityScore >= 85)
         {
             Console.WriteLine("Congratulations! You have achieved a high sustainability score.");
         }
-        else if (player.SustainabilityScore >= 100)
+        else if (player.SustainabilityScore >= 50)
         {
             Console.WriteLine("You have achieved a moderate sustainability score.");
         }
@@ -88,6 +87,7 @@ public class Game
             Console.WriteLine("Your sustainability score is low. Consider playing again and revist the locations to improve it.");
         }
         // Your items will be used to build a sustainable city of your own.
+        Console.WriteLine("\nHere is a summary of the items you obtained in each location along with some feedback:");
         player.Inventory.ShowEndGameFeedback();
         Console.WriteLine("Thank you for playing Ecotropolis!");
     }   

@@ -8,14 +8,14 @@ public class Item
     public string Description { get; private set; }
     public string EndGameFeedback {get; private set;}
 
-     public Item(string name, int value, string description) { // Constructor for the unique items
+    public Item(string name, int value, string description) { // Constructor for the unique items
         Name = name;
         Value = value;
         Description = description;
         EndGameFeedback = string.Empty;
     }
 
-     [JsonConstructor]
+    [JsonConstructor]
     public Item(string name, int value, string description, string endGameFeedback) { // Constructor for the other items
         Name = name;
         Value = value;

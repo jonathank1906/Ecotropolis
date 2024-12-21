@@ -1,5 +1,6 @@
 namespace Ecotropolis;
 using System.Text.Json.Serialization;
+using static Ecotropolis.Messager;
 public class Location
 {
     [JsonPropertyName("name")]
@@ -20,7 +21,7 @@ public class Location
         RewardItems = new List<Item>();
     }
     public void PlayLocation(Player player) {
-        Console.WriteLine(WelcomeMessage);
+        Console.WriteLine(WordWrap(WelcomeMessage, 100, ""));
         foreach (var challenge in UrbanChallenges)
         {
             challenge.Execute(player);
