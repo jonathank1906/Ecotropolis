@@ -1,6 +1,6 @@
 namespace Ecotropolis;
 using System.Text.Json.Serialization;
-using static EcoTropolis.Messages;
+using static Ecotropolis.Messager;
 public class UrbanChallenge {
      [JsonPropertyName("description")]
     public string Description { get; private set; }
@@ -43,15 +43,15 @@ public class UrbanChallenge {
                         break; 
                     }
                     else { 
-                        DisplayMessage("invalid option"); 
+                        PrintMessage("invalid_option"); 
                     }
                 } 
                 catch (FormatException) { 
-                    DisplayMessage("invalid command"); 
+                    PrintMessage("invalid_command"); 
                 }
             }  
             else { 
-                DisplayMessage("empty input"); 
+                PrintMessage("empty_input"); 
             }  
         }
     }

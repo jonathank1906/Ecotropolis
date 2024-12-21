@@ -1,12 +1,11 @@
 namespace Ecotropolis;
-using static EcoTropolis.Messages;
+using static Ecotropolis.Messager;
 
 public class StartMenu {
     public string? CityName { get; private set; }   
     
     public StartMenu() {
-        DisplayMessage("world map");
-        DisplayMessage("start");
+        PrintMessage("welcome");
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey(true);
     }

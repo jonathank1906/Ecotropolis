@@ -1,5 +1,5 @@
 namespace Ecotropolis;
-using static EcoTropolis.Messages;
+using static Ecotropolis.Messager;
 
 public class PawnShop
 {
@@ -14,7 +14,7 @@ public class PawnShop
         };
     }
     public void Open() {
-        DisplayMessage("pawn shop"); // this is the heading only
+       // DisplayMessage("pawn shop"); // this is the heading only
         while (true) {
             Console.WriteLine("Available unique items:");
             for (int i = 0; i < uniqueItems.Count; i++) {
