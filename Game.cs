@@ -1,7 +1,7 @@
 using EcoTropolis;
 
 namespace Ecotropolis;
-using static EcoTropolis.Messages;
+using static Ecotropolis.Messager; 
 
 public class Game
 {
@@ -21,7 +21,7 @@ public class Game
         bool enterPawnShopSequence = false;
         while (true) {
             if (locations.Count == 0) { 
-                DisplayMessage("All Locations Visited");
+                PrintMessage("all_locations_visited");
                 enterPawnShopSequence = true;
                 break;
             }
@@ -39,22 +39,22 @@ public class Game
                         Console.ReadKey(true);
                     }
                     else if (choice == -1) { // Exit the game
-                        DisplayMessage("Exit Game");
+                        PrintMessage("exit_game");
                         return;
                     }
                     else if (choice == locations.Count) { // Display help menu
-                        DisplayMessage("help");
+                        PrintMessage("help");
                     }
                     else { // Invalid choice
-                        DisplayMessage("invalid option");
+                        PrintMessage("invalid_option");
                     }
                 }
                 catch (FormatException) { // Handle invalid numeric input
-                    DisplayMessage("invalid command");
+                    PrintMessage("invalid_command");
                 }
            }
            else { // Null or empty input
-               DisplayMessage("empty input");
+               PrintMessage("empty_input");
            }
         }
         if (enterPawnShopSequence) {
@@ -62,17 +62,17 @@ public class Game
         }
         GameEnd();
     }
-    public void DisplayTravelMenu() {  // Display the travel menu
-        DisplayMessage("travel_menu");
-        Console.WriteLine("0. Exit Game"); // Exit the game
+    public void DisplayTravelMenu() { // Display the travel menu
+        string variable = "0. Exit Game\n";
+
         for (int i = 0; i < locations.Count; i++) { // Display the available locations
-            Console.WriteLine($"{i + 1}. {locations[i].Name}");
+            variable += ($"{i + 1}. {locations[i].Name}\n");
         }
-        Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
-        Console.Write("> ");
+        variable += $"{locations.Count + 1}. Help"; // Display the help option
+        PrintMessage("travel_menu", variable);
     }
     public void GameEnd() {
-        DisplayMessage("game_end");
+        PrintMessage("game_end");
         Console.WriteLine($@"You have completed your journey with a sustainability score of... 
 +------------------+
       {player.SustainabilityScore}/100     
