@@ -1,3 +1,5 @@
+using EcoTropolis;
+
 namespace Ecotropolis;
 using static EcoTropolis.Messages;
 
@@ -61,6 +63,7 @@ public class Game
         GameEnd();
     }
     public void DisplayTravelMenu() {  // Display the travel menu
+        DisplayMessage("travel_menu");
         Console.WriteLine("0. Exit Game"); // Exit the game
         for (int i = 0; i < locations.Count; i++) { // Display the available locations
             Console.WriteLine($"{i + 1}. {locations[i].Name}");

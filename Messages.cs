@@ -15,6 +15,9 @@ public static class Messages {
             case "world map":
                 PrintWorldMap();
                 break;
+            case "travel_menu":
+                PrintTravelMenu();
+                break;
             case "invalid option":
                 PrintInvalidOption();
                 break;
@@ -84,6 +87,14 @@ public static class Messages {
 
     private static void PrintInvalidCommandMessage() { // invalid command message
         Console.WriteLine("\nInvalid input. Please try again.");
+    }
+    
+    private static void PrintTravelMenu() { // travel menu message
+        Console.WriteLine("\nTravel Menu:");
+        Console.WriteLine("Select a location to visit:");
+        Console.WriteLine("TODO: WE NEED TO MAKE SOME SORT OF A DESCRIPTION HERE!!!!");
+
+        Console.WriteLine("\nAvailable locations:");
     }
 
     private static void PrintInvalidOption() { // invalid city name message
