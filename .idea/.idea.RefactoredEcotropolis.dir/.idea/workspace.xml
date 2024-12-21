@@ -9,19 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4f21a093-fe46-4c39-ae73-bc4a0989e670" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Messages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsons/Manila.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsons/Manila.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/WorldOfZuul.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/WorldOfZuul.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
