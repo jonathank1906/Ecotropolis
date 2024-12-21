@@ -60,14 +60,14 @@ public class Game
         }
         GameEnd();
     }
-    public void DisplayTravelMenu() {  // Display the travel menu
-        PrintMessage("travel_menu");
-        Console.WriteLine("0. Exit Game"); // Exit the game
+    public void DisplayTravelMenu() { // Display the travel menu
+        string variable = "0. Exit Game\n";
+
         for (int i = 0; i < locations.Count; i++) { // Display the available locations
-            Console.WriteLine($"{i + 1}. {locations[i].Name}");
+            variable += $"{i + 1}. {locations[i].Name}\n";
         }
-        Console.WriteLine($"{locations.Count + 1}. Help"); // Display the help option
-        Console.Write("> ");
+        variable += $"{locations.Count + 1}. Help"; // Display the help option
+        PrintMessage("travel_menu", variable);
     }
     public void GameEnd() {
         PrintMessage("game_end");

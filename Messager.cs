@@ -86,8 +86,6 @@ public static class Messager
     }
     
     public static void PrintMessage(string key, string? variable = null) {
-        Console.WriteLine("\n[SYSTEM MESSAGE START]");
-        Console.WriteLine("---------------------------------");
         Messages.TryGetValue(key, out string? message);
         
         if (string.IsNullOrEmpty(message)) {
@@ -103,15 +101,7 @@ public static class Messager
                 Console.WriteLine(variable);
             }
         }
-
-        Console.WriteLine("---------------------------------");
-        Console.WriteLine("[SYSTEM MESSAGE END]");
-        Console.Write("> ");
     }
-
-    // public static void PrintMessage() {
-        
-    // }
 
     public static string WordWrap(string text, int lineWidth, string indent)
     {
