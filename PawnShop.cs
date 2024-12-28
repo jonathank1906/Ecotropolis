@@ -14,34 +14,33 @@ public class PawnShop
         };
     }
     public void Open() {
-       // DisplayMessage("pawn shop"); // this is the heading only
         while (true) {
-            Console.WriteLine("Available unique items:");
+            string stringVariable = "\n";
+            
             for (int i = 0; i < uniqueItems.Count; i++) {
-                Console.WriteLine($"{i + 1}. {uniqueItems[i].Name} (Cost: {uniqueItems[i].Value} tokens)");
+                stringVariable += $"{i + 1}. {uniqueItems[i].Name} (Cost: {uniqueItems[i].Value} tokens) \n";
             }
-            Console.WriteLine($"You have {player.Tokens} tokens.");
-            Console.WriteLine("What would you like to do?");
-            Console.WriteLine("0. Exit the shop\n1. Buy an item\n2. View inventory"); 
-            Console.Write("> ");
+            stringVariable += $"\n You have {player.Tokens} tokens.";
+            PrintMessage("pawn_shop", stringVariable);
+            PrintMessage("pawn_shop_menu");
+            
             switch (Console.ReadLine()) {
                 case "0":
                     return;
                 case "1":
-                    Console.WriteLine("Which item would you like to buy?");
+                    PrintMessage("generic", "Which item would you like to buy?");
                     string? input = Console.ReadLine();
                     if (int.TryParse(input, out int choice) && choice >= 1 && choice <= uniqueItems.Count) {
-                        Console.WriteLine($"You selected {uniqueItems[choice - 1].Name}.");
+                        PrintMessage("generic",$"You selected {uniqueItems[choice - 1].Name}.");
                         Item selectedItem = uniqueItems[choice - 1];
                         BuyItem(selectedItem);
                     }
                     break;
                 case "2":
-                    Console.WriteLine("Your inventory:");
                     player.Inventory.Show();
                     continue;
                 default:
-                    Console.WriteLine("Invalid selection. Please try again.");
+                    PrintMessage("invalid_option");
                     break;
             }
         }
@@ -53,7 +52,7 @@ public class PawnShop
             uniqueItems.Remove(item);
         }
         else {
-            Console.WriteLine("You don't have enough tokens to buy this item.");
+            PrintMessage("generic","You don't have enough tokens to buy this item.");
         }
     }
 }

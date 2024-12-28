@@ -33,8 +33,6 @@ public class Game
                         Location selectedLocation = locations[choice];
                         selectedLocation.PlayLocation(player); // Play the challenges at the location
                         locations.RemoveAt(choice);
-                        Console.WriteLine("\nPress any key to return to the travel menu...");
-                        Console.ReadKey(true);
                     }
                     else if (choice == -1) { // Exit the game
                         PrintMessage("exit_game");
@@ -50,10 +48,10 @@ public class Game
                 catch (FormatException) { // Handle invalid numeric input
                     PrintMessage("invalid_command");
                 }
-           }
-           else { // Null or empty input
+            } 
+            else { // Null or empty input
                PrintMessage("empty_input");
-           }
+            }
         }
         if (enterPawnShopSequence) {
             pawnShop.Open();
@@ -68,27 +66,31 @@ public class Game
         variable += $"{locations.Count + 1}. Help"; // Display the help option
         PrintMessage("travel_menu", variable);
     }
-    public void GameEnd() {
-        PrintMessage("game_end");
-        Console.WriteLine($@"You have completed your journey with a sustainability score of... 
-+------------------+
-      {player.SustainabilityScore}/100     
-+------------------+");
+
+    public void GameEnd()
+    {
+        string stringVariable = (player.SustainabilityScore / 100).ToString();
+        stringVariable += "\n";
+
         if (player.SustainabilityScore >= 85)
         {
-            Console.WriteLine("Congratulations! You have achieved a high sustainability score.");
+            stringVariable += "Congratulations! You have achieved a high sustainability score.";
         }
         else if (player.SustainabilityScore >= 50)
         {
-            Console.WriteLine("You have achieved a moderate sustainability score.");
+            stringVariable += "You have achieved a moderate sustainability score.";
         }
         else
         {
-            Console.WriteLine("Your sustainability score is low. Consider playing again and revist the locations to improve it.");
+            stringVariable +=
+                "Your sustainability score is low. Consider playing again and revist the locations to improve it.";
         }
-        // Your items will be used to build a sustainable city of your own.
-        Console.WriteLine("\nHere is a summary of the items you obtained in each location along with some feedback:");
-        player.Inventory.ShowEndGameFeedback();
-        Console.WriteLine("Thank you for playing Ecotropolis!");
-    }   
+
+        PrintMessage("game_end", stringVariable);
+
+        stringVariable = player.Inventory.GenerateEndGameFeedback();
+        PrintMessage("feedback", stringVariable);
+
+        PrintMessage("exit_game");
+    }
 }
