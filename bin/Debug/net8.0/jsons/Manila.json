@@ -23,7 +23,8 @@
 
   "urbanChallenges": [
     {
-      "name": "Flooding and Climate Resilience \n\n Manila is prone to severe flooding due to typhoons, heavy rains, and inadequate drainage. Coastal areas face rising sea levels, while urbanization has reduced natural water-absorbing areas like forests and wetlands.",
+      "name": "Flooding and Climate Resilience",
+      "description": "Manila is prone to severe flooding due to typhoons, heavy rains, and inadequate drainage. Coastal areas face rising sea levels, while urbanization has reduced natural water-absorbing areas like forests and wetlands.",
       "options": [
         {
           "description": "Build Extensive Flood Control Systems. Invest in large-scale floodways, pumping stations, and dikes. These solutions are effective but require high upfront costs and time to complete.",
@@ -39,7 +40,8 @@
       ]
     },
     {
-      "name": "Urban Housing Crisis \n\nInformal settlements dominate Manila, housing millions of low-income families in unsafe and overcrowded conditions. The growing population outpaces available land and housing, leading to social inequality.",
+      "name": "Urban Housing Crisis.",
+      "desription": "Informal settlements dominate Manila, housing millions of low-income families in unsafe and overcrowded conditions. The growing population outpaces available land and housing, leading to social inequality.",
       "options": [
         {
           "description": "Vertical Affordable Housing Projects. Build high-rise, affordable housing developments to maximize limited land. This reduces urban sprawl but requires strong regulation to avoid displacement.",
@@ -56,7 +58,8 @@
       ]
     },
     {
-      "name": "Disaster Preparedness and Response \n\nAs part of the Pacific Ring of Fire, Manila faces frequent earthquakes, typhoons, and volcanic threats. Infrastructure and communities need better disaster preparedness to minimize losses.",
+      "name": "Disaster Preparedness and Response.",
+      "description": "As part of the Pacific Ring of Fire, Manila faces frequent earthquakes, typhoons, and volcanic threats. Infrastructure and communities need better disaster preparedness to minimize losses.",
       "options": [
         {
           "description": "Early Warning Systems and Evacuation Plans. Install high-tech monitoring systems and establish clear evacuation protocols. This reduces risks during disasters but relies heavily on long-term maintenance and compliance.",
@@ -73,7 +76,8 @@
       ]
     },
     {
-      "name": "Access to Green and Safe Public Spaces \n\nMany parts of Manila lack public parks and recreational areas, particularly in densely populated and low-income neighborhoods, worsening health and social inequality.",
+      "name": "Access to Green and Safe Public Spaces.",
+      "description": "Many parts of Manila lack public parks and recreational areas, particularly in densely populated and low-income neighborhoods, worsening health and social inequality.",
       "options": [
         {
           "description": "Redevelop Rizal Park and Major Green Spaces. Enhance iconic parks to attract tourism and provide recreation, though this approach may leave underserved areas untouched.",
@@ -90,7 +94,8 @@
       ]
     },
     {
-      "name": "Water and Sanitation Challenges \n\nManila suffers from polluted waterways, inadequate sewerage systems, and water scarcity. Informal settlers and low-income communities are disproportionately affected.",
+      "name": "Water and Sanitation Challenges.",
+      "description": "Manila suffers from polluted waterways, inadequate sewerage systems, and water scarcity. Informal settlers and low-income communities are disproportionately affected.",
       "options": [
         {
           "description": "Expand Sewerage and Wastewater Treatment Plants. Address water pollution and improve sanitation, but requires significant funding and time.",
@@ -107,7 +112,8 @@
       ]
     },
     {
-      "name": "Waste Management and Pollution \n\nWith millions of residents, Manila produces massive amounts of waste. Inefficient collection and reliance on landfills lead to pollution and health hazards, especially in coastal areas.",
+      "name": "Waste Management and Pollution Control.",
+      "description": "With millions of residents, Manila produces massive amounts of waste. Inefficient collection and reliance on landfills lead to pollution and health hazards, especially in coastal areas.",
       "options": [
         {
           "description": "Implement Waste-to-Energy Plants. Reduce landfill waste and generate power, but may face opposition due to environmental concerns.",

@@ -47,6 +47,10 @@ public static class Messager
                   Select a location to visit:
                   """;
         AddMessage(key, message);
+
+        key = "return_travel";
+        message = "Press any key to return to the travel menu...";
+        AddMessage(key, message);
         
         key = "invalid_option";
         message = "Invalid choice. Please select a valid option.";
@@ -59,18 +63,41 @@ public static class Messager
         key = "empty_input";
         message = "Null or empty input. Please try again.";
         AddMessage(key, message);
+
+        key = "challenge"; 
+        message = "Challenge:";
+        AddMessage(key, message);
         
         key = "all_locations_visited";
         message = "Congratulations! You have completed all the challenges in Ecotropolis.";
         AddMessage(key, message);
         
         key = "pawn_shop";
-        message = "Welcome to the Pawn Shop! Here you can buy unique items to help you build your city.";
+        message = """
+                  Welcome to the Pawn Shop! Here you can buy unique items to help you build your city.
+                  Available unique items:
+                  """;
+        AddMessage(key, message);
+        
+        key = "pawn_shop_menu";
+        message = """
+                  What would you like to do?
+                  0. Exit the shop
+                  1. Buy an item
+                  2. View inventory
+                  """;
         AddMessage(key, message);
         
         key = "game_end";
         message =
-            "You have reached the end of the game. Your own city is now yours. Here are some stats on your performance:";
+            """
+            You have reached the end of the game. Your own city is now yours. Here are some stats on your performance:
+            You have completed your journey with a sustainability score of...
+            """;
+        AddMessage(key, message);
+        
+        key = "feedback";
+        message = "Here is a summary of the items you obtained in each location along with some feedback:";
         AddMessage(key, message);
         
         key = "exit_game";
@@ -79,13 +106,21 @@ public static class Messager
 
     }
     
-    public static void AddMessage(string key, string message)
+    private static void AddMessage(string key, string message)
     {
         Messages.Add(key, message);
     }
     
-    public static void PrintMessage(string key, string? variable = null) {
-        Messages.TryGetValue(key, out string? message);
+    public static void PrintMessage(string key, string? variable = null, bool raw = false) {
+        if (raw) {
+            Console.WriteLine(variable);
+            return;
+        } 
+            //Console.WriteLine("\n[SYSTEM MESSAGE START]");
+        Console.WriteLine();
+        Console.WriteLine("{---------------------------------}");
+        Messages.TryGetValue(key, out string message);
+        
         if (string.IsNullOrEmpty(message)) {
             Console.WriteLine("Message not found.");
         }
@@ -93,12 +128,18 @@ public static class Messager
             if (string.IsNullOrEmpty(variable)) {
                 Console.WriteLine(message);
             }
+            else if (key == "generic") {
+                Console.WriteLine(variable);
+            }
             else {
                 Console.WriteLine(message);
                 Console.WriteLine("");
                 Console.WriteLine(variable);
             }
         }
+
+        Console.WriteLine("{---------------------------------}");
+        //Console.WriteLine("[SYSTEM MESSAGE END]");
     }
 
     public static string WordWrap(string text, int lineWidth, string indent)

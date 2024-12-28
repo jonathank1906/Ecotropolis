@@ -20,15 +20,22 @@ public class Location
         UrbanChallenges = new List<UrbanChallenge>();
         RewardItems = new List<Item>();
     }
-    public void PlayLocation(Player player) {
-        Console.WriteLine(WordWrap(WelcomeMessage, 100, ""));
+    public void PlayLocation(Player player)
+    {
+        string textVariable = WordWrap(WelcomeMessage, 100, "");
+        PrintMessage("generic", textVariable);
+
         foreach (var challenge in UrbanChallenges)
         {
             challenge.Execute(player);
         }
         // Challenges completed, reward the player with an item
         Item reward = RewardItem(player.SustainabilityScore);
-        Console.WriteLine($"\nYou earned: {reward.Name}!");
+        textVariable = $"\nYou earned: {reward.Name}!"; 
+        PrintMessage("generic", textVariable, true);
+        PrintMessage("return_travel");
+        Console.ReadKey(true); // Wait for user to press a key
+        
         player.Inventory.AddToInventory(reward);
         // Go back to travel menu
     }
