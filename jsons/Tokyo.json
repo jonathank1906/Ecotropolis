@@ -1,6 +1,6 @@
 {
     "name": "Tokyo",
-    "WelcomeMessage": "- Yōkoso Tokyo e! - Welcome to Tokyo! The heart of Japan, where tradition and innovation collide!\n\nTokyo provides everything between serene temples and towering skyscrapers, a global icon of progress!\nBeneath the vibrant facade however, lie challenges that test even the most progressed and advanced cities.\n\nTo set the scene, Tokyo faces two distinct issues that threaten its future sustainability: Growing impacts of natural disasters,\nand ever rising urban heat levels.\n\nTo get to the bottom of this, you will have to navigate the different solutions presented to you,\nto make sure Tokyo can persevere as the strong-spirited metropolis that it is!",
+    "WelcomeMessage": "- Yōkoso Tokyo e! - Welcome to Tokyo! The heart of Japan, where tradition and innovation collide! Tokyo provides everything between serene temples and towering skyscrapers, a global icon of progress! Beneath the vibrant facade however, lie challenges that test even the most progressed and advanced cities. To set the scene, Tokyo faces two distinct issues that threaten its future sustainability: Growing impacts of natural disasters, and ever rising urban heat levels. To get to the bottom of this, you will have to navigate the different solutions presented to you,\nto make sure Tokyo can persevere as the strong-spirited metropolis that it is!",
     "rewardItems": [
     {
         "name": "Golden Ōgi",
@@ -39,7 +39,7 @@
             "scoreImpact": -5
         }
         ]
-    },
+    },                                                                                                
     {
         "name": "Flood Risk Reduction",
         "description": "Tokyo experiences frequent flooding, especially during typhoon seasons and during heavy rainfall.\nTo manage flood risk, a balance between large-scale infrastructure and nature-based solutions is required.\n\nWhat strategy will you implement to ensure the city remains dry and protected?",
