@@ -23,13 +23,10 @@ static class LocationLoader {
         try {
             string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");  // Get all JSON files in the folder
 
-            foreach (string filePath in jsonFiles) 
-            {
+            foreach (string filePath in jsonFiles) {
                 string json = File.ReadAllText(filePath);
                 Location? location = JsonSerializer.Deserialize<Location>(json, options);
-                Console.WriteLine(location.ToString());
-                if (location != null)
-                {
+                if (location != null) {
                     locations.Add(location);
                 }
                 else

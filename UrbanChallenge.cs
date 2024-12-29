@@ -45,12 +45,12 @@ public class UrbanChallenge {
         {
             stringVariable += (WordWrap($"{i + 1}. {Options[i].Description}",60,"   ") + "\n");
         }
-
-        PrintMessage("challenge", stringVariable);
+        
+        stringVariable += $"Please select an option (1 to {Options.Count})";
+        
 
         while (true) { // Loop until the user selects a valid option 
-            PrintMessage(null, $"Please select an option (1 to {Options.Count}):", true);
-            string? input = Console.ReadLine();
+            string input = InteractiveMessage("challenge", stringVariable);
 
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
