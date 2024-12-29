@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
  * ========================================================================================================
  */
 
-internal class Item {
+public class Item {
     /*
      * ===============================================================================================
      * Fields: internal string Name: holds the name of the item
@@ -18,13 +18,13 @@ internal class Item {
      * internal string EndGameFeedback: holds the end game feedback text that will be displayed at the end of the game. 
      * 
      */
-    internal string Name { get; private set; }
-    internal int Value { get; private set; }
-    internal string Description { get; private set; }
-    internal string EndGameFeedback {get; private set;}
+    public string Name { get; private set; }
+    public int Value { get; private set; }
+    public string Description { get; private set; }
+    public string EndGameFeedback {get; private set;}
 
     
-    internal Item(string name, int value, string description) { // Constructor for the unique items
+    public Item(string name, int value, string description) { // Constructor for the unique items
         Name = name;
         Value = value;
         Description = description;

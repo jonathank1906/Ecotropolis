@@ -12,7 +12,7 @@ using static Ecotropolis.Messager;
  * ========================================================================================================
  */
 
-internal class Location {
+public class Location {
     /*
      * ========================================================================================================
      * Fields: internal string Name: holds the name of the location
@@ -22,16 +22,16 @@ internal class Location {
      * ========================================================================================================
      */
     [JsonPropertyName("name")]
-    internal string Name { get; set; }
+    public string Name { get; set; }
     
     [JsonPropertyName("WelcomeMessage")]
-    internal string WelcomeMessage { get; set; }
+    public string WelcomeMessage { get; set; }
     
     [JsonPropertyName("urbanChallenges")]
-    internal List<UrbanChallenge> UrbanChallenges { get; set; }
+    public List<UrbanChallenge> UrbanChallenges { get; set; }
 
     [JsonPropertyName("rewardItems")]
-    private List<Item> RewardItems { get; set; }
+    public List<Item> RewardItems { get; set; }
 
     
     /*
@@ -72,6 +72,10 @@ internal class Location {
         
         player.AddToInventory(reward);
         // Go back to travel menu
+    }
+    
+    internal string ToString() {
+        return $"{Name} - {WelcomeMessage}";
     }
     
     

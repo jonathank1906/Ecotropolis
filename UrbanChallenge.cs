@@ -12,12 +12,12 @@ using static Ecotropolis.Messager;
  * ========================================================================================================
  */
 
-internal class UrbanChallenge {
+public class UrbanChallenge {
      [JsonPropertyName("description")]
-    private string Description { get;}
+    public string Description { get;}
 
     [JsonPropertyName("options")]
-    private List<ChallengeOption> Options { get; }
+    public List<ChallengeOption> Options { get; }
 
     
     /*
@@ -28,7 +28,7 @@ internal class UrbanChallenge {
      * ========================================================================================================
      */
     [JsonConstructor]
-    internal UrbanChallenge(string description, List<ChallengeOption> options) {
+    public UrbanChallenge(string description, List<ChallengeOption> options) {
         Description = description;
         Options = options;
     }
