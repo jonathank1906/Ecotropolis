@@ -1,24 +1,64 @@
 namespace Ecotropolis;
 using static Ecotropolis.Messager;
 
-public class Game
-{
-    private Player player;
-    private List<Location> locations;
-    private PawnShop pawnShop;
+/*
+ * ========================================================================================================
+ * internal class Game:
+ * The Game class is responsible for managing the game loop and the player's progress throughout the game.
+ * It is "internal", because we only have one assembly and therefore there is no difference
+ * between "internal" and "public" in our use case.
+ *
+ * This class provides the core logic of the game, including the game loop, travel menu, and game end sequence.
+ * ========================================================================================================
+ */
 
-    public Game() 
-    {
-        player = new Player();
-        pawnShop = new PawnShop(player);
-        locations = LocationLoader.LoadLocationsFromFolder("jsons"); // Load locations from JSON files
-        StartMenu startMenu = new StartMenu();
+internal class Game {
+    /*
+     * ===============================================================================================
+     * Fields: private readonly Player _player: holds the player object
+     *     private readonly List<Location> _locations: holds the list of locations in the game.
+     * ===============================================================================================
+     */
+    private readonly Player _player;
+    private readonly List<Location> _locations;
+    
+    /*
+     * ===============================================================================================
+     * Constructor: internal Game():
+     * Initializes the player and loads the locations from JSON files.
+     * Displays the start menu and starts the game loop.
+     * ===============================================================================================
+     */
+    
+    internal Game() {
+        _player = new Player();
+        _locations = LocationLoader.LoadLocationsFromFolder("jsons"); // Load locations from JSON files
+        StartMenu startMenu = new();
         GamePlay();
     }
-    public void GamePlay() {
+    
+    /*
+     * ===============================================================================================
+     * Methods: private void GamePlay(): main game loop that handles player input and location progression
+     *         private void DisplayTravelMenu(): displays the travel menu to the player
+     *        private void GameEnd(): handles the end of the game, including feedback and final score
+     * ===============================================================================================
+     */
+    
+    /*
+     * GamePlay():
+     * The main game loop that handles player input and location progression.
+     * Displays the travel menu to the player and processes their choices.
+     * If all locations are visited, triggers the pawn shop sequence.
+     * After the pawn shop sequence, ends the game and displays the final score.
+     *
+     * Properties:
+     * - bool enterPawnShopSequence: flag to indicate if the player should enter the pawn shop sequence
+     */
+    private void GamePlay() {
         bool enterPawnShopSequence = false;
         while (true) {
-            if (locations.Count == 0) { 
+            if (_locations.Count == 0) { 
                 PrintMessage("all_locations_visited");
                 enterPawnShopSequence = true;
                 break;
@@ -29,20 +69,27 @@ public class Game
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
                     int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
-                    if (choice >= 0 && choice < locations.Count) { // Valid location
-                        Location selectedLocation = locations[choice];
-                        selectedLocation.PlayLocation(player); // Play the challenges at the location
-                        locations.RemoveAt(choice);
-                    }
-                    else if (choice == -1) { // Exit the game
-                        PrintMessage("exit_game");
-                        return;
-                    }
-                    else if (choice == locations.Count) { // Display help menu
-                        PrintMessage("help");
-                    }
-                    else { // Invalid choice
-                        PrintMessage("invalid_option");
+                    switch (choice) {
+                        case >= 0 when choice < _locations.Count: {
+                            // Valid location
+                            Location selectedLocation = _locations[choice];
+                            selectedLocation.PlayLocation(_player); // Play the challenges at the location
+                            _locations.RemoveAt(choice);
+                            break;
+                        }
+                        case -1: // Exit the game
+                            PrintMessage("exit_game");
+                            return;
+                        default: {
+                            if (choice == _locations.Count) { // Display help menu
+                                PrintMessage("help");
+                            }
+                            else { // Invalid choice
+                                PrintMessage("invalid_option");
+                            }
+
+                            break;
+                        }
                     }
                 }
                 catch (FormatException) { // Handle invalid numeric input
@@ -54,41 +101,50 @@ public class Game
             }
         }
         if (enterPawnShopSequence) {
+            PawnShop pawnShop = new(_player);
             pawnShop.Open();
         }
         GameEnd();
     }
-    public void DisplayTravelMenu() { // Display the travel menu
+    
+    /*
+     * DisplayTravelMenu():
+     * Logic for displaying the travel menu to the player.
+     */
+    private void DisplayTravelMenu() { 
         string variable = "0. Exit Game\n";
-        for (int i = 0; i < locations.Count; i++) { // Display the available locations
-            variable += $"{i + 1}. {locations[i].Name}\n";
+        for (int i = 0; i < _locations.Count; i++) { // Display the available locations
+            variable += $"{i + 1}. {_locations[i].Name}\n";
         }
-        variable += $"{locations.Count + 1}. Help"; // Display the help option
+        variable += $"{_locations.Count + 1}. Help"; // Display the help option
         PrintMessage("travel_menu", variable);
     }
-
-    public void GameEnd()
-    {
-        string stringVariable = (player.SustainabilityScore / 100).ToString();
+    
+    
+    /*
+     * GameEnd():
+     * Handles the end of the game, including feedback and final score.
+     */
+    private void GameEnd() {
+        string stringVariable = (_player.SustainabilityScore / 100).ToString();
         stringVariable += "\n";
 
-        if (player.SustainabilityScore >= 85)
-        {
-            stringVariable += "Congratulations! You have achieved a high sustainability score.";
-        }
-        else if (player.SustainabilityScore >= 50)
-        {
-            stringVariable += "You have achieved a moderate sustainability score.";
-        }
-        else
-        {
-            stringVariable +=
-                "Your sustainability score is low. Consider playing again and revist the locations to improve it.";
+        switch (_player.SustainabilityScore) {
+            case >= 85:
+                stringVariable += "Congratulations! You have achieved a high sustainability score.";
+                break;
+            case >= 50:
+                stringVariable += "You have achieved a moderate sustainability score.";
+                break;
+            default:
+                stringVariable +=
+                    "Your sustainability score is low. Consider playing again and revist the locations to improve it.";
+                break;
         }
 
         PrintMessage("game_end", stringVariable);
 
-        stringVariable = player.Inventory.GenerateEndGameFeedback();
+        stringVariable = _player.GenerateEndGameFeedback();
         PrintMessage("feedback", stringVariable);
 
         PrintMessage("exit_game");

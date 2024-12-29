@@ -1,14 +1,12 @@
 using System.Text.Json.Serialization;
 
 namespace Ecotropolis;
-public class ChallengeOption
-{
-    public string Description { get; private set; }
-    public int ScoreImpact { get; private set; }
+internal class ChallengeOption {
+    internal string Description { get; private set; }
+    internal int ScoreImpact { get; private set; }
 
     [JsonConstructor]
-    public ChallengeOption(string description, int scoreImpact)
-    {
+    internal ChallengeOption(string description, int scoreImpact) {
         Description = description;
         ScoreImpact = scoreImpact;
     }
