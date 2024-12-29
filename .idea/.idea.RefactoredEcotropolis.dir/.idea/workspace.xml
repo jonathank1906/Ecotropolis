@@ -9,11 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4f21a093-fe46-4c39-ae73-bc4a0989e670" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Location.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LocationLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LocationLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrbanChallenge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrbanChallenge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Messager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Messager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.pdb" afterDir="false" />
@@ -25,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/WorldOfZuul.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/WorldOfZuul.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,19 +72,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.WorldOfZuul.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.WorldOfZuul.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "formatting",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="WorldOfZuul" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -123,7 +120,7 @@
       <workItem from="1734776529389" duration="1102000" />
       <workItem from="1734777660091" duration="1591000" />
       <workItem from="1735380877092" duration="4759000" />
-      <workItem from="1735488734167" duration="1324000" />
+      <workItem from="1735488734167" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="json working">
       <option name="closed" value="true" />

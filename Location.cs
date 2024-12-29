@@ -57,7 +57,10 @@ public class Location {
      */
     internal void PlayLocation(Player player) {
         string textVariable = WordWrap(WelcomeMessage, 100, "");
+        textVariable += "\n";
+        textVariable += "Press Enter to start your first challenge ...";
         PrintMessage("generic", textVariable);
+        Console.ReadLine(); // Wait for user to press Enter
 
         foreach (var challenge in UrbanChallenges)
         {
@@ -66,9 +69,8 @@ public class Location {
         // Challenges completed, reward the player with an item
         Item reward = RewardItem(player.SustainabilityScore);
         textVariable = $"\nYou earned: {reward.Name}!"; 
-        PrintMessage("generic", textVariable, true);
-        PrintMessage("return_travel");
-        Console.ReadKey(true); // Wait for user to press a key
+        PrintMessage(null, textVariable, true);
+        Console.ReadLine();
         
         player.AddToInventory(reward);
         // Go back to travel menu
