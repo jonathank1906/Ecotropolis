@@ -9,9 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4f21a093-fe46-4c39-ae73-bc4a0989e670" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Location.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LocationLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LocationLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Messager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Messager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawnShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PawnShop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrbanChallenge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrbanChallenge.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.pdb" afterDir="false" />
@@ -120,7 +123,7 @@
       <workItem from="1734776529389" duration="1102000" />
       <workItem from="1734777660091" duration="1591000" />
       <workItem from="1735380877092" duration="4759000" />
-      <workItem from="1735488734167" duration="3665000" />
+      <workItem from="1735488734167" duration="8997000" />
     </task>
     <task id="LOCAL-00001" summary="json working">
       <option name="closed" value="true" />

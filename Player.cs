@@ -106,7 +106,6 @@ internal class Player {
         internal void Add(Item item) {
             _inventory.Add(item);
             string stringVariable = $"{item.Name} added to inventory. \n {WordWrap(item.Description, 60, "")}";
-            PrintMessage("generic", stringVariable);
         }
 
         internal void Show() {
@@ -118,8 +117,6 @@ internal class Player {
             }
 
             PrintMessage("generic", stringVariable);
-            PrintMessage(null, "Press any key to continue...", true);
-            Console.ReadLine();
         }
 
         internal List<Item> GetItems() {

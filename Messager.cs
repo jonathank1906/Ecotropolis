@@ -83,10 +83,20 @@ static class Messager {
                    Explore vibrant cities across the globe, each with unique challenges to tackle.
                    Solve urban issues, earn rewards, and shape the future of Ecotropolis!
                    Select a location to visit:
+                   0. Exit Game
                    {0}
                    """;
         AddMessage(key, message);
 
+        
+        key = "reward_earned";
+        message = """
+                  Congratulations!
+                  You have successfully completed the challenge and earned a reward.
+                  Your reward: {0}
+                  """;
+        AddMessage(key, message);
+    
         key = "return_travel";
         message = "Press any key to return to the travel menu...{0}";
         AddMessage(key, message);
@@ -120,6 +130,14 @@ static class Messager {
                   0. Exit the shop
                   1. Buy an item
                   2. View inventory
+                  """;
+        AddMessage(key, message);
+        
+        key = "buy_items";
+        message = """
+                  Which item would you like to buy?
+                  {0}
+                  Please select the numbers 1-3. Press 0 to go back.
                   """;
         AddMessage(key, message);
         /*
@@ -167,11 +185,12 @@ static class Messager {
      * If a variable is provided, it is included in the message.
      * If raw is true, the variable is printed directly without formatting.
      */
-    public static void PrintMessage(string key, string? variable = null, bool raw = false) {
+    private static string GenerateMessage(string key, string? variable, bool raw = false, bool interactive = false) {
+        /*
         if (raw) {
             Console.WriteLine(variable);
             return;
-        } 
+        } */
             //Console.WriteLine("\n[SYSTEM MESSAGE START]");
         Console.Clear();
         Console.WriteLine("{---------------------------------}");
@@ -191,7 +210,22 @@ static class Messager {
 
         Console.WriteLine("{---------------------------------}");
         
+        if (interactive) {
+            return Console.ReadKey().KeyChar.ToString();
+        }
+        else {
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            return null; 
+        }
         //Console.WriteLine("[SYSTEM MESSAGE END]");
+    }
+
+    public static void PrintMessage(string? key, string? variable = null, bool raw = false) {
+        GenerateMessage(key, variable, raw);
+    }
+    public static string InteractiveMessage(string key, string? variable = null, bool raw = false) {
+        return GenerateMessage(key, variable, raw,true); 
     }
 
     /*

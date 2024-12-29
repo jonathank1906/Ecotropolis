@@ -56,15 +56,13 @@ internal class Game {
      * - bool enterPawnShopSequence: flag to indicate if the player should enter the pawn shop sequence
      */
     private void GamePlay() {
-        bool enterPawnShopSequence = false;
+
         while (true) {
             if (_locations.Count == 0) { 
                 PrintMessage("all_locations_visited");
-                enterPawnShopSequence = true;
                 break;
             }
-            DisplayTravelMenu(); // Display the travel menu to the player
-            string? input = Console.ReadLine(); // Get the player's choice from the menu
+            string? input = InteractiveMessage("travel_menu", TravelMenuContent()); // Display the travel menu to the player
 
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
@@ -83,6 +81,7 @@ internal class Game {
                         default: {
                             if (choice == _locations.Count) { // Display help menu
                                 PrintMessage("help");
+                                Console.ReadLine();
                             }
                             else { // Invalid choice
                                 PrintMessage("invalid_option");
@@ -100,10 +99,9 @@ internal class Game {
                PrintMessage("empty_input");
             }
         }
-        if (enterPawnShopSequence) {
-            PawnShop pawnShop = new(_player);
-            pawnShop.Open();
-        }
+        
+        PawnShop pawnShop = new(_player);
+        pawnShop.Open();
         GameEnd();
     }
     
@@ -111,13 +109,13 @@ internal class Game {
      * DisplayTravelMenu():
      * Logic for displaying the travel menu to the player.
      */
-    private void DisplayTravelMenu() { 
-        string variable = "0. Exit Game\n";
+    private string TravelMenuContent() {
+        string variable = string.Empty; 
         for (int i = 0; i < _locations.Count; i++) { // Display the available locations
             variable += $"{i + 1}. {_locations[i].Name}\n";
         }
         variable += $"{_locations.Count + 1}. Help"; // Display the help option
-        PrintMessage("travel_menu", variable);
+        return variable; 
     }
     
     

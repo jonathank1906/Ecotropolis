@@ -52,26 +52,24 @@ internal class PawnShop {
      */
     internal void Open() {
         while (true) {
-            string stringVariable = "\n";
+            string uniqueItemsString = "";
             
             for (int i = 0; i < uniqueItems.Count; i++) {
-                stringVariable += $"{i + 1}. {uniqueItems[i].Name} (Cost: {uniqueItems[i].Value} tokens) \n";
+                uniqueItemsString += $"{i + 1}. {uniqueItems[i].Name} (Cost: {uniqueItems[i].Value} tokens) \n";
             }
-            stringVariable += $"\n You have {player.Tokens} tokens.";
-            PrintMessage("pawn_shop", stringVariable);
-            PrintMessage("pawn_shop_menu");
+            string stringVariable = uniqueItemsString + $"\nYou have {player.Tokens} tokens.";
+            string input = InteractiveMessage("pawn_shop", stringVariable);
             
-            switch (Console.ReadLine()) {
+            switch (input) {
                 case "0":
                     return;
                 case "1":
-                    PrintMessage("generic", "Which item would you like to buy?");
-                    string? input = Console.ReadLine();
+                    input = InteractiveMessage("buy_items", uniqueItemsString);
                     if (int.TryParse(input, out int choice) && choice >= 1 && choice <= uniqueItems.Count) {
                         PrintMessage("generic",$"You selected {uniqueItems[choice - 1].Name}.");
                         Item selectedItem = uniqueItems[choice - 1];
                         BuyItem(selectedItem);
-                    }
+                    } 
                     break;
                 case "2":
                     player.ShowInventory();
