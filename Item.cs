@@ -1,14 +1,30 @@
 namespace Ecotropolis;
 using System.Text.Json.Serialization;
 
-public class Item
-{
-    public string Name { get; private set; }
-    public int Value { get; private set; }
-    public string Description { get; private set; }
-    public string EndGameFeedback {get; private set;}
+/*
+ * ========================================================================================================
+ * internal class Item:
+ *
+ * This class represents an item in the game. It contains a name, a value, a description, and end game feedback.
+ * ========================================================================================================
+ */
 
-    public Item(string name, int value, string description) { // Constructor for the unique items
+internal class Item {
+    /*
+     * ===============================================================================================
+     * Fields: internal string Name: holds the name of the item
+     *     internal int Value: holds the value of the item TODO: What is the value of an item?
+     * internal string Description: holds the item description. 
+     * internal string EndGameFeedback: holds the end game feedback text that will be displayed at the end of the game. 
+     * 
+     */
+    internal string Name { get; private set; }
+    internal int Value { get; private set; }
+    internal string Description { get; private set; }
+    internal string EndGameFeedback {get; private set;}
+
+    
+    internal Item(string name, int value, string description) { // Constructor for the unique items
         Name = name;
         Value = value;
         Description = description;
@@ -16,7 +32,7 @@ public class Item
     }
 
     [JsonConstructor]
-    public Item(string name, int value, string description, string endGameFeedback) { // Constructor for the other items
+    internal Item(string name, int value, string description, string endGameFeedback) { // Constructor for the other items
         Name = name;
         Value = value;
         Description = description;

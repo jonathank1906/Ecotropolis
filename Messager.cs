@@ -3,16 +3,52 @@ using System.Threading.Channels;
 
 namespace Ecotropolis;
 
-public static class Messager
-{
-    public static Dictionary<string, string> Messages { get; private set; } = new Dictionary<string, string>(); 
+/*
+ * ========================================================================================================
+ * static class Messager:
+ *
+ * This class is responsible for displaying messages to the user. It contains a dictionary of messages that
+ * can be accessed by a key. The messages are stored as strings and can be printed to the console. The class
+ * also provides a method for word wrapping messages to fit a specified line width.
+ * ========================================================================================================
+ */
+
+static class Messager {
+    
+    /*
+     * ===============================================================================================
+     * Fields: private static readonly Dictionary<string, string> _messages: holds the messages
+     * ===============================================================================================
+     */
+    private static readonly Dictionary<string, string> _messages = new Dictionary<string, string>(); 
+    
+    /*
+     * ===============================================================================================
+     * Static Constructor: Messager():
+     * Initializes the messages in the dictionary.
+     * ===============================================================================================
+     */
     
     static Messager () {
-        InstatiateMessages();
+        InitiateMessages();
     }
     
-    private static void InstatiateMessages()
-    {
+    /*
+     * ===============================================================================================
+     * Methods: private static void InitiateMessages(): initializes the messages in the dictionary
+     *         private static void AddMessage(string key, string message): adds a message to the dictionary
+     *        public static void PrintMessage(string key, string? variable = null, bool raw = false): prints a message to the console
+     *       public static string WordWrap(string text, int lineWidth, string indent): wraps a message to fit a specified line width
+     * ===============================================================================================
+     */
+    
+    /*
+     * InitiateMessages():
+     * Initializes the messages in the dictionary. Each message is associated with a key for easy access.
+     * The messages are stored as strings and can be printed to the console.
+     * The messages include generic messages, game instructions, and feedback messages.
+     */
+    private static void InitiateMessages() {
         string key = "generic";
         string message = " "; 
         AddMessage(key, message);
@@ -106,11 +142,21 @@ public static class Messager
 
     }
     
-    private static void AddMessage(string key, string message)
-    {
-        Messages.Add(key, message);
+    /*
+     * AddMessage(string key, string message):
+     * Adds a message to the dictionary with the specified key.
+     * This method is redundant, can be replaced with a standard dictionary method. 
+     */
+    private static void AddMessage(string key, string message) {
+        _messages.Add(key, message);
     }
     
+    /*
+     * PrintMessage(string key, string? variable = null, bool raw = false):
+     * Prints a message to the console based on the specified key.
+     * If a variable is provided, it is included in the message.
+     * If raw is true, the variable is printed directly without formatting.
+     */
     public static void PrintMessage(string key, string? variable = null, bool raw = false) {
         if (raw) {
             Console.WriteLine(variable);
@@ -119,7 +165,7 @@ public static class Messager
             //Console.WriteLine("\n[SYSTEM MESSAGE START]");
         Console.WriteLine();
         Console.WriteLine("{---------------------------------}");
-        Messages.TryGetValue(key, out string message);
+        _messages.TryGetValue(key, out string message);
         
         if (string.IsNullOrEmpty(message)) {
             Console.WriteLine("Message not found.");
@@ -142,6 +188,11 @@ public static class Messager
         //Console.WriteLine("[SYSTEM MESSAGE END]");
     }
 
+    /*
+     * WordWrap(string text, int lineWidth, string indent):
+     * Wraps a message to fit a specified line width, applying indentation for subsequent lines.
+     * This method is used to format long messages for display to the user.
+     */
     public static string WordWrap(string text, int lineWidth, string indent)
     {
         string[] words = text.Split(' ');

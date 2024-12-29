@@ -8,16 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f21a093-fe46-4c39-ae73-bc4a0989e670" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/shelf/Uncommitted_changes_before_Update_at_16__12__2024_19_47_[Changes]/WorldOfZuul.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/shelf/Uncommitted_changes_before_Update_at_16__12__2024_19_47_[Changes]/WorldOfZuul.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/shelf/Uncommitted_changes_before_Update_at_16__12__2024_19_47_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/shelf/Uncommitted_changes_before_Update_at_16__12__2024_19_47__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RefactoredEcotropolis.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Location.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocationLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LocationLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Messager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Messager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PawnShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PawnShop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StartMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StartMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UrbanChallenge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrbanChallenge.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/WorldOfZuul.exe" afterDir="false" />
@@ -26,20 +28,13 @@
       <change beforePath="$PROJECT_DIR$/jsons/Manila.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsons/Manila.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/WorldOfZuul.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/WorldOfZuul.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/WorldOfZuul.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/WorldOfZuul.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/WorldOfZuul.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/WorldOfZuul.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/WorldOfZuul.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/WorldOfZuul.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -95,7 +90,7 @@
   "keyToString": {
     ".NET Project.WorldOfZuul.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "output-separation",
+    "git-widget-placeholder": "privatization",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
