@@ -121,7 +121,7 @@ static class Messager {
         AddMessage(key, message);
 
         key = "challenge"; 
-        message = "Challenge:{0}";
+        message = "Challenge: {0}";
         AddMessage(key, message);
         
         key = "all_locations_visited";
@@ -144,7 +144,7 @@ static class Messager {
         message = """
                   Which item would you like to buy?
                   {0}
-                  Please select the numbers 1-3. Press 0 to go back.
+                  Please select an option (1 to 3). Press 0 to go back.
                   """;
         AddMessage(key, message);
         /*
@@ -200,7 +200,7 @@ static class Messager {
         } */
             //Console.WriteLine("\n[SYSTEM MESSAGE START]");
         Console.Clear();
-        Console.WriteLine("{---------------------------------}");
+       // Console.WriteLine("{---------------------------------}");
         _messages.TryGetValue(key, out string message);
         
         if (string.IsNullOrEmpty(message)) {
@@ -215,7 +215,7 @@ static class Messager {
             }
         }
 
-        Console.WriteLine("{---------------------------------}");
+        //Console.WriteLine("{---------------------------------}");
         
         if (interactive) {
             return Console.ReadKey().KeyChar.ToString();

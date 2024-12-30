@@ -6,19 +6,19 @@
         "name": "Golden Ōgi",
         "value": 100,
         "description": "A stunning golden fan, that represents balance, refinement, and near perfection. A treasure of those that have achieved greatness, but strive for more.",
-        "endgamefeedback": "You have successfully navigated the urban challenges of Tokyo, demonstrating your commitment to sustainability and innovation. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Tokyo urban challenge!"
+        "endgamefeedback": "With unparalleled foresight and careful decision-making in Tokyo, your city shines as an example of balance, refinement, and near perfection. The Golden Ōgi represents how you have seamlessly integrated solutions like earthquake-resilient buildings, large-scale heat mitigation strategies, and sustainable urban planning. Your city stands strong, not just as a beacon of hope but as a model for future generations to emulate—a near-perfect harmony of innovation and sustainability!"
     },
     {
         "name": "Silver Torii Gate",
         "value": 50,
         "description": "A Torii gate symbolizes progress and milestones. Let it guide you further beyond!",
-        "endgamefeedback": "You have made significant progress in addressing the urban challenges of Tokyo, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Tokyo urban challenge!"
+        "endgamefeedback": "The Silver Torii Gate symbolizes the significant progress you’ve made in Tokyo, but it also reminds you of opportunities missed. While your contributions have laid a strong fundament for your city, some choices lacked the ambition to fully unlock Tokyo’s potential. Your new city benefits from the improved urban planning and sustainability changes, but it could have reached even higher with bolder decisions. A commendable effort nonetheless, guiding your city toward future milestones!"
     },
     {
         "name": "Bronze Daruma Doll",
         "value": 20,
         "description": "A traditional spiritual talisman, that symbolizes perseverance - 'Fall seven times, rise up eight.'",
-        "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Tokyo, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Tokyo urban challenge!"
+        "endgamefeedback": "The Bronze Daruma Doll reflects your resilience and perseverance through Tokyo’s challenges, but also represents a reminder of what could have been. Many opportunities for impactful change were left aside. While your city benefits from incremental improvements, it struggles to match its full potential. Let this be a lesson in striving for greater more—because just as the Daruma Doll rises again after falling, so too can your city rise stronger with the knowledge gained from this journey!"
     }
     ],
     "urbanChallenges": [

@@ -13,7 +13,9 @@ using static Ecotropolis.Messager;
  */
 
 public class UrbanChallenge {
-     [JsonPropertyName("description")]
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+    [JsonPropertyName("description")]
     public string Description { get;}
 
     [JsonPropertyName("options")]
@@ -28,7 +30,8 @@ public class UrbanChallenge {
      * ========================================================================================================
      */
     [JsonConstructor]
-    public UrbanChallenge(string description, List<ChallengeOption> options) {
+    public UrbanChallenge(string name, string description, List<ChallengeOption> options) {
+        Name = name;
         Description = description;
         Options = options;
     }
@@ -40,7 +43,8 @@ public class UrbanChallenge {
      * ========================================================================================================
      */
     internal void Execute(Player player) {  
-        string stringVariable = WordWrap(Description, 100, "") + "\n"; // Display the challenge description
+        string stringVariable = Name + "\n"; // Display the challenge name 
+        stringVariable += WordWrap(Description, 100, "") + "\n"; // Display the challenge description
         for (int i = 0; i < Options.Count; i++) // Display the option descriptions
         {
             stringVariable += WordWrap($"{i + 1}. {Options[i].Description}",60,"   ") + "\n";

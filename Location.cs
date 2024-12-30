@@ -67,7 +67,7 @@ public class Location {
         }
         // Challenges completed, reward the player with an item
         (Item reward, bool earnedToken) = RewardItem(player);
-        textVariable = $"{reward.Name}\n{reward.Description}"; 
+        textVariable = $"{reward.Name}\n{WordWrap(reward.Description, 100, "")}"; 
         // Choose between two versions of PrintMessage (if the player earned a token or not)
         string messageType = earnedToken ? "reward_with_token" : "reward_earned";
         PrintMessage(messageType, textVariable);

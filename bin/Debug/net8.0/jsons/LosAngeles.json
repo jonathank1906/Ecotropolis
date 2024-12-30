@@ -26,15 +26,15 @@
       "options": [
         {
           "description": "Implement stricter emissions standards for vehicles",
-          "scoreImpact": 50
+          "scoreImpact": 5
         },
         {
           "description": "Encourage the use of public transportation and carpooling",
-          "scoreImpact": 40
+          "scoreImpact": 3
         },
         {
           "description": "No changes to current regulations",
-          "scoreImpact": 0
+          "scoreImpact": 1
         }
       ]
     },
