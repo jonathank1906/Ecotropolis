@@ -144,7 +144,5 @@ internal class Game {
 
         stringVariable = _player.GenerateEndGameFeedback();
         PrintMessage("feedback", stringVariable);
-
-        PrintMessage("exit_game");
     }
 }
