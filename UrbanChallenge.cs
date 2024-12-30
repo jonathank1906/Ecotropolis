@@ -1,33 +1,56 @@
 namespace Ecotropolis;
 using System.Text.Json.Serialization;
 using static Ecotropolis.Messager;
+
+/*
+ * ========================================================================================================
+ * internal class UrbanChallenge:
+ *
+ * This class represents an urban challenge in the game. It contains a description and a list of challenge options.
+ * The class also has a method to execute the challenge, which displays the description and options to the player
+ * and rewards the player based on their choice.
+ * ========================================================================================================
+ */
+
 public class UrbanChallenge {
      [JsonPropertyName("description")]
-    public string Description { get; private set; }
+    public string Description { get;}
 
     [JsonPropertyName("options")]
-    public List<ChallengeOption> Options { get; private set; }
+    public List<ChallengeOption> Options { get; }
 
+    
+    /*
+     * ========================================================================================================
+     * Constructor: internal UrbanChallenge(string description, List<ChallengeOption> options):
+     * Initializes the urban challenge with the given description and list of options.
+     * It gets the description and options from the JSON file.
+     * ========================================================================================================
+     */
     [JsonConstructor]
-    public UrbanChallenge(string description, List<ChallengeOption> options)
-    {
+    public UrbanChallenge(string description, List<ChallengeOption> options) {
         Description = description;
         Options = options;
     }
 
-        public void Execute(Player player) {  
-        Console.WriteLine("Challenge:");
-        Console.WriteLine(WordWrap($"{Description}", 100, "")); // Display the challenge description
+    /*
+     * ========================================================================================================
+     * Methods: internal void Execute(Player player): Executes the urban challenge by displaying the description
+     * and options to the player and rewarding the player based on their choice.
+     * ========================================================================================================
+     */
+    internal void Execute(Player player) {  
+        string stringVariable = WordWrap(Description, 100, "") + "\n"; // Display the challenge description
         for (int i = 0; i < Options.Count; i++) // Display the option descriptions
         {
-           
-            Console.WriteLine(WordWrap($"{i + 1}. {Options[i].Description}",60,"   "));
+            stringVariable += WordWrap($"{i + 1}. {Options[i].Description}",60,"   ") + "\n";
         }
+        
+        stringVariable += $"Please select an option (1 to {Options.Count})";
+        
 
         while (true) { // Loop until the user selects a valid option 
-            Console.WriteLine("Please select an option (1 to {0}):", Options.Count);
-            Console.Write("> ");
-            string? input = Console.ReadLine();
+            string input = InteractiveMessage("challenge", stringVariable);
 
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
@@ -37,15 +60,15 @@ public class UrbanChallenge {
                         break;
                     }
                     else { // Invalid option number
-                        PrintMessage("invalid option");
+                        PrintMessage("invalid_option");
                     }
                 }
                 catch (FormatException) { // Invalid input format
-                    PrintMessage("invalid command");
+                    PrintMessage("invalid_command");
                 }
             }  
             else { // Empty input
-                PrintMessage("empty input");
+                PrintMessage("empty_input");
             }  
         }
     }

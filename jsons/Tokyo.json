@@ -28,15 +28,15 @@
         "options": [
         {
             "description": "Strengthen building codes to ensure all new constructions are earthquake-resistant.",
-            "scoreImpact": 10
+            "scoreImpact": 5
         },
         {
             "description": "Provide financial incentives to retrofit older buildings for earthquake resistance.",
-            "scoreImpact": 6
+            "scoreImpact": 3
         },
         {
             "description": "Focus only on emergency shelters while ignoring long-term building safety.",
-            "scoreImpact": -5
+            "scoreImpact": 1
         }
         ]
     },                                                                                                
@@ -46,15 +46,15 @@
         "options": [
         {
             "description": "Install permeable pavements and rain gardens in urban areas.",
-            "scoreImpact": 5
+            "scoreImpact": 3
         },
         {
             "description": "Increase reliance on sandbags and temporary barriers.",
-            "scoreImpact": -5
+            "scoreImpact": 1
         },
         {
             "description": "Build large-scale underground floodwater storage and advanced drainage systems.",
-            "scoreImpact": 10
+            "scoreImpact": 5
         }
         ]
     },
@@ -64,15 +64,15 @@
         "options": [
         {
             "description": "Rely on outdated meteorological systems for warnings.",
-            "scoreImpact": -5
+            "scoreImpact": 1
         },
         {
             "description": "Develop AI-based forecasting systems and public evacuation apps.",
-            "scoreImpact": 10
+            "scoreImpact": 5
         },
         {
             "description": "Expand community awareness programs for typhoon preparedness.",
-            "scoreImpact": 6
+            "scoreImpact": 3
         }
         ]
     },
@@ -82,15 +82,15 @@
         "options": [
         {
             "description": "Mandate green roofs and walls for all new developments.",
-            "scoreImpact": 10
+            "scoreImpact": 5
         },
         {
             "description": "Install artificial shade structures instead of vegetation.",
-            "scoreImpact": -5
+            "scoreImpact": 1
         },
         {
             "description": "Plant urban trees and increase public green spaces.",
-            "scoreImpact": 6
+            "scoreImpact": 3
         }
         ]
     },
@@ -100,15 +100,15 @@
         "options": [
         {
             "description": "Focus on public relations campaigns without addressing root causes.",
-            "scoreImpact": -5
+            "scoreImpact": 1
         },
         {
             "description": "Replace all high-traffic roads with reflective or water-retaining pavements.",
-            "scoreImpact": 10
+            "scoreImpact": 5
         },
         {
             "description": "Gradually install cool pavements in selected districts.",
-            "scoreImpact": 4
+            "scoreImpact": 3
         }
         ]
     }
