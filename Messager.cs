@@ -72,7 +72,6 @@ static class Messager {
                    Each city has unique problems. Travel to them to begin solving challenges.
                    After completing a challenge, you will receive a reward that impacts your city-building efforts.
                    Make strategic decisions to balance progress and sustainability.
-                   Press any key to return to the game...
                    {0}
                    """; 
         AddMessage(key, message);
