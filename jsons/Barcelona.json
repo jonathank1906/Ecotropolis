@@ -28,11 +28,11 @@
         "options": [
           {
             "description": "Limited Tourist Zones: By designating certain areas for tourists and limiting short-term rentals to these zones, Barcelona might balance tourism revenue with housing needs. It could create more affordable areas for residents.",
-            "scoreImpact": 5
+            "scoreImpact": 3
           },
           {
             "description": "Strict Short-Term Rental Regulations: Barcelona could impose stricter regulations on short-term rentals to curb their impact on housing availability and rent prices to prioritize long-term housing for residents.",
-            "scoreImpact": 10
+            "scoreImpact": 5
           }
         ]
       },
@@ -42,15 +42,15 @@
         "options": [
           {
             "description": "Incentives for Local Ownership: Offering incentives for locals to purchase homes could reduce speculative purchases by foreign investors. This approach may not drastically alter market prices but would empower residents to remain in their neighborhoods.",
-            "scoreImpact": 5
+            "scoreImpact": 3
           },
           {
             "description": "Community Land Trusts: Establishing a trust to purchase properties and offer them at affordable rates could stabilize housing for some residents, but high initial costs and limited scale might limit its impact. In your city, this strategy could preserve housing for low-income residents.",
-            "scoreImpact": 2
+            "scoreImpact": 1
           },
           {
             "description": "Taxing Vacant Properties: Barcelona could implement a vacancy tax on empty homes, encouraging landlords to rent out vacant properties. This would increase housing stock and deter speculative investors. A similar policy back home could reduce artificial scarcity, making housing more accessible.",
-            "scoreImpact": 10
+            "scoreImpact": 5
           }
         ]
       },
@@ -60,15 +60,15 @@
         "options": [
           {
             "description": "Property Tax Exemptions for Low-Income Residents: Reducing property taxes for low-income households would provide financial relief but may not prevent landlords from increasing rents.",
-            "scoreImpact": 2
+            "scoreImpact": 1
           },
           {
             "description": "Affordable Housing Quotas for New Developments: Mandating a percentage of affordable units in new housing developments would create more accessible homes.",
-            "scoreImpact": 5
+            "scoreImpact": 3
           },
           {
             "description": "Rent Control Measures: By expanding rent control laws, Barcelona could set limits on annual rent increases, protecting tenants from sharp price hikes. If your city adopted similar policies, they could provide stability to renters facing rapid price changes.",
-            "scoreImpact": 10
+            "scoreImpact": 5
           }
         ]
       },
@@ -78,15 +78,15 @@
         "options": [
           {
             "description": "Temporary Housing Programs: Creating temporary housing in underutilized properties for vulnerable populations would provide short-term relief but might not increase permanent housing availability.",
-            "scoreImpact": 2
+            "scoreImpact": 1
           },
           {
             "description": "Adaptive Reuse of Vacant Buildings: Barcelona could repurpose vacant office spaces, factories, or public buildings into affordable housing. This approach would increase housing availability without requiring new construction.",
-            "scoreImpact": 10
+            "scoreImpact": 5
           },
           {
             "description": "Subsidies for Renovating Empty Homes: Providing subsidies to renovate and rent vacant homes would encourage property owners to bring unused units back into the housing market. Locally, this could unlock new housing opportunities but might need ongoing investment.",
-            "scoreImpact": 5
+            "scoreImpact": 3
           }
         ]
       },
@@ -96,15 +96,15 @@
         "options": [
           {
             "description": "Public-Private Partnerships for Affordable Housing: Collaborating with private developers to build affordable housing units with government subsidies might address immediate housing needs.",
-            "scoreImpact": 5
+            "scoreImpact": 3
           },
           {
             "description": "Support for Housing Cooperatives: Barcelona could incentivize the development of housing cooperatives, where residents collectively own and manage their buildings. This model reduces reliance on private landlords and speculative markets.",
-            "scoreImpact": 10
+            "scoreImpact": 5
           },
           {
             "description": "Shared-Equity Homeownership: Introducing shared-equity schemes, where buyers co-own homes with a public or nonprofit entity, could lower purchase costs but limit ownership rights.",
-            "scoreImpact": 2
+            "scoreImpact": 1
           }
         ]
       }
