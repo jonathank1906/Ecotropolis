@@ -6,19 +6,19 @@
       "name": "Golden Windmill Replica",
       "value": 100,
       "description": "A small windmill replica made of gold, symbolizing Amsterdam's heritage.",
-      "endgamefeedback" : "You have successfully navigated the urban challenges of Amsterdam, demonstrating your commitment to sustainability and innovation. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Amsterdam urban challenge!"
+      "endgamefeedback" : "Your decisions made a great impact on the urban challenges of Amsterdam, leading to positive changes in the city's development and quality of life. Your dedication to sustainability and community well-being has set a high standard for urban leadership. Congratulations on completing the Amsterdam urban challenge with excellence!"
     },
     {
       "name": "Silver Bicycle Bell",
       "value": 50,
       "description": "A decorative bell for bicycles, Amsterdam's favorite transport.",
-      "endgamefeedback" : "You have made significant progress in addressing the urban challenges of Amsterdam, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Amsterdam urban challenge!"
+      "endgamefeedback" : "You have achieved notable advancements in solving the urban challenges of Amsterdam, even though there is room for improvement, your efforts have contributed to a more sustainable and inclusive city. Your commitment to positive change is commendable. Well done on completing the Amsterdam urban challenges!"
     },
     {
       "name": "Bronze Tulip",
       "value": 20,
       "description": "A rare tulip dipped in bronze.",
-      "endgamefeedback" : "You have taken important steps towards addressing the urban challenges of Amsterdam, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Amsterdam urban challenge!"
+      "endgamefeedback" : "Your initiative and focus on the sustainable development of the city had a good impact and a mindset shift. Unfortunately, there is still work to be done. Your decisions can be more sustainable-oriented. Please consider trying again and revisiting the location!"
     }
   ],
   "urbanChallenges": [
