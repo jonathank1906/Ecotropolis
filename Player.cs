@@ -25,7 +25,7 @@ internal class Player {
     private readonly Inventory _inventory = new Inventory();
     internal int SustainabilityScore { get; set; } = 0; // Overall score used in end-game feedback
     internal int LocationScoreTracker { get; set; } = 0; // Score specific to the current location (for rewarding items)
-    internal int Tokens { get; set; } = 50;
+    internal int Tokens { get; set; } = 0;
 
 
     /*
