@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonat\\Desktop\\WorldOfZuul\\WorldOfZuul.csproj": {}
+    "C:\\Users\\jonat\\Desktop\\final\\RefactoredEcotropolis\\WorldOfZuul.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonat\\Desktop\\WorldOfZuul\\WorldOfZuul.csproj": {
+    "C:\\Users\\jonat\\Desktop\\final\\RefactoredEcotropolis\\WorldOfZuul.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonat\\Desktop\\WorldOfZuul\\WorldOfZuul.csproj",
+        "projectUniqueName": "C:\\Users\\jonat\\Desktop\\final\\RefactoredEcotropolis\\WorldOfZuul.csproj",
         "projectName": "WorldOfZuul",
-        "projectPath": "C:\\Users\\jonat\\Desktop\\WorldOfZuul\\WorldOfZuul.csproj",
+        "projectPath": "C:\\Users\\jonat\\Desktop\\final\\RefactoredEcotropolis\\WorldOfZuul.csproj",
         "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonat\\Desktop\\WorldOfZuul\\obj\\",
+        "outputPath": "C:\\Users\\jonat\\Desktop\\final\\RefactoredEcotropolis\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonat\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -118,7 +118,7 @@ internal class Game {
      * Handles the end of the game, including feedback and final score.
      */
     private void GameEnd() {
-        string stringVariable = (_player.SustainabilityScore / 100).ToString();
+        string stringVariable = (_player.SustainabilityScore).ToString();
         stringVariable += "\n";
 
         switch (_player.SustainabilityScore) {

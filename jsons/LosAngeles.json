@@ -26,15 +26,15 @@
       "options": [
         {
           "description": "Implement stricter emissions standards for vehicles",
-          "scoreImpact": 50
+          "scoreImpact": 5
         },
         {
           "description": "Encourage the use of public transportation and carpooling",
-          "scoreImpact": 40
+          "scoreImpact": 3
         },
         {
           "description": "No changes to current regulations",
-          "scoreImpact": 0
+          "scoreImpact": 1
         }
       ]
     },
@@ -44,15 +44,15 @@
       "options": [
         {
           "description": "Relocate residential zones farther from highways",
-          "scoreImpact": 60
+          "scoreImpact": 5
         },
         {
           "description": "Create buffer zones with green spaces",
-          "scoreImpact": 50
+          "scoreImpact": 3
         },
         {
           "description": "Allow current zoning practices to continue",
-          "scoreImpact": 0
+          "scoreImpact": 1
         }
       ]
     },
@@ -62,15 +62,15 @@
       "options": [
         {
           "description": "Expand public transportation infrastructure",
-          "scoreImpact": 70
+          "scoreImpact": 5
         },
         {
           "description": "Implement congestion pricing in high-traffic areas",
-          "scoreImpact": 50
+          "scoreImpact": 3
         },
         {
           "description": "Encourage the use of personal vehicles",
-          "scoreImpact": 0
+          "scoreImpact": 1
         }
       ]
     },
@@ -80,15 +80,15 @@
       "options": [
         {
           "description": "Increase funding for affordable housing projects",
-          "scoreImpact": 80
+          "scoreImpact": 5
         },
         {
           "description": "Provide incentives to developers for affordable housing",
-          "scoreImpact": 60
+          "scoreImpact": 3
         },
         {
           "description": "Do nothing about housing prices",
-          "scoreImpact": 0
+          "scoreImpact": 1
         }
       ]
     },
@@ -98,15 +98,15 @@
       "options": [
         {
           "description": "Expand recycling programs and public awareness campaigns",
-          "scoreImpact": 60
+          "scoreImpact": 5
         },
         {
           "description": "Encourage composting and reduce single-use plastics",
-          "scoreImpact": 50
+          "scoreImpact": 3
         },
         {
           "description": "Continue with current waste management practices",
-          "scoreImpact": 0
+          "scoreImpact": 1
         }
       ]
     }

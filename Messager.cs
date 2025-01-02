@@ -157,7 +157,11 @@ static class Messager {
         AddMessage(key, message);
         
         key = "feedback";
-        message = "Here is a summary of the items you obtained in each location along with some feedback:{0}";
+        message = """
+            ---- Feedback ----
+            Here is a summary of the items you obtained in each location along with some feedback:
+            {0}
+            """;
         AddMessage(key, message);
         
         key = "exit_game";

@@ -1,77 +1,77 @@
 {
   "name": "Manila",
-  "WelcomeMessage": "Welcome to Manila! Start your urban challenge.",
+  "WelcomeMessage": "Welcome to Manila, the Pearl of the Orient! In this bustling metropolis, you'll face challenges that test your skills in disaster management, urban planning, and sustainability. Can you guide Manila to a resilient and prosperous future?",
   "rewardItems": [
     {
       "name": "Pearl of the Orient Trophy",
       "value": 100,
-      "description": "A dazzling pearl trophy symbolizing Manila's resilience and beauty.",
-      "endgamefeedback": "not yet implemented"
+      "description": "You have shown excellent understanding of the typical problems regarding disaster management in urban areas. We hope you have learnt a lot about the challenges people face in Manila and we wish you luck on your next mission.",
+      "endgamefeedback": "Thanks to your excellent performance in Manila, you have been able to guide your city to success! Your city now utilizes green spaces to naturally lower the impact of natural disasters and provide more shade, keeping the streets cool. Advanced draining systems are taking care of heavy rains and the rain water is recycled to support many of your rooftop gardens. Your citizens are safe, regardless of the income level and they are okay with paying more in taxes, because they see it as worth it. Well done!"
     },
     {
       "name": "Bamboo Weaving Basket",
       "value": 50,
-      "description": "A handcrafted basket made from sustainable bamboo, reflecting Filipino craftsmanship.",
-      "endgamefeedback": "not yet implemented"
+      "description": "You have shown great understanding of the typical problems regarding disaster management in urban areas. Although there were some weak sides in your solution, you have still managed to help a lot. Better luck next time!",
+      "endgamefeedback": "Thanks to your okay performance in Manila, you have been able to bring some of the disaster-preventing inovations home! Your citizens are happy to have advanced warning systems and great evacuation strategies, with plenty of green space. Although the heavy rains are still a problem for your city, you are set to fight them next."
     },
     {
       "name": "Counterfeit Burial Jar",
       "value": 20,
-      "description": "The guy that gave you this definitely scammed you. But at least it looks cool. Could have tried harder though.",
-      "endgamefeedback": "not yet implemented"
+      "description": "This was definitely not your best performance. Cutting corners is almost never the way. But nothing to worry about, next time you will get it right!",
+      "endgamefeedback": "You have managed to keep your most valued citizens happy. Whether it is the potential business partners, or just overall more wealthy people. While they are important for your city, you cannot forget about the common folk, which is now living mostly in makeshift shelters around the busy and expensive neighbourhoods. The fear of losing the only place you call home in a typhoon was not eradicated yet. Let's just hope, that by cutting corners here you have invested in something prosperous for all in the other areas. "
     }],
 
   "urbanChallenges": [
     {
       "name": "Flooding and Climate Resilience",
-      "description": "Manila is prone to severe flooding due to typhoons, heavy rains, and inadequate drainage. Coastal areas face rising sea levels, while urbanization has reduced natural water-absorbing areas like forests and wetlands.",
+      "description": "Manila is prone to severe flooding due to typhoons, heavy rains, and inadequate drainage. Coastal areas face rising sea levels, while urbanization has reduced natural water-absorbing areas like forests and wetlands. Here are 3 options the government is considering and they would like to hear your point of view. ",
       "options": [
         {
-          "description": "Build Extensive Flood Control Systems. Invest in large-scale floodways, pumping stations, and dikes. These solutions are effective but require high upfront costs and time to complete.",
-          "scoreImpact": 5
+          "description": "Build Extensive Flood Control Systems. \nInvest in large-scale floodways, pumping stations, and dikes. If this was free, they would have done it without thinking. And although high upfront costs and a long time required for construction are the only drawbacks, they are a really significant factor.",
+          "scoreImpact": 3
         },
-        {          
+        {
           "description": "Promote Community-Led Solutions. Empower local communities with flood preparedness kits and training programs. While cost-effective, this addresses only immediate concerns and relies heavily on community participation.",
           "scoreImpact": 3
         },
         {
-          "description": "Adopt Nature-Based Solutions. Restore mangroves, plant urban forests, and construct green spaces to mitigate flooding naturally while improving air quality and biodiversity.",
+          "description": "Adopt Nature-Based Solutions. Restore mangroves, plant urban forests, and construct green spaces to mitigate flooding naturally while improving air quality and biodiversity. This approach is a long run, but it has proven effective in other parts of the world. It is the imbalance in nature that causes the disasters in the first place, isn't it? ",
           "scoreImpact": 5
         }
       ]
     },
     {
       "name": "Urban Housing Crisis.",
-      "description": "Informal settlements dominate Manila, housing millions of low-income families in unsafe and overcrowded conditions. The growing population outpaces available land and housing, leading to social inequality.",
+      "description": "Informal settlements dominate Manila, housing millions of low-income families in unsafe and overcrowded conditions. This is also a problem considering disaster resilience, as these settlements are more likely to be destroyed by extreme weather.",
       "options": [
         {
-          "description": "Vertical Affordable Housing Projects. Build high-rise, affordable housing developments to maximize limited land. This reduces urban sprawl but requires strong regulation to avoid displacement.",
+          "description": "Build Disaster-Resilient Housing Projects. Develop vertical, earthquake- and typhoon-resistant housing to ensure safety and maximize land use. This will provide families with safer living contitions, and greatly reduce the risk of housing collapse during disasters. Providing the homes and the infrastructure would nevertheless be a real challenge to the economy.",
           "scoreImpact": 5
         },
         {
-          "description": "Integrate Informal  Settlements. Upgrade slums with better housing, water, and sanitation, while preserving the community’s structure. It is socially inclusive but may have scalability challenges.",
+          "description": "Upgrade Informal Settlements with Resilient Infrastructure. Provide essential utilities, disaster-ready structures, and safe evacuation routes. While this solution promises high reduction in casualties in disasters, it can only go so far. But maybe it is a good first step of a more complex solution?",
           "scoreImpact": 3
         },
         {
-          "description": "Mixed-Income Residential Zones. Create zones combining low-, middle-, and high-income housing to ensure inclusivity and equitable access to services.",
+          "description": "Design Inclusive Residential Zones with Emergency Shelters. Integrate low-income and high-income housing with built-in evacuation spaces for disaster scenarios. This solution lets the people from the lower-income groups share the resources more with others. Will the progress in infrastructure be quicker if more wealthy people are to live in the area? And how do we achieve, that the housing in the zones stays affordable?",
           "scoreImpact": 5
         }
       ]
     },
     {
       "name": "Disaster Preparedness and Response.",
-      "description": "As part of the Pacific Ring of Fire, Manila faces frequent earthquakes, typhoons, and volcanic threats. Infrastructure and communities need better disaster preparedness to minimize losses.",
+      "description": "As part of the Pacific Ring of Fire, Manila faces frequent earthquakes, typhoons, and volcanic threats. Infrastructure and communities need better disaster preparedness to minimize losses on both lives and property.",
       "options": [
         {
-          "description": "Early Warning Systems and Evacuation Plans. Install high-tech monitoring systems and establish clear evacuation protocols. This reduces risks during disasters but relies heavily on long-term maintenance and compliance.",
-          "scoreImpact": 5
+          "description": "Install Advanced Monitoring Systems. Implement earthquake and typhoon early warning systems with citywide alerts to reduce casualties. Establish clear evacuation protocols and make them part of the school curiculum.",
+          "scoreImpact": 4
         },
         {
-          "description": "Community-Based Disaster Readiness Programs. Train local communities in disaster risk reduction and first aid. This fosters resilience but may lack the scale needed for larger disasters.",
+          "description": "Organize Large-Scale Community Drills. Train residents in evacuation, first aid, and disaster response techniques to enhance readiness. This will ensure that competent people are almost always 'on site'. While definitely beneficial, wouldn't the money be beeter spent elsewhere?",
           "scoreImpact": 3
         },
         {
-          "description": "Reinforce Critical Infrastructure. Retrofit bridges, hospitals, and schools to withstand earthquakes, floods, and typhoons. Effective but costly.",
+          "description": "Fortify Public Infrastructure Against Disasters. Reinforce buildings, bridges, and utilities to withstand earthquakes and typhoons. This is definitely the most expensive solution here. Do you think it is worth the cost?",
           "scoreImpact": 5
         }
       ]
@@ -81,15 +81,15 @@
       "description": "Many parts of Manila lack public parks and recreational areas, particularly in densely populated and low-income neighborhoods, worsening health and social inequality.",
       "options": [
         {
-          "description": "Redevelop Rizal Park and Major Green Spaces. Enhance iconic parks to attract tourism and provide recreation, though this approach may leave underserved areas untouched.",
+          "description": "Redevelop Rizal Park and Major Green Spaces. Enhance iconic parks to attract tourism and provide recreation.",
           "scoreImpact": 1
         },
         {
-          "description": "Create Pocket Parks in Urban Poor Areas. Develop small, accessible parks in densely populated, underserved neighborhoods. Immediate but limited in scale.",
+          "description": "Create Pocket Parks in poorer urban Areas. Develop small, accessible parks in densely populated, underserved neighborhoods. Immediate but limited in scale.",
           "scoreImpact": 3
         },
         {
-          "description": "Citywide Green Infrastructure Network. Establish an interconnected system of parks, rooftop gardens, vertical greenery, and urban forests, improving access for all citizens.",
+          "description": "Citywide Green Infrastructure Network. Plant trees along the streets to provide natural shade. Coordinate effort in building a wide network of parks, green roofs, and open spaces designed not only to recreation, but manage floods and serve as evacuation sites as well.",
           "scoreImpact": 5
         }
       ]
@@ -99,7 +99,7 @@
       "description": "Manila suffers from polluted waterways, inadequate sewerage systems, and water scarcity. Informal settlers and low-income communities are disproportionately affected.",
       "options": [
         {
-          "description": "Expand Sewerage and Wastewater Treatment Plants. Address water pollution and improve sanitation, but requires significant funding and time.",
+          "description": "Modernize Sewerage Systems with Disaster Backups. Prevent flooding and contamination by upgrading treatment plants with backup systems.",
           "scoreImpact": 5
         },
         {
@@ -108,7 +108,7 @@
         },
         {
           "description": "Rainwater Harvesting and Reuse Programs. Promote systems to collect and reuse rainwater in urban and rural areas, reducing demand on water supply systems.",
-          "scoreImpact": 5
+          "scoreImpact": 3
         }
       ]
     },
@@ -116,19 +116,19 @@
       "name": "Waste Management and Pollution Control.",
       "description": "With millions of residents, Manila produces massive amounts of waste. Inefficient collection and reliance on landfills lead to pollution and health hazards, especially in coastal areas.",
       "options": [
-        {
-          "description": "Implement Waste-to-Energy Plants. Reduce landfill waste and generate power, but may face opposition due to environmental concerns.",
-          "scoreImpact": 5
-        },
-        {
-          "description": "Expand Barangay-Level Recycling Programs. Promote local recycling programs that create jobs and reduce waste. Scalable but requires strong community participation.",
-          "scoreImpact": 3
-        },
-        {
-          "description": "Ban Single-Use Plastics. Enforce strict bans on single-use plastics across the city, reducing pollution but requiring significant public education efforts.",
-          "scoreImpact": 3
-        }
-      ]
-    }
-  ]
-}
+      {
+        "description": "Implement Waste-to-Energy Plants. Reduce landfill waste and generate power, but may face opposition due to environmental concerns.",
+        "scoreImpact": 3
+      },
+      {
+        "description": "Build a garbage island. They are really cool when they are far enough of your shores, aren't they? However, we need to figure out how to keep it away. ",
+        "scoreImpact": 1
+      },
+      {
+        "description": "Promote Community-Based Recycling and Waste Segregation. Engage neighborhoods in reducing waste volume and improving disposal practices. Community initiatives have decreased waste in the past, though limited participation is always a risk.",
+        "scoreImpact": 5
+      }
+        ]
+      }
+    ]
+  }

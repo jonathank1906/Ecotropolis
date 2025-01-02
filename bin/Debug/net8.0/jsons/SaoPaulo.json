@@ -1,113 +1,114 @@
 {
-    "name": "Sao Paulo",
-    "WelcomeMessage": "Los Angeles is a city like no other—a global hub of entertainment, innovation, and cultural diversity. From the star-studded streets of Hollywood to the vibrant neighborhoods shaped by countless communities, this city captures the imagination of millions.\n\nYet, behind the sunlit skyline lies a metropolis facing significant challenges. L.A. grapples with the demands of rapid urban growth, a fragile water supply, and the urgent need for greener, more sustainable living.\n\nYour journey begins here, in a city that dreams big but requires bold solutions to secure its future. Will you rise to the occasion, balancing innovation with responsibility, and ensure Los Angeles remains a city where dreams thrive for generations to come?",
-    "rewardItems": [
-      { 
-        "name": "Golden Surfboard", 
-        "value": 100,
-        "description": "A luxurious surfboard symbolizing LA's sunny beaches.",
-        "endgamefeedback": "You have successfully navigated the urban challenges of Los Angeles, demonstrating your commitment to sustainability and innovation. Your efforts have made a positive impact on the city's future, and your leadership will be remembered for generations to come. Congratulations on completing the Los Angeles urban challenge!"
-      },
-      { 
-        "name": "Silver Keychain", 
-        "value": 50, 
-        "description": "A sleek keychain featuring the LA skyline.",
-        "endgamefeedback": "You have made significant progress in addressing the urban challenges of Los Angeles, showcasing your dedication to sustainable solutions and community well-being. Your contributions have helped shape a brighter future for the city, and your leadership is commendable. Well done on completing the Los Angeles urban challenge!"
-      }, 
-      { 
-          "name": "Bronze Badge", 
-          "value": 20, 
-          "description": "A small badge commemorating your visit to LA.",
-          "endgamefeedback": "You have taken important steps towards addressing the urban challenges of Los Angeles, demonstrating your commitment to positive change and urban sustainability. Your efforts have made a difference in the city's future, and your leadership is appreciated. Congratulations on completing the Los Angeles urban challenge!"
-      }],
-"urbanChallenges": [
+  "name": "São Paulo",
+  "WelcomeMessage": "São Paulo, a sprawling megacity of contrasts and opportunities, is at the heart of Brazil's economic and cultural life. From its towering skyscrapers to its vibrant local markets, the city thrives with energy and ambition.\n\nHowever, São Paulo also faces unique challenges. Its rapid urban growth, heavy traffic, and environmental issues demand innovative solutions and a collective effort for sustainable development.\n\nYour journey begins here, in a city that never sleeps, yet dreams of a brighter, greener future. Will you rise to the occasion, balancing growth with responsibility, and help São Paulo become a beacon of progress for generations to come?",
+  "rewardItems": [
+    { 
+      "name": "Golden Metro Card", 
+      "value": 100,
+      "description": "A premium card symbolizing efficient and sustainable transit solutions in São Paulo.",
+      "endgamefeedback": "You have successfully addressed São Paulo's urban challenges, showcasing your leadership and vision for a sustainable future. Your efforts have earned you admiration and respect across the city."
+    },
+    { 
+      "name": "Silver Transit Badge", 
+      "value": 50, 
+      "description": "A sleek badge commemorating your achievements in public transportation.",
+      "endgamefeedback": "You have made significant strides in improving São Paulo's transportation network, earning praise for your dedication to progress. Well done on leaving a positive mark on the city!"
+    }, 
+    { 
+      "name": "Bronze Urban Planner Medal", 
+      "value": 20, 
+      "description": "A medal celebrating your initial steps towards urban improvement.",
+      "endgamefeedback": "You have taken meaningful actions to address São Paulo's challenges, demonstrating your commitment to positive change. Your efforts are appreciated, and your leadership is noted."
+    }
+  ],
+  "urbanChallenges": [
     {
-      "name": "Air Pollution",
-      "description": "High levels of PM2.5 and ozone are impacting air quality and public health.",
+      "name": "Vehicle Emissions and Air Quality",
+      "description": "São Paulo's reliance on motor vehicles leads to significant air pollution, affecting public health and visibility.",
       "options": [
         {
-          "description": "Implement stricter emissions standards for vehicles",
-          "scoreImpact": 50
+          "description": "Invest in public transportation to reduce car usage",
+          "scoreImpact": 3
         },
         {
-          "description": "Encourage the use of public transportation and carpooling",
-          "scoreImpact": 40
+          "description": "Maintain current vehicle regulations",
+          "scoreImpact": 1
         },
         {
-          "description": "No changes to current regulations",
-          "scoreImpact": 0
+          "description": "Set stricter vehicle emission standards and promote electric vehicles",
+          "scoreImpact": 5
         }
       ]
     },
     {
-      "name": "Urban Planning",
-      "description": "Residential areas are located too close to major pollution sources like highways and factories.",
+      "name": "Inefficient Urban Infrastructure",
+      "description": "Inefficient urban planning in São Paulo results in poor traffic flow and excessive commuting times.",
       "options": [
         {
-          "description": "Relocate residential zones farther from highways",
-          "scoreImpact": 60
+          "description": "Redesign major intersections to improve traffic flow",
+          "scoreImpact": 5
         },
         {
-          "description": "Create buffer zones with green spaces",
-          "scoreImpact": 50
+          "description": "Keep existing urban planning strategies",
+          "scoreImpact": 1
         },
         {
-          "description": "Allow current zoning practices to continue",
-          "scoreImpact": 0
+          "description": "Develop mixed-use zones to reduce the need for long commutes",
+          "scoreImpact": 3
         }
       ]
     },
     {
-      "name": "Traffic Congestion and Transportation",
-      "description": "Severe traffic congestion leads to wasted time and increased emissions.",
+      "name": "Daily Traffic Gridlock",
+      "description": "São Paulo faces daily gridlock due to over-reliance on personal vehicles and underdeveloped public transit options.",
       "options": [
         {
-          "description": "Expand public transportation infrastructure",
-          "scoreImpact": 70
+          "description": "Encourage carpooling without infrastructure changes",
+          "scoreImpact": 1
         },
         {
-          "description": "Implement congestion pricing in high-traffic areas",
-          "scoreImpact": 50
+          "description": "Introduce congestion pricing in high-traffic areas",
+          "scoreImpact": 3
         },
         {
-          "description": "Encourage the use of personal vehicles",
-          "scoreImpact": 0
+          "description": "Expand the metro and bus rapid transit systems",
+          "scoreImpact": 5
         }
       ]
     },
     {
-      "name": "Housing Affordability and Homelessness",
-      "description": "Rising housing costs have led to a growing homelessness crisis.",
+      "name": "Housing and Commute Distances",
+      "description": "High housing costs force many São Paulo residents to live far from work, increasing traffic congestion.",
       "options": [
         {
-          "description": "Increase funding for affordable housing projects",
-          "scoreImpact": 80
+          "description": "Allow market forces to dictate housing development",
+          "scoreImpact": 1
         },
         {
-          "description": "Provide incentives to developers for affordable housing",
-          "scoreImpact": 60
+          "description": "Incentivize developers to build housing near transit lines",
+          "scoreImpact": 3
         },
         {
-          "description": "Do nothing about housing prices",
-          "scoreImpact": 0
+          "description": "Subsidize affordable housing closer to business hubs",
+          "scoreImpact": 5
         }
       ]
     },
     {
-      "name": "Waste Management",
-      "description": "High levels of waste generation and low recycling rates are causing environmental issues.",
+      "name": "Waste Collection Traffic Disruption",
+      "description": "Traffic congestion worsens due to inefficient waste collection schedules clogging narrow streets during peak hours.",
       "options": [
         {
-          "description": "Expand recycling programs and public awareness campaigns",
-          "scoreImpact": 60
+          "description": "Introduce smart waste collection routes to minimize delays",
+          "scoreImpact": 3
         },
         {
-          "description": "Encourage composting and reduce single-use plastics",
-          "scoreImpact": 50
+          "description": "Shift waste collection to nighttime hours",
+          "scoreImpact": 5
         },
         {
-          "description": "Continue with current waste management practices",
-          "scoreImpact": 0
+          "description": "Continue with current waste collection practices",
+          "scoreImpact": 1
         }
       ]
     }
