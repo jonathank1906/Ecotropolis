@@ -1,94 +1,144 @@
 namespace Ecotropolis;
 using static Ecotropolis.Messager;
 
-public class Game
-{
-    private Player player;
-    private List<Location> locations;
-    private PawnShop pawnShop;
+/*
+ * ========================================================================================================
+ * internal class Game:
+ * The Game class is responsible for managing the game loop and the player's progress throughout the game.
+ * It is "internal", because we only have one assembly and therefore there is no difference
+ * between "internal" and "public" in our use case.
+ *
+ * This class provides the core logic of the game, including the game loop, travel menu, and game end sequence.
+ * ========================================================================================================
+ */
 
-    public Game() 
-    {
-        player = new Player();
-        pawnShop = new PawnShop(player);
-        locations = LocationLoader.LoadLocationsFromFolder("jsons"); // Load locations from JSON files
-        StartMenu startMenu = new StartMenu();
+internal class Game {
+    /*
+     * ===============================================================================================
+     * Fields: private readonly Player _player: holds the player object
+     *     private readonly List<Location> _locations: holds the list of locations in the game.
+     * ===============================================================================================
+     */
+    private readonly Player _player;
+    private readonly List<Location> _locations;
+    
+    /*
+     * ===============================================================================================
+     * Constructor: internal Game():
+     * Initializes the player and loads the locations from JSON files.
+     * Starts the game loop.
+     * ===============================================================================================
+     */
+    
+    internal Game() {
+        _player = new Player();
+        _locations = LocationLoader.LoadLocationsFromFolder("jsons"); // Load locations from JSON files
         GamePlay();
     }
-    public void GamePlay() {
-        bool enterPawnShopSequence = false;
+    
+    /*
+     * ===============================================================================================
+     * Methods: private void GamePlay(): main game loop that handles player input and location progression
+     *          private void TravelMenuContent(): displays the travel menu to the player
+     *          private void GameEnd(): handles the end of the game, including feedback and final score
+     * ===============================================================================================
+     */
+    
+    /*
+     * GamePlay():
+     * The main game loop that handles player input and location progression.
+     * Displays the travel menu to the player and processes their choices.
+     * If all locations are visited, triggers the pawn shop sequence.
+     * After the pawn shop sequence, ends the game and displays the final score.
+     */
+    private void GamePlay() {
+        PrintMessage("welcome");
         while (true) {
-            if (locations.Count == 0) { 
+            if (_locations.Count == 0) { 
                 PrintMessage("all_locations_visited");
-                enterPawnShopSequence = true;
                 break;
             }
-            DisplayTravelMenu(); // Display the travel menu to the player
-            string? input = Console.ReadLine(); // Get the player's choice from the menu
+            string? input = InteractiveMessage("travel_menu", TravelMenuContent()); // Display the travel menu to the player
 
             if (!string.IsNullOrEmpty(input)) { // Ensure input is not null or empty
                 try {
                     int choice = int.Parse(input) - 1; // Parse input and adjust for zero-based index
-                    if (choice >= 0 && choice < locations.Count) { // Valid location
-                        Location selectedLocation = locations[choice];
-                        selectedLocation.PlayLocation(player); // Play the challenges at the location
-                        locations.RemoveAt(choice);
-                        Console.WriteLine("\nPress any key to return to the travel menu...");
-                        Console.ReadKey(true);
-                    }
-                    else if (choice == -1) { // Exit the game
-                        PrintMessage("exit_game");
-                        return;
-                    }
-                    else if (choice == locations.Count) { // Display help menu
-                        PrintMessage("help");
-                    }
-                    else { // Invalid choice
-                        PrintMessage("invalid_option");
+                    switch (choice) {
+                        case >= 0 when choice < _locations.Count: {
+                            // Valid location
+                            Location selectedLocation = _locations[choice];
+                            selectedLocation.PlayLocation(_player); // Play the challenges at the location
+                            _locations.RemoveAt(choice);
+                            break;
+                        }
+                        case -1: // Exit the game
+                            PrintMessage("exit_game");
+                            return;
+                        default: {
+                            if (choice == _locations.Count) { // Display help menu
+                                PrintMessage("help");
+                                Console.ReadLine();
+                            }
+                            else { // Invalid choice
+                                PrintMessage("invalid_option");
+                            }
+                            break;
+                        }
                     }
                 }
                 catch (FormatException) { // Handle invalid numeric input
                     PrintMessage("invalid_command");
                 }
-           }
-           else { // Null or empty input
+            } 
+            else { // Null or empty input
                PrintMessage("empty_input");
-           }
+            }
         }
-        if (enterPawnShopSequence) {
-            pawnShop.Open();
-        }
+        PawnShop pawnShop = new(_player);
+        pawnShop.Open();
         GameEnd();
     }
-    public void DisplayTravelMenu() { // Display the travel menu
-        string variable = "0. Exit Game\n";
-        for (int i = 0; i < locations.Count; i++) { // Display the available locations
-            variable += $"{i + 1}. {locations[i].Name}\n";
+    
+    /*
+     * TravelMenuContent():
+     * Logic for displaying the travel menu to the player.
+     */
+    private string TravelMenuContent() {
+        string variable = string.Empty; 
+        for (int i = 0; i < _locations.Count; i++) { // Display the available locations
+            variable += $"{i + 1}. {_locations[i].Name}\n";
         }
-        variable += $"{locations.Count + 1}. Help"; // Display the help option
-        PrintMessage("travel_menu", variable);
+        variable += $"{_locations.Count + 1}. Help"; // Display the help option
+        return variable; 
     }
-    public void GameEnd() {
-        PrintMessage("game_end");
-        Console.WriteLine($@"You have completed your journey with a sustainability score of... 
-+------------------+
-      {player.SustainabilityScore}/100     
-+------------------+");
-        if (player.SustainabilityScore >= 85)
-        {
-            Console.WriteLine("Congratulations! You have achieved a high sustainability score.");
+    
+    
+    /*
+     * GameEnd():
+     * Handles the end of the game, including feedback and final score.
+     */
+    private void GameEnd() {
+        string stringVariable = (_player.SustainabilityScore / 100).ToString();
+        stringVariable += "\n";
+
+        switch (_player.SustainabilityScore) {
+            case >= 85:
+                stringVariable += "Congratulations! You have achieved a high sustainability score.";
+                break;
+            case >= 50:
+                stringVariable += "You have achieved a moderate sustainability score.";
+                break;
+            default:
+                stringVariable +=
+                    "Your sustainability score is low. Consider playing again and revist the locations to improve it.";
+                break;
         }
-        else if (player.SustainabilityScore >= 50)
-        {
-            Console.WriteLine("You have achieved a moderate sustainability score.");
-        }
-        else
-        {
-            Console.WriteLine("Your sustainability score is low. Consider playing again and revist the locations to improve it.");
-        }
-        // Your items will be used to build a sustainable city of your own.
-        Console.WriteLine("\nHere is a summary of the items you obtained in each location along with some feedback:");
-        player.Inventory.ShowEndGameFeedback();
-        Console.WriteLine("Thank you for playing Ecotropolis!");
-    }   
+
+        PrintMessage("game_end", stringVariable);
+
+        stringVariable = _player.GenerateEndGameFeedback();
+        PrintMessage("feedback", stringVariable);
+
+        PrintMessage("exit_game");
+    }
 }
